@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 11 routes from src/lib/nav.ts. trailingSlash:true matches next.config.mjs.
+     DOMAIN_TBD: replace https://www.pt-trustap.com/ with real domain once PRD §7 Q5 confirmed. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.pt-trustap.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.pt-trustap.com/about/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.pt-trustap.com/services/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.pt-trustap.com/tower-crane/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.pt-trustap.com/passenger-hoist/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.pt-trustap.com/material-lift/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.pt-trustap.com/manual-crane/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.pt-trustap.com/genset/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.pt-trustap.com/parts/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.pt-trustap.com/gallery/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.pt-trustap.com/contact/</loc><priority>0.8</priority></url>
+</urlset>

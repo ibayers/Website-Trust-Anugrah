@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Passenger Hoist | PT. TRUST ANUGRAH PERSADA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#fe6b00",
+                        "on-surface": "#e0e3e6",
+                        "inverse-on-surface": "#2d3133",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#ffb693",
+                        "surface-container-highest": "#323538",
+                        "outline-variant": "#44474d",
+                        "surface-dim": "#101416",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-fixed": "#351000",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "on-secondary": "#561f00",
+                        "on-primary-fixed-variant": "#39475f",
+                        "secondary": "#ffb693",
+                        "on-secondary-container": "#572000",
+                        "on-tertiary": "#00363a",
+                        "surface-container-lowest": "#0b0f11",
+                        "surface-bright": "#363a3c",
+                        "inverse-primary": "#515f78",
+                        "on-error": "#690005",
+                        "outline": "#8f9097",
+                        "on-background": "#e0e3e6",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "surface": "#101416",
+                        "on-surface-variant": "#c5c6cd",
+                        "inverse-surface": "#e0e3e6",
+                        "primary": "#b9c7e4",
+                        "surface-tint": "#b9c7e4",
+                        "on-tertiary-container": "#009099",
+                        "surface-container-low": "#191c1e",
+                        "secondary-fixed": "#ffdbcc",
+                        "surface-variant": "#323538",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#0d1c32",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "tertiary": "#00dbe9",
+                        "on-primary-container": "#74829d",
+                        "tertiary-fixed": "#7df4ff",
+                        "surface-container-high": "#272a2d",
+                        "primary-container": "#0a192f",
+                        "on-tertiary-fixed": "#002022",
+                        "error": "#ffb4ab",
+                        "on-primary": "#233148",
+                        "tertiary-fixed-dim": "#00dbe9",
+                        "surface-container": "#1d2022",
+                        "tertiary-container": "#001d1f",
+                        "background": "#101416"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "section-gap": "128px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-technical": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-technical": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #101416;
+            color: #e0e3e6;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(16, 20, 22, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .safety-orange-glow {
+            box-shadow: 0 0 15px rgba(254, 107, 0, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(185, 199, 228, 0.4);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .spec-row:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface-container/40 dark:bg-surface-container-high/40 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-md flex justify-between items-center px-margin-desktop py-4 w-full transition-all duration-300 ease-in-out">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">
+            PT. TRUST ANUGRAH PERSADA
+        </div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Tower Crane</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md" href="#">Passenger Hoist</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Manual Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Genset</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Gallery</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md">Guestbook</button>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 font-bold hover:brightness-110 transition-all safety-orange-glow">Contact Us</button>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 h-full w-64 hidden lg:flex flex-col bg-surface-container-low/60 dark:bg-surface-container-lowest/60 backdrop-blur-lg border-r border-outline-variant/20 shadow-2xl pt-24 pb-8 z-40 ease-out duration-200">
+<div class="px-6 mb-10">
+<div class="font-headline-md text-on-surface font-bold text-lg">Equipment Division</div>
+<div class="text-on-surface-variant text-sm opacity-70">Precision Engineering</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined text-secondary">elevator</span>
+<span class="font-body-md text-body-md">Material Lift</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined text-secondary">shopping_cart</span>
+<span class="font-body-md text-body-md">Sell</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined text-secondary">account_circle</span>
+<span class="font-body-md text-body-md">Biodata</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined text-secondary">description</span>
+<span class="font-body-md text-body-md">Manuals</span>
+</a>
+</nav>
+<div class="mt-auto px-6">
+<button class="w-full border border-tertiary text-tertiary py-3 rounded hover:bg-tertiary/10 transition-colors font-label-technical">Request Quote</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 min-h-screen relative">
+<!-- Hero Background Animation -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-30">
+
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="mb-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-end gap-gutter mb-12">
+<div class="max-w-2xl">
+<div class="font-label-technical text-tertiary mb-4 tracking-[0.2em]">INDUSTRIAL VERTICAL TRANSPORTATION</div>
+<h1 class="font-headline-lg text-headline-lg text-glow leading-tight mb-6">High-Performance <br/><span class="text-secondary">Passenger Hoist</span> Solutions</h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">Engineering reliability into every vertical meter. Our fleet of high-altitude passenger hoists is designed for maximum efficiency in skyscraper construction and large-scale industrial projects.</p>
+</div>
+<div class="flex flex-col items-end gap-2 text-right">
+<span class="font-label-technical text-on-surface-variant">OPERATIONAL CAPACITY</span>
+<div class="text-display-xl font-display-xl text-secondary">100<span class="text-body-md align-top ml-1">M</span></div>
+<span class="text-on-surface-variant">MAX REACH</span>
+</div>
+</div>
+<!-- Bento Equipment Showcase -->
+<div class="bento-grid">
+<div class="col-span-12 md:col-span-8 h-[500px] glass-panel relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A massive, high-contrast industrial photograph of a twin-cage passenger hoist climbing the side of a modern glass skyscraper during sunset. The hoist is made of weathered gray steel with safety orange accents, and the sky behind is a deep indigo and orange gradient. The overall aesthetic is cinematic, sharp, and reflects high-end engineering and architectural power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkhd145BbMjDtb6Fxbv_CtPHVLto4n_GS-nqoV4_-oxVKnGVr0bvLmNvOqY55nIA6FksMaL2z-QGFhO5NSxAy4thl2dCpp7HA-Kyl7rUzXKr7elP4w8KwwmF1oJeMLGnhdMF6sMiVbLC4kIB6-a2nUsCdwCmqqZQHW4RdJe2ojrk96sykdqIwEI9HqG1P0Ol2pcmpokReJqQTyA59dCn33rQQ29ZDuX_QalZ8yuP9L6S6X7rxgfeAWqPF_J4yI7iMIYj2BzbaxWQvr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="font-label-technical text-sm text-on-surface">UNIT ID: PH-T100-26</span>
+</div>
+<h3 class="font-headline-md text-on-surface">Dual Cage Heavy Duty Hoist</h3>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 flex flex-col gap-gutter">
+<div class="h-1/2 glass-panel p-6 border border-outline-variant/30 flex flex-col justify-between">
+<div class="material-symbols-outlined text-tertiary text-4xl" data-weight="fill">precision_manufacturing</div>
+<div>
+<h4 class="font-headline-md text-lg mb-2">Precision Control</h4>
+<p class="text-on-surface-variant text-sm">Advanced variable frequency drive (VFD) for smooth acceleration and deceleration.</p>
+</div>
+</div>
+<div class="h-1/2 glass-panel p-6 border border-outline-variant/30 flex flex-col justify-between bg-secondary-container/10">
+<div class="material-symbols-outlined text-secondary text-4xl" data-weight="fill">engineering</div>
+<div>
+<h4 class="font-headline-md text-lg mb-2">Service Lifecycle</h4>
+<p class="text-on-surface-variant text-sm">Full predictive maintenance support and real-time diagnostic monitoring.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Our Rental &amp; Service <br/><span class="text-tertiary">Commitment</span></h2>
+<div class="flex flex-col gap-6">
+<div class="flex gap-6 group">
+<div class="w-12 h-12 shrink-0 glass-panel flex items-center justify-center border border-secondary/30 group-hover:bg-secondary-container/20 transition-colors">
+<span class="material-symbols-outlined text-secondary">height</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl mb-1">Extended Range Capacity</h4>
+<p class="text-on-surface-variant">Rental passenger lift with 80-100m height capabilities, adaptable to specific project verticality needs.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="w-12 h-12 shrink-0 glass-panel flex items-center justify-center border border-tertiary/30 group-hover:bg-tertiary-container/20 transition-colors">
+<span class="material-symbols-outlined text-tertiary">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl mb-1">Technical Troubleshooting</h4>
+<p class="text-on-surface-variant">Comprehensive electrical diagnostics, supply components, resistors, and controller replacements.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="w-12 h-12 shrink-0 glass-panel flex items-center justify-center border border-on-surface-variant/30 group-hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl mb-1">Certified Crew</h4>
+<p class="text-on-surface-variant">Provision of licensed manpower from the official Manpower Department for safe operations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 border-2 border-dashed border-outline-variant/30 rounded-lg pointer-events-none"></div>
+<div class="glass-panel p-8">
+<h3 class="font-label-technical text-tertiary mb-6 border-b border-outline-variant/30 pb-4">SPECIFICATION OVERVIEW</h3>
+<div class="flex flex-col divide-y divide-outline-variant/20">
+<div class="flex justify-between py-4 spec-row">
+<span class="text-on-surface-variant">Max Height Capability</span>
+<span class="font-label-technical text-on-surface">100 Meters</span>
+</div>
+<div class="flex justify-between py-4 spec-row">
+<span class="text-on-surface-variant">Logistics Range</span>
+<span class="font-label-technical text-on-surface">National (Inc. Outside Java)</span>
+</div>
+<div class="flex justify-between py-4 spec-row">
+<span class="text-on-surface-variant">Maintenance Cycle</span>
+<span class="font-label-technical text-on-surface">Periodic / Scheduled</span>
+</div>
+<div class="flex justify-between py-4 spec-row">
+<span class="text-on-surface-variant">Cage Fabrication</span>
+<span class="font-label-technical text-on-surface">Custom Manufacturing</span>
+</div>
+<div class="flex justify-between py-4 spec-row">
+<span class="text-on-surface-variant">Safety Brake</span>
+<span class="font-label-technical text-on-surface">Brake Hoist Certified</span>
+</div>
+</div>
+<button class="w-full mt-8 py-4 bg-surface-container-highest border border-outline text-on-surface hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary transition-all font-bold">Download Tech Data (PDF)</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Integration -->
+<section class="mb-section-gap">
+<div class="flex justify-between items-baseline mb-12">
+<h2 class="font-headline-lg text-headline-lg">Project <span class="text-secondary">Portfolio</span></h2>
+<a class="text-tertiary flex items-center gap-2 font-label-technical hover:underline" href="#">VIEW FULL GALLERY <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square glass-panel overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="A low-angle shot looking up the vertical mast of a passenger hoist on a construction site. The steel structure is highlighted by sharp morning light, casting geometric shadows. The background features a clear blue sky and the sheer concrete face of an unfinished building. Modern, high-contrast industrial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMDTIQ9p0wW8-qSbZf1G97Psbc9Me9lGk8LoFQsFm7HVVvBujnfrbeO0QER4nGxD2EL6ScEON8IStTvW8FNCU2YSWBRgbcS2huuy5OnDrsjsJ7RGbeRQDMkjrOdRcLTzNof6uMcZWyKmlMS-la28iKTNGU9Mbc1pAzSnhVF2ZJuvyZgjDFqtNKpN8lDquyMqR94aRskuVSPIoDSqYTOluDmlXmDVnKkr1koYlyt44XxPOiznkOkb8PKEjALAQQUhlLwnSXBztAK3W8"/>
+</div>
+<div class="aspect-square glass-panel overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Detailed close-up of a hoist's control panel inside the cage. The panel features industrial-grade buttons, a digital height display glowing in blue, and a safety emergency stop button. The interior of the cage is metallic and clean, reflecting a well-maintained piece of equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY4bGiecGz127krsUKVAqCBLnJ-9bBDt6MF-BL7Bm_VlaE2TEEpj5AVDr1VZ72qk6mCxemH85qelIrxQD0yR080ZJB1kBIKRCM2byhnVJlF-orp18Q9FZSXlJITy-TP5qFk4B8Ug-lvliA1Nf5AujksN5MEerhHfvUyMU8TxRnlQ2B3bLPkEyKaSsFhS0yqDyjZJO30UwfoObOBjIo5tuXR8jFN47ShClyNuSQwU_c2a_4f29GvGyHM83Ug6GglxpSEQyaJ5acax6-"/>
+</div>
+<div class="aspect-square glass-panel overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Industrial crane yard with several passenger hoist units being prepared for deployment. Large logistics trucks are visible in the background, under a bright, high-key sky. The units are painted in a corporate navy and orange scheme, clean and ready for work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFhxzsXMLejxqQ_mHVEucanIjXUiaIM3oniBOkWkvi4J9en98XOKv3GJiHtuy8I9dkNx4mFp84OD2_VK8tGxbjQw8JNqzT-qJdrKROGEeQChbq8lugPZMOPj3yV5EdS1zB5gO9G00RJzLxjCwsf2pphOv_Lc2Ich_yIjlsARiBf5qDYt6O2r-Kw1vY82VQb2HhV3i-Zg5MayhXKxZYej6f_CEnuWu5wfHkTk4L7jss9S-tzxSDf1eP57xEx9w__alaFX9PsM6do1Tq"/>
+</div>
+<div class="aspect-square glass-panel overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Night-time construction site with a passenger hoist cage illuminated from within, glowing against the dark skeleton of a building. The hoist mast is lit by floodlights, creating a high-performance, high-tech engineering vibe. Cinematic lighting with deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_UCTB7WZ3D5EgMyXHk3kB0HjZePsuLU4pVZoxUVasLT080Aaljwa8-scfkOJKiHcA2JvcbG9Z6F75zsaxYYUm1OhPAAmvB4wOCvkjPwA1WTy5_PobG6fkiagkbPwHazQ_10HUFn6HUalOxQoDQIPYZ_es9azh6HNg6kQa6AlHuzxwH7RaatJFf-2nypZ17sh1XBa5s0QC0hfsCaS2SRI2XPD8yuxkgP_ZEuTX4sroU7x5K0WWCSnSanVzAH4nYyLDsWFQrUHo4yM1"/>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim dark:bg-surface-dim border-t border-outline-variant w-full mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-secondary-fixed-dim font-bold tracking-tighter">PT. TRUST ANUGRAH PERSADA</div>
+<p class="text-on-surface-variant opacity-80 font-body-md text-body-md">
+                    Leading provider of high-reach vertical transportation and industrial hoisting solutions. Driven by precision engineering and safety excellence.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 glass-panel flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">link</span></a>
+<a class="w-10 h-10 glass-panel flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="w-10 h-10 glass-panel flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">phone</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-technical text-tertiary">NAVIGATION</h4>
+<nav class="grid grid-cols-2 gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Guestbook</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Technical Specs</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Project Portfolio</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-technical text-secondary">HEADQUARTERS</h4>
+<div class="text-on-surface-variant opacity-80">
+<div class="flex items-start gap-2 mb-2">
+<span class="material-symbols-outlined text-sm mt-1">location_on</span>
+<p>Equipment Division Complex,<br/>Main Industrial Zone,<br/>Indonesia</p>
+</div>
+<p class="font-label-technical mt-4">OPERATIONAL HOURS: 08:00 - 17:00 WIB</p>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/10 text-center">
+<span class="text-on-surface-variant opacity-60 text-sm">© 2026 PT. TRUST ANUGRAH PERSADA. Industrial-Grade Reliability.</span>
+</div>
+</footer>
+<!-- Back to top micro-interaction -->
+<button class="fixed bottom-8 right-8 w-12 h-12 glass-panel border border-secondary/30 rounded-full flex items-center justify-center text-secondary opacity-0 translate-y-10 transition-all duration-300 z-50 hover:bg-secondary-container hover:text-on-secondary-container" id="backToTop">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<script>
+        // Micro-interactions
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-10');
+                backToTop.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-10');
+                backToTop.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Add subtle parallax to hero elements
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            document.querySelectorAll('.glass-panel').forEach(panel => {
+                const shiftX = (x - 0.5) * 10;
+                const shiftY = (y - 0.5) * 10;
+                panel.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
+            });
+        });
+    </script>
+</body></html>

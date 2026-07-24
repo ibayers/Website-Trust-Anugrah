@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equipment for Sale | PT. TRUST ANUGRAH PERSADA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-container": "#fe6b00",
+            "on-surface": "#e0e3e6",
+            "inverse-on-surface": "#2d3133",
+            "error-container": "#93000a",
+            "secondary-fixed-dim": "#ffb693",
+            "surface-container-highest": "#323538",
+            "outline-variant": "#44474d",
+            "surface-dim": "#101416",
+            "primary-fixed": "#d6e3ff",
+            "on-secondary-fixed": "#351000",
+            "on-tertiary-fixed-variant": "#004f54",
+            "on-secondary": "#561f00",
+            "on-primary-fixed-variant": "#39475f",
+            "secondary": "#ffb693",
+            "on-secondary-container": "#572000",
+            "on-tertiary": "#00363a",
+            "surface-container-lowest": "#0b0f11",
+            "surface-bright": "#363a3c",
+            "inverse-primary": "#515f78",
+            "on-error": "#690005",
+            "outline": "#8f9097",
+            "on-background": "#e0e3e6",
+            "primary-fixed-dim": "#b9c7e4",
+            "surface": "#101416",
+            "on-surface-variant": "#c5c6cd",
+            "inverse-surface": "#e0e3e6",
+            "primary": "#b9c7e4",
+            "surface-tint": "#b9c7e4",
+            "on-tertiary-container": "#009099",
+            "surface-container-low": "#191c1e",
+            "secondary-fixed": "#ffdbcc",
+            "surface-variant": "#323538",
+            "on-error-container": "#ffdad6",
+            "on-primary-fixed": "#0d1c32",
+            "on-secondary-fixed-variant": "#7a3000",
+            "tertiary": "#00dbe9",
+            "on-primary-container": "#74829d",
+            "tertiary-fixed": "#7df4ff",
+            "surface-container-high": "#272a2d",
+            "primary-container": "#0a192f",
+            "on-tertiary-fixed": "#002022",
+            "error": "#ffb4ab",
+            "on-primary": "#233148",
+            "tertiary-fixed-dim": "#00dbe9",
+            "surface-container": "#1d2022",
+            "tertiary-container": "#001d1f",
+            "background": "#101416"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "unit": "8px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "container-max": "1440px",
+            "section-gap": "128px",
+            "margin-mobile": "16px"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "headline-md": ["Hanken Grotesk"],
+            "label-technical": ["JetBrains Mono"],
+            "headline-lg-mobile": ["Hanken Grotesk"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Hanken Grotesk"],
+            "display-xl": ["Hanken Grotesk"]
+          },
+          "fontSize": {
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+            "label-technical": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+            "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+            "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-panel {
+      background: rgba(16, 20, 22, 0.4);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(224, 227, 230, 0.1);
+      border-left: 1px solid rgba(224, 227, 230, 0.1);
+    }
+    .safety-glow {
+      box-shadow: 0px 0px 15px rgba(254, 107, 0, 0.3);
+    }
+    .spec-row:nth-child(even) {
+      background-color: rgba(50, 53, 56, 0.2);
+    }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(16, 20, 22, 0.7), rgba(16, 20, 22, 0.95));
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-container/40 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-md">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">
+        PT. TRUST ANUGRAH PERSADA
+      </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Tower Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Passenger Hoist</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Manual Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Genset</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Gallery</a>
+</nav>
+<div class="flex gap-4">
+<button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg hover:bg-white/5 transition-all">Guestbook</button>
+<button class="bg-secondary-container text-on-secondary-container font-bold px-6 py-2 rounded-lg safety-glow hover:brightness-110 transition-all">Contact Us</button>
+</div>
+</div>
+</header>
+<main class="relative min-h-screen">
+<!-- Atmospheric Background Image -->
+<div class="fixed inset-0 -z-10">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, low-angle shot of multiple massive yellow tower cranes silhouetted against a deep blue dusk sky. The scene is desaturated with high contrast, featuring sharp metallic edges and industrial details. Subtle grid overlays and technical coordinate lines are faintly visible across the composition, enhancing the futuristic engineering aesthetic of the industrial landscape." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuX1Kv-p9dw63VgjhvTxoePQBH1QKBSsrDtMpOCnaPQJeCwnhB5h62y3tAly-1AzgP1hGusYOXBvgZXRdDpt-c7sHwrByTmkjIQjQsV3wxoPwUuGTdXe9yoEzK-uPACbN-E_e1FOnE2b0KS4EVxZAXoA3H3_-JzaOWUoq3o4O9to4wJorO3NNICMYssBGhGSQux1OADYaNUT27Ar0E7yFnqRX9k5VEWjM9eGr6bgkjV4GU-ORtiqaL2xHBXxV41LIJ7U-QWfpPGBTe')"></div>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<!-- Hero Section -->
+<section class="px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 max-w-2xl mb-16">
+<span class="font-label-technical text-secondary tracking-widest uppercase">Inventory Catalogue</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Precision Equipment <br/><span class="text-secondary">Ready for Deployment</span></h1>
+<p class="text-body-lg text-on-surface-variant">Industrial-grade machinery engineered for maximum reliability. Browse our current stock of certified tower cranes and passenger lifts.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar Navigation (Matching JSON Logic) -->
+<aside class="w-full lg:w-64 shrink-0">
+<div class="bg-surface-container-low/60 backdrop-blur-lg border border-outline-variant/20 rounded-xl overflow-hidden shadow-2xl">
+<div class="p-6 border-b border-outline-variant/20">
+<div class="font-headline-md text-on-surface text-lg">Equipment Division</div>
+<div class="text-on-surface-variant text-sm">Precision Engineering</div>
+</div>
+<nav class="flex flex-col py-4">
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform ease-out duration-200 font-body-md text-body-md flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-secondary" data-icon="elevator">elevator</span> Material Lift
+              </a>
+<a class="bg-secondary-container text-on-secondary-container rounded-r-full py-3 px-6 hover:translate-x-1 transition-transform ease-out duration-200 font-body-md text-body-md flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span> Sell
+              </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform ease-out duration-200 font-body-md text-body-md flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-secondary" data-icon="account_circle">account_circle</span> Biodata
+              </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform ease-out duration-200 font-body-md text-body-md flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-secondary" data-icon="description">description</span> Manuals
+              </a>
+</nav>
+<div class="p-6">
+<button class="w-full bg-secondary text-on-secondary font-bold py-3 rounded-lg safety-glow hover:brightness-110 transition-all">Request Quote</button>
+</div>
+</div>
+<!-- Contact Support Quick Access -->
+<div class="mt-8 glass-panel rounded-xl p-6 border border-outline-variant/20">
+<h3 class="font-label-technical text-secondary mb-4">Support Channels</h3>
+<ul class="space-y-4">
+<li class="flex items-center justify-between">
+<span class="text-body-md text-on-surface-variant">Admin Support</span>
+<span class="material-symbols-outlined text-secondary" data-icon="support_agent">support_agent</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-body-md text-on-surface-variant">CS Hub 1</span>
+<span class="material-symbols-outlined text-secondary" data-icon="chat">chat</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-body-md text-on-surface-variant">Tech Specs</span>
+<span class="material-symbols-outlined text-secondary" data-icon="settings_suggest">settings_suggest</span>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Main Content Area: Spec Sheet -->
+<div class="flex-grow">
+<div class="glass-panel border border-outline-variant/20 rounded-xl overflow-hidden shadow-2xl">
+<!-- Table Header -->
+<div class="grid grid-cols-12 bg-surface-container-highest px-6 py-4 border-b border-outline-variant">
+<div class="col-span-1 font-label-technical text-on-surface-variant">ID</div>
+<div class="col-span-4 font-label-technical text-on-surface-variant">EQUIPMENT TYPE / MODEL</div>
+<div class="col-span-4 font-label-technical text-on-surface-variant">DOCUMENTATION</div>
+<div class="col-span-3 font-label-technical text-on-surface-variant text-right">ACTION</div>
+</div>
+<!-- Table Rows -->
+<div class="flex flex-col">
+<!-- Item 1 -->
+<div class="grid grid-cols-12 px-6 py-8 spec-row items-center hover:bg-white/5 transition-colors group">
+<div class="col-span-1 font-label-technical text-secondary">01</div>
+<div class="col-span-4">
+<div class="font-headline-md text-lg text-on-surface group-hover:text-secondary transition-colors">Tower Crane - MG5023</div>
+<div class="text-on-surface-variant text-sm mt-1">Industrial Series • Max Capacity 5T</div>
+</div>
+<div class="col-span-4 flex flex-col gap-2">
+<a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="description">description</span>
+                    Technical Data (Zip-PDF)
+                  </a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors text-xs font-label-technical" href="https://www.moving-goods.com" target="_blank">
+<span class="material-symbols-outlined text-[16px]" data-icon="language">language</span>
+                    www.moving-goods.com
+                  </a>
+</div>
+<div class="col-span-3 text-right">
+<button class="bg-transparent border border-secondary text-secondary px-6 py-2 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all font-bold">Contact Us</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="grid grid-cols-12 px-6 py-8 spec-row items-center hover:bg-white/5 transition-colors group">
+<div class="col-span-1 font-label-technical text-secondary">02</div>
+<div class="col-span-4">
+<div class="font-headline-md text-lg text-on-surface group-hover:text-secondary transition-colors">Tower Crane - MG6015</div>
+<div class="text-on-surface-variant text-sm mt-1">Precision Series • Reach Optimization</div>
+</div>
+<div class="col-span-4 flex flex-col gap-2">
+<a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="description">description</span>
+                    Technical Data (Zip-PDF)
+                  </a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors text-xs font-label-technical" href="https://www.moving-goods.com" target="_blank">
+<span class="material-symbols-outlined text-[16px]" data-icon="language">language</span>
+                    www.moving-goods.com
+                  </a>
+</div>
+<div class="col-span-3 text-right">
+<button class="bg-transparent border border-secondary text-secondary px-6 py-2 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all font-bold">Contact Us</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="grid grid-cols-12 px-6 py-8 spec-row items-center hover:bg-white/5 transition-colors group">
+<div class="col-span-1 font-label-technical text-secondary">03</div>
+<div class="col-span-4">
+<div class="font-headline-md text-lg text-on-surface group-hover:text-secondary transition-colors">Tower Crane - MG6036</div>
+<div class="text-on-surface-variant text-sm mt-1">Heavy-Duty Series • Variable Jib</div>
+</div>
+<div class="col-span-4 flex flex-col gap-2">
+<a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="description">description</span>
+                    Technical Data (Zip-PDF)
+                  </a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors text-xs font-label-technical" href="https://www.moving-goods.com" target="_blank">
+<span class="material-symbols-outlined text-[16px]" data-icon="language">language</span>
+                    www.moving-goods.com
+                  </a>
+</div>
+<div class="col-span-3 text-right">
+<button class="bg-transparent border border-secondary text-secondary px-6 py-2 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all font-bold">Contact Us</button>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="grid grid-cols-12 px-6 py-8 spec-row items-center hover:bg-white/5 transition-colors group">
+<div class="col-span-1 font-label-technical text-secondary">04</div>
+<div class="col-span-4">
+<div class="font-headline-md text-lg text-on-surface group-hover:text-secondary transition-colors">Tower Crane - MG7030</div>
+<div class="text-on-surface-variant text-sm mt-1">Mega-Project Scale • High Elevation</div>
+</div>
+<div class="col-span-4 flex flex-col gap-2">
+<a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="description">description</span>
+                    Technical Data (Zip-PDF)
+                  </a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors text-xs font-label-technical" href="https://www.moving-goods.com" target="_blank">
+<span class="material-symbols-outlined text-[16px]" data-icon="language">language</span>
+                    www.moving-goods.com
+                  </a>
+</div>
+<div class="col-span-3 text-right">
+<button class="bg-transparent border border-secondary text-secondary px-6 py-2 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all font-bold">Contact Us</button>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="grid grid-cols-12 px-6 py-8 spec-row items-center hover:bg-white/5 transition-colors group">
+<div class="col-span-1 font-label-technical text-secondary">05</div>
+<div class="col-span-4">
+<div class="font-headline-md text-lg text-on-surface group-hover:text-secondary transition-colors">Passenger/Material Lift</div>
+<div class="text-on-surface-variant text-sm mt-1">Dual-Speed Cabin • Certified Safety</div>
+</div>
+<div class="col-span-4 flex flex-col gap-2">
+<a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="description">description</span>
+                    Technical Data (Zip-PDF)
+                  </a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors text-xs font-label-technical" href="https://www.moving-goods.com" target="_blank">
+<span class="material-symbols-outlined text-[16px]" data-icon="language">language</span>
+                    www.moving-goods.com
+                  </a>
+</div>
+<div class="col-span-3 text-right">
+<button class="bg-transparent border border-secondary text-secondary px-6 py-2 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all font-bold">Contact Us</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex items-center justify-center gap-8 py-12 border-y border-outline-variant/10">
+<div class="text-center">
+<div class="font-headline-md text-3xl text-secondary">15+</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant">Years Excellence</div>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div class="text-center">
+<div class="font-headline-md text-3xl text-secondary">200+</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant">Units Deployed</div>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div class="text-center">
+<div class="font-headline-md text-3xl text-secondary">24/7</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant">Support Core</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim border-t border-outline-variant w-full mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div>
+<div class="font-headline-md text-secondary-fixed-dim mb-4">PT. TRUST ANUGRAH PERSADA</div>
+<p class="text-on-surface-variant text-body-md opacity-80 hover:opacity-100 transition-opacity">Industrial-Grade Reliability. Specialized in large-scale construction machinery sales, rentals, and technical support.</p>
+</div>
+<div>
+<h4 class="font-label-technical text-on-surface mb-6 uppercase tracking-widest">Quick Navigation</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Technical Specs</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Project Portfolio</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Guestbook</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-technical text-on-surface mb-6 uppercase tracking-widest">Contact Information</h4>
+<div class="text-on-surface-variant space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<span>Industrial Zone Block B-12, <br/>Jakarta Metropolis Engineering Center</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+<span>inquiry@tap-indonesia.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-margin-desktop text-center">
+<p class="text-on-surface-variant text-sm">© 2026 PT. TRUST ANUGRAH PERSADA. All Rights Reserved. Engineered for Excellence.</p>
+</div>
+</footer>
+<script>
+    // Micro-interactions for table rows and buttons
+    document.querySelectorAll('.spec-row').forEach(row => {
+      row.addEventListener('mouseenter', () => {
+        row.style.transform = 'scale(1.005)';
+      });
+      row.addEventListener('mouseleave', () => {
+        row.style.transform = 'scale(1)';
+      });
+    });
+
+    // Simple sticky nav highlight
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('bg-surface-container/90');
+      } else {
+        header.classList.remove('bg-surface-container/90');
+      }
+    });
+  </script>
+</body></html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manual Crane Solutions | PT. TRUST ANUGRAH PERSADA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fe6b00",
+                    "on-surface": "#e0e3e6",
+                    "inverse-on-surface": "#2d3133",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb693",
+                    "surface-container-highest": "#323538",
+                    "outline-variant": "#44474d",
+                    "surface-dim": "#101416",
+                    "primary-fixed": "#d6e3ff",
+                    "on-secondary-fixed": "#351000",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "on-secondary": "#561f00",
+                    "on-primary-fixed-variant": "#39475f",
+                    "secondary": "#ffb693",
+                    "on-secondary-container": "#572000",
+                    "on-tertiary": "#00363a",
+                    "surface-container-lowest": "#0b0f11",
+                    "surface-bright": "#363a3c",
+                    "inverse-primary": "#515f78",
+                    "on-error": "#690005",
+                    "outline": "#8f9097",
+                    "on-background": "#e0e3e6",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "surface": "#101416",
+                    "on-surface-variant": "#c5c6cd",
+                    "inverse-surface": "#e0e3e6",
+                    "primary": "#b9c7e4",
+                    "surface-tint": "#b9c7e4",
+                    "on-tertiary-container": "#009099",
+                    "surface-container-low": "#191c1e",
+                    "secondary-fixed": "#ffdbcc",
+                    "surface-variant": "#323538",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#0d1c32",
+                    "on-secondary-fixed-variant": "#7a3000",
+                    "tertiary": "#00dbe9",
+                    "on-primary-container": "#74829d",
+                    "tertiary-fixed": "#7df4ff",
+                    "surface-container-high": "#272a2d",
+                    "primary-container": "#0a192f",
+                    "on-tertiary-fixed": "#002022",
+                    "error": "#ffb4ab",
+                    "on-primary": "#233148",
+                    "tertiary-fixed-dim": "#00dbe9",
+                    "surface-container": "#1d2022",
+                    "tertiary-container": "#001d1f",
+                    "background": "#101416"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1440px",
+                    "section-gap": "128px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-technical": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-xl": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-technical": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(16, 20, 22, 0.4);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(143, 144, 151, 0.2);
+            border-left: 1px solid rgba(143, 144, 151, 0.2);
+        }
+        .safety-glow {
+            box-shadow: 0 0 15px rgba(254, 107, 0, 0.4);
+        }
+        .industrial-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(68, 71, 77, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md industrial-grid overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar Navigation Shell -->
+<nav class="bg-surface-container/40 dark:bg-surface-container-high/40 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-md flex justify-between items-center px-margin-desktop py-4 w-full transition-all duration-300 ease-in-out">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter uppercase">
+            PT. TRUST ANUGRAH PERSADA
+        </div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Tower Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Passenger Hoist</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md" href="#">Manual Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Genset</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#">Gallery</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 font-bold safety-glow transition-all hover:scale-105 active:scale-95">Contact Us</button>
+<button class="text-on-surface-variant hover:text-on-surface font-medium transition-colors">Guestbook</button>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center mb-section-gap overflow-hidden rounded-xl border border-outline-variant/20">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="A cinematic, high-contrast photograph of a sleek, heavy-duty industrial manual crane system operating in a complex urban construction environment. The lighting is dramatic, with cool blue atmospheric tones and sharp metallic highlights reflecting off the structural steel beams. The camera angle is low, emphasizing the scale and power of the equipment against a desaturated, slightly hazy skyline. The overall aesthetic is clean, professional, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxbaIVhxmDHHhId3zrSswww-9mWu-zzeayXHOPglMt64r-sBMosk-SXr8etPDk9vyV9yj-zGRu7arqUhk9yYfNJX7JJel4TRkDHksniys93Hj-cLXsbAHdtTsnormEEdqbz4qUNfaR5JtoaJtPwLf01S5NKobv9-SWRCIlB-EMb1xMHfjspavEMM5cugCC40_M-Bhpgqv9XnbRQN9re2SN1qLDaupTLGDUIms3pfRSpSjvZaorKheyg_KsMU7C-8g556Uu6NMavC1n"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 text-secondary border border-secondary/30 mb-6">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+<span class="font-label-technical text-label-technical uppercase tracking-widest">Precision Engineering</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6">Industrial Manual Crane Systems</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                    Designed for specialized maneuvers where mechanical power meets architectural constraints. Our manual crane solutions provide high-precision lifting in environments inaccessible to conventional mobile cranes.
+                </p>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 font-bold safety-glow hover:translate-y-[-2px] transition-transform">Get Technical Specs</button>
+<button class="border border-tertiary text-tertiary px-8 py-4 font-bold hover:bg-tertiary/10 transition-colors">Project Portfolio</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Why Manual Cranes? -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Context Card -->
+<div class="md:col-span-8 glass-panel p-10 rounded-xl">
+<h2 class="font-headline-lg text-headline-lg mb-6 border-b border-outline-variant/30 pb-4">Specialized Access Logic</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                        In modern urban construction, spatial constraints often render standard mobile cranes obsolete. For some reason, manual cranes are needed to dismantle tower cranes from difficult areas that small mobile cranes can't get closer to. Our engineered systems bridge this gap, offering a low-cost, high-reliability alternative that mirrors tower crane functionality at a fraction of the spatial footprint.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<div>
+<h4 class="font-bold text-on-surface mb-1 uppercase tracking-tight">Lower Cost Threshold</h4>
+<p class="text-on-surface-variant text-sm">Achieve heavy-duty results with significantly reduced operational and mobilization expenses compared to mechanized alternatives.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<div>
+<h4 class="font-bold text-on-surface mb-1 uppercase tracking-tight">Custom Fabrication</h4>
+<p class="text-on-surface-variant text-sm">Beside rental manual crane services, our engineers design and manufacture bespoke systems tailored to your project's unique geometry.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Spec Mini-Panel -->
+<div class="md:col-span-4 bg-surface-container-high border border-outline-variant/20 p-8 rounded-xl flex flex-col justify-between">
+<div>
+<h3 class="font-label-technical text-label-technical text-secondary mb-4">DEPLOYMENT METRICS</h3>
+<div class="space-y-4">
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant text-sm">Min. Footprint</span>
+<span class="font-label-technical">1.2m x 1.2m</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant text-sm">Typical SWL</span>
+<span class="font-label-technical">500kg - 2000kg</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant text-sm">Rotation Arc</span>
+<span class="font-label-technical">360° Continuous</span>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<div class="h-32 w-full bg-surface-dim rounded border border-outline-variant/30 relative overflow-hidden">
+<!-- Technical Wireframe Placeholder -->
+<div class="absolute inset-0 opacity-20 industrial-grid"></div>
+<div class="flex items-center justify-center h-full gap-2">
+<span class="material-symbols-outlined text-outline">architecture</span>
+<span class="text-xs font-label-technical text-outline">CAD_SCHEMATIC_v4.2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Equipment Showcase -->
+<section class="mb-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg">Gallery &amp; Field Assets</h2>
+<p class="text-on-surface-variant mt-2 max-w-xl">A visual documentation of our manual crane fleet in complex dismantling and lifting operations across Southeast Asia.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-4 bg-surface-container-highest hover:bg-secondary-container hover:text-on-secondary-container transition-colors rounded">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-4 bg-surface-container-highest hover:bg-secondary-container hover:text-on-secondary-container transition-colors rounded">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Image Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="group relative overflow-hidden rounded-lg aspect-square border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Close-up detail of a heavy-duty industrial manual crane winch mechanism in a dark navy and safety orange color scheme. The steel is textured and weathered, showing industrial durability. Shot in a high-contrast style with moody, dramatic lighting focusing on the precision of the gears and handles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD88obQXvQ9KKDRXcRsJVZY0DLzInBJYVJGhnRlHzHcONxq8IHn_SsXqICDTO_An-KDJcYCY3ss5qo7Uvirv6_qoLUiv7aOsqkW3hwc0cjY6PNYPjgJQVW4zAs6B590HnU_k6pO0q0B2Zbca6Uko9g7AKM61QyZtxSdIpn_4GPpoZjaLRXMZqYxX_vjCVZSKjhwDJjUIr2vQTwBGU7lUkSKmnlgZnuZ1VY-fphMr1O8oe63yKBF1KlvXVrjjssJVi7UN8nldTBC9MGD"/>
+<div class="absolute inset-0 bg-secondary-container/0 group-hover:bg-secondary-container/10 transition-colors pointer-events-none"></div>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-square border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Wide angle view of a manual crane positioned on top of a high-rise building structure under construction. The background shows a vast city skyline at dusk with deep blue tones. The crane is highlighted by a warm orange spotlight, creating a futuristic industrial silhouette. Clean, sharp lines and geometric precision define the composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2fAZvDA3RXtHhWoc2gEgauiOhEARiU2jBcXotZp18_WA4quQtrCe5A9OyL0LRNcL5wD38LvpYRZy9R7yLiuEmUyOghluDM-umMAEWjWbWh9LzfCceAPk_vINqx2t2t4t3WRPgRnlpD3hu3Y5FPNlO4KcqTI3l47BR13cldTxKGlmK900cpNyFiELSL0qSLPKOot1LFlXZ2aMqGeaBe0qERt9YjW5fHeyRd2bBe7vULDrrVjlxN6jJFbT05AIwfrJ9_x8X9EAXuwc4"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-square border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Detailed view of industrial steel rigging and manual crane components at a construction site. The lighting is cool-toned, architectural, and cinematic. The scene conveys a sense of massive scale and precision engineering, with desaturated blue tones and strong shadow play on the metallic surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF_Kgli6yf6J0e-8ubD4m3SOk1qL8g9IdDivMwpb8_p9IWZPZrKMHDgTwOoVFlHU5ZBD2hC3oFMeXYlpyMTtMmoomHbuYzAD8S2wsZQvlYWGTXv8a5i-auN79V9OmixNM_0P7IC39b97AtKyEqEIWwP_H2YFAM7Zd5qOpSWCK7CueEopnMP_2TqbkQPSWRpWedSm5LfTyN62iSqOQi9yzjkZZUAKls1Sfm4sfjoQPhU_zlP2ot1LsYgQRfBfUmCNuVzL02WItRcR-H"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-square border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="A manual crane being utilized for the dismantling process of a larger tower crane. The shot captures the tight spatial constraints of the site, with scaffolding and steel beams framing the action. High-contrast lighting highlights the textures of the concrete and metal, maintaining a professional and serious industrial mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCgkaB3C6ug_0k09CTo3QMIEE_qLkdf9FE7Qis4OoDc0To367leqKEx6lDEdDHdzt8P50nknffz-NIs4Eyzzv_r-RfAu3PR_LJiZoVRPiyaSCfO1G9KZYAcCelGrBYf-7pqtbGOVRe0n6--AvLa02PD3e6PiFE2ozV_KWqegPUlCYEZi2avxd392KjO5R5Xi40ibc9hwd_aJoQfJ_jzEQE68a-dd0eQ7I5-ZB6E6LFcKJzjIJI3p7ebEt0mo6CDIY262123fPnKBfL"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-square border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Low angle perspective of manual crane boom reaching into a narrow alleyway between two industrial buildings. The lighting is focused on the tip of the crane, emphasizing precision in restricted spaces. The color palette is restricted to navy, slate gray, and bright safety orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqI6DkIJMYkigMI4cx1CPN2l6gjW9qvvWftyfWfidhGEvAmDHL0Smf-uWt3FGpo2J28cunpBmrnl11ye_gjKiVjF7jM5zO2p6oRPMdZvMeMewS5JHRya8r9pkDFMPQI4CLVc14zqEaCS73r-yyJ3Jo9sKl7jyPjwg5-UBxryqF5jPncCl-197HGrfg4VAu5J1T0q1itNqrTkX9-VagbPmwZ8mcKIYP3Kq4q8vJqonsNADlSmz6HU5_0PwgVhAEz2mnir3iznFrfsOH"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-square border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Construction engineers supervising the assembly of a custom-fabricated manual crane unit. The shot is candid and professional, showing teamwork and technical expertise. The environment is a clean, modern workshop with high-key lighting and a high-tech engineering aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtFW0BCbO6oP89BhQVzhnm9Qn9M6sYSFhasizvSah0ULSLKJlJIWQaSRgFWVKKXDeTCnQJ8qCIgU3JCx3p4ek0KW0wxXBFD0sZDYQAK8CDZFDTRoavI9dGh6ZbuQVpaFlXGhv3KRIoRXkl5g0B_twvld1WnZVedO2SbdSLN-BV4VDjzvM8vHUWRHZ9vNNeU3BdKLOUigvhncYwUUkvDHYHLL05YacPsNwRRMebi5ipqTFmqbEql7XHZkcUP2QeZoOuM9ZI9yoWPqtk"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-square border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Symmetric shot of several manual cranes stored in an industrial warehouse. The repeating patterns of the steel booms create a strong graphic composition. The lighting is soft and diffused, creating a calm yet powerful atmosphere of readiness and capability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmPcFMNVPkcGfrGkKFu5BJ920goYq5GTe6CTT4awCc_i0sp_KNjBKAG3DHlaNdunYnyrv4oGm-gYtbdbnwM0zPp_E_tBKRnmLrfXUlvPmp3y9GgtpbWyz95QYNwFlhEefochLgtTX4W_0skRbQ_kz5Y52ea_bM-g7Vsm0zDpqX7l0fUhcIEMvxggMA1kY2rOU5CWuJFvuF7ZqDsKx4X7TIvFQ380GtGngRlPkdBvicWVrTWK-o3RpHz2BmWFrDaBnYd06oGsXgAOLn"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-square border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Technical close-up of the pivot point and rotation gear of a heavy-duty manual crane. The image is crisp and detailed, showcasing the high-quality materials and craftsmanship. The lighting creates strong highlights on the metallic edges, emphasizing the precision of the manufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAQufdaQ0l4lRHIBDqtlc-1XUqCM6Fvhi7dmdK6CcNAg87ozTaNd-YfKpKzGLmmbBXHMfVw48DiFmykvuafg9yKboONWMt3rmnUtpjOHLLy2MYCLjLE6BXDJAYi8hewz_24Jh8tlF7ubsUzlilzIfnmpYcsjXwM7sRwjn2VI0PfvSeKKoXn0mPFjyVM6bJqoVkDadx8wUB9C0F8pWUwuzcLWQknl-drXktzZJWJDhgWdHvAKZ3d6T91KZgJNe1O2sCCkg1fejrLSSI"/>
+</div>
+</div>
+</section>
+<!-- Spec Sheet Row Style -->
+<section class="mb-section-gap">
+<h3 class="font-headline-md text-headline-md mb-8">Performance Comparison</h3>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-label-technical">
+<th class="p-6 text-left border-b border-outline-variant">EQUIPMENT CLASS</th>
+<th class="p-6 text-left border-b border-outline-variant">OPERATIONAL RADIUS</th>
+<th class="p-6 text-left border-b border-outline-variant">MAX CAPACITY</th>
+<th class="p-6 text-left border-b border-outline-variant">STATUS</th>
+</tr>
+</thead>
+<tbody class="text-body-md">
+<tr class="hover:bg-white/5 transition-colors">
+<td class="p-6 border-b border-outline-variant/20 font-bold">Manual Series A-1</td>
+<td class="p-6 border-b border-outline-variant/20">15 Meters</td>
+<td class="p-6 border-b border-outline-variant/20">1.5 Tons</td>
+<td class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="font-label-technical uppercase text-xs">Ready For Site</span>
+</div>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-white/5 transition-colors">
+<td class="p-6 border-b border-outline-variant/20 font-bold">Manual Series B-Special</td>
+<td class="p-6 border-b border-outline-variant/20">22 Meters</td>
+<td class="p-6 border-b border-outline-variant/20">2.0 Tons</td>
+<td class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-technical uppercase text-xs">In Maintenance</span>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="p-6 border-b border-outline-variant/20 font-bold">Custom Dismantling Rig</td>
+<td class="p-6 border-b border-outline-variant/20">Variable</td>
+<td class="p-6 border-b border-outline-variant/20">Up to 3.5 Tons</td>
+<td class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-technical uppercase text-xs">Custom Request</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim dark:bg-surface-dim w-full mt-section-gap border-t border-outline-variant transition-opacity opacity-80 hover:opacity-100">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-secondary-fixed-dim uppercase font-bold tracking-tighter">
+                    PT. TRUST ANUGRAH PERSADA
+                </div>
+<p class="text-on-surface-variant max-w-xs">
+                    Pioneering high-precision industrial lifting solutions across global urban landscapes since 2012.
+                </p>
+<div class="flex gap-4">
+<a class="material-symbols-outlined text-on-surface-variant hover:text-secondary" href="#">public</a>
+<a class="material-symbols-outlined text-on-surface-variant hover:text-secondary" href="#">mail</a>
+<a class="material-symbols-outlined text-on-surface-variant hover:text-secondary" href="#">call</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-label-technical text-on-surface uppercase font-bold">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Guestbook</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Technical Specs</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-technical text-on-surface uppercase font-bold">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Project Portfolio</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-technical text-on-surface uppercase font-bold">Global Presence</h4>
+<div class="w-full h-32 rounded bg-surface-container-high border border-outline-variant/30 flex items-center justify-center" data-location="Jakarta, Indonesia" style="">
+<span class="material-symbols-outlined text-outline text-4xl">location_on</span>
+<p class="text-xs font-label-technical ml-2 text-outline">JAKARTA HQ // 6.2088° S, 106.8456° E</p>
+</div>
+<p class="text-on-surface-variant text-xs mt-4">
+                    © 2026 PT. TRUST ANUGRAH PERSADA. Industrial-Grade Reliability. All Rights Reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for gallery hover effects
+        document.querySelectorAll('.group img').forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.parentElement.style.borderColor = 'rgba(254, 107, 0, 0.4)';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.parentElement.style.borderColor = 'rgba(143, 144, 151, 0.2)';
+            });
+        });
+
+        // Sticky header background transition
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-surface-container/90');
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('bg-surface-container/90');
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body></html>

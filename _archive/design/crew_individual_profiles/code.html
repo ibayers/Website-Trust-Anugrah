@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Crew | PT. TRUST ANUGRAH PERSADA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#101416",
+                        "secondary": "#ffb693",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e0e3e6",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container-low": "#191c1e",
+                        "secondary-container": "#fe6b00",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "on-tertiary-container": "#009099",
+                        "secondary-fixed": "#ffdbcc",
+                        "surface-variant": "#323538",
+                        "secondary-fixed-dim": "#ffb693",
+                        "inverse-on-surface": "#2d3133",
+                        "on-primary-fixed-variant": "#39475f",
+                        "background": "#101416",
+                        "on-tertiary": "#00363a",
+                        "on-secondary-fixed": "#351000",
+                        "surface-bright": "#363a3c",
+                        "surface-container-lowest": "#0b0f11",
+                        "surface-container-high": "#272a2d",
+                        "on-primary": "#233148",
+                        "outline": "#8f9097",
+                        "surface-tint": "#b9c7e4",
+                        "on-primary-container": "#74829d",
+                        "error-container": "#93000a",
+                        "outline-variant": "#44474d",
+                        "surface": "#101416",
+                        "tertiary-fixed-dim": "#00dbe9",
+                        "on-surface": "#e0e3e6",
+                        "tertiary": "#00dbe9",
+                        "primary": "#b9c7e4",
+                        "tertiary-container": "#001d1f",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-background": "#e0e3e6",
+                        "on-primary-fixed": "#0d1c32",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "on-surface-variant": "#c5c6cd",
+                        "surface-container": "#1d2022",
+                        "tertiary-fixed": "#7df4ff",
+                        "primary-container": "#0a192f",
+                        "on-tertiary-fixed": "#002022",
+                        "on-secondary": "#561f00",
+                        "on-secondary-container": "#572000",
+                        "inverse-primary": "#515f78",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#323538"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1440px",
+                        "margin-mobile": "16px",
+                        "section-gap": "128px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "label-technical": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-technical": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(29, 32, 34, 0.4);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(224, 227, 230, 0.1);
+            border-left: 1px solid rgba(224, 227, 230, 0.1);
+        }
+        .safety-glow {
+            box-shadow: 0 0 15px rgba(254, 107, 0, 0.3);
+        }
+        .tech-grid {
+            background-image: linear-gradient(rgba(68, 71, 77, 0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(68, 71, 77, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface-container/40 dark:bg-surface-container-high/40 backdrop-blur-xl border-b border-outline-variant/30 docked full-width top-0 sticky z-50 shadow-md">
+<nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">
+                PT. TRUST ANUGRAH PERSADA
+            </div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Tower Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Passenger Hoist</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Manual Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Genset</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-headline-md text-body-md" href="#">Gallery</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md">Guestbook</button>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 font-bold hover:brightness-110 transition-all safety-glow">Contact Us</button>
+</div>
+</nav>
+</header>
+<!-- SideNavBar (Hidden on smaller screens) -->
+<aside class="fixed left-0 h-full w-64 hidden lg:flex flex-col bg-surface-container-low/60 dark:bg-surface-container-lowest/60 backdrop-blur-lg border-r border-outline-variant/20 pt-24 pb-8 shadow-2xl z-40">
+<div class="px-6 mb-12">
+<div class="font-headline-md text-on-surface font-bold text-lg">Equipment Division</div>
+<div class="text-on-surface-variant text-sm">Precision Engineering</div>
+</div>
+<nav class="flex-grow flex flex-col gap-2 pr-4">
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full flex items-center gap-4 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">elevator</span>
+<span>Material Lift</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full flex items-center gap-4 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Sell</span>
+</a>
+<a class="bg-secondary-container text-on-secondary-container rounded-r-full py-3 px-6 flex items-center gap-4 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span>Biodata</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full flex items-center gap-4 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">description</span>
+<span>Manuals</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-outline-variant/20 text-secondary border border-secondary/30 py-3 font-bold hover:bg-secondary/10 transition-colors">Request Quote</button>
+</div>
+</aside>
+<main class="lg:ml-64 relative min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[80vh] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-dim via-surface-dim/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast photograph of a diverse team of professional construction engineers and crane operators standing on a high-altitude steel structure during a golden hour sunset. They are wearing reflective safety vests, hard hats, and holding digital tablets and structural blueprints. The background features a blurred cityscape of Jakarta with multiple tower cranes against a deep navy and orange sky. Modern industrial aesthetic with desaturated tones and high precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1u6x1TZaa1E0K4bq7FsmjDOd9H3CdZrxgx86dCr1oBOkntZBn79U9K5A5sUfn3gZIsxF4usS2lubeJ6Xoaud3O9f20zDGjl8XLAF_0kjL0YeqYYD0dp91Bz8WqDAPi_ghFaEvfZbRrV9SxBgZ1CrFAT7KLNNan_6glFj1tXLX-xuwXi08bowkpL6InDmjn8A9lNc9RghNm9jSG_-20-LKmGS2fKCAv5MTfUQOm4sWMLRvmcBXqVYLm-jroaaWuM2387atThRbBaPH"/>
+</div>
+<div class="relative z-20 px-margin-desktop max-w-4xl">
+<div class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 border border-secondary/30">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="font-label-technical text-label-technical text-secondary uppercase tracking-widest">On-Site Elite Crew</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6">The Pulse of <br/><span class="text-secondary">Precision</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
+                    Meet the licensed specialists driving Southeast Asia's skyline development. Our workforce is the foundation of every high-rise we support.
+                </p>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 font-bold text-lg safety-glow hover:scale-105 transition-transform">Consult Our Experts</button>
+<button class="border border-outline text-on-surface px-8 py-4 font-bold text-lg hover:bg-white/5 transition-colors">View Certifications</button>
+</div>
+</div>
+</section>
+<!-- Mission Statement -->
+<section class="px-margin-desktop py-section-gap tech-grid">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-gutter items-center">
+<div class="glass-panel p-12 border border-outline-variant/30">
+<h2 class="font-headline-lg text-headline-lg mb-8">Safety is <span class="text-secondary">Number 1</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        At PT. TRUST ANUGRAH PERSADA, we believe that technical excellence is inseparable from safety. Our "Crew First" protocol ensures that every operator, engineer, and safety officer undergoes rigorous monthly training and certification updates. We don't just move loads; we manage risk with absolute precision.
+                    </p>
+<div class="grid grid-cols-2 gap-8 border-t border-outline-variant/30 pt-8">
+<div>
+<div class="font-display-xl text-headline-lg text-secondary">100%</div>
+<div class="font-label-technical text-label-technical text-on-surface-variant uppercase">Certified Personnel</div>
+</div>
+<div>
+<div class="font-display-xl text-headline-lg text-secondary">0</div>
+<div class="font-label-technical text-label-technical text-on-surface-variant uppercase">LTI Record 2025</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img class="w-full h-auto shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="A macro close-up of an industrial safety helmet and a pair of professional rigging gloves resting on a stack of architectural blueprints. The lighting is cold and clinical, highlighting the texture of the weathered equipment and the precise lines of the drawings. In the background, out-of-focus steel girders create a structural framing. Futuristic industrial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-XNyEk3IjgzUYz-L84RINRQRuu1K6kk8N1qxwle3uAuKAkuBMHNafa4lLYLypaRgJpVBloI7ZyZDmFj_X7kynvmGQ8Wv0-kJEHyFQN-2nD3JGZVcpAgCQ3YzkkMfQsWmKmyy0D2YVw1XZsoOHQlQgfkMlJCDuJc7WzjV9QN4dpiba8DPbNSZkAdcZDjLlCYSS0ltOOt-LL-4RRzqZT_7TgRAa_XrjCe5RG1Oszk89AnvUyCWdWiFIrQQEyuYG23A7wcPLsrrtCBGs"/>
+</div>
+</div>
+</section>
+<!-- Expertise Categories -->
+<section class="bg-surface-container-lowest py-section-gap"><div class="px-margin-desktop max-w-container-max mx-auto"><div class="mb-16"><h2 class="font-headline-lg text-headline-lg mb-4 text-center">Meet Our <span class="text-secondary">Specialists</span></h2><div class="w-24 h-1 bg-secondary mx-auto"></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8"><div class="glass-panel overflow-hidden border border-outline-variant/20 hover:border-secondary/40 transition-all group"><div class="aspect-[4/5] relative overflow-hidden"><img alt="Andi Pratama" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl7Bbd6UBxqwqP8V74Uyl-G675H-nN9MDvPOSt0C0ckorV8iF0kiSS2PSii2yAL8PieXAx742_l1Ph1CepHal4DPvRbJwAbxADQoCZ0vCGW7rfnrjyp0ofoaIjdt8FaCXmM9OtVr5iZ40xYkYp3ijuH_nrz15b11kCo3vhLV-zZUgWbjm7pAcGStfXXIYhOPbAczpgrjFGkUHo8TjQfbfwFGySXRDsN90DEMfPQZGOW_Eqa2QveX2bs9ju470QlpgOZ2S2e5ovGtBi"/><div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div></div><div class="p-8"><div class="font-label-technical text-xs text-secondary uppercase tracking-widest mb-2">Senior Tower Crane Operator</div><h3 class="font-headline-md text-headline-md mb-4">Andi Pratama</h3><p class="text-on-surface-variant text-sm leading-relaxed mb-6">With over 15 years of high-altitude experience, Andi holds a Class A SIO certification. He has successfully spearheaded heavy lifting operations for Jakarta's most iconic skyscrapers, ensuring zero-incident precision.</p><div class="flex items-center gap-2 text-secondary font-label-technical text-xs"><span class="material-symbols-outlined text-sm">verified</span> SIO CLASS A</div></div></div><div class="glass-panel overflow-hidden border border-outline-variant/20 hover:border-secondary/40 transition-all group"><div class="aspect-[4/5] relative overflow-hidden"><img alt="Siti Aminah" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2fgMe7G2QCU8YFZ6iCrIT_HtKtyqDvWdHEpq1p2HnWVmRR4406QbWHTBC-LuWgZD_NZfhsvZjM8Hd5UBUqGRSUfAZibuPNFFHfMjYL_rtg-QhLGHgxlxU91LhLYJWfmDzvfn5q9wlQfJ5Nj21JAWiupEiwuC9r-NASA1UmJaSO35JUGhgu4llEX-VPvdVJSWPYk-xl_JJp0dJD-Yw13FBApxEb3FPRJfGnXNBJ5D-s6p-CFad1Wdk_GkgaQIT1qezUcTg2RqK6K7Z"/><div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div></div><div class="p-8"><div class="font-label-technical text-xs text-secondary uppercase tracking-widest mb-2">Lead Safety Officer</div><h3 class="font-headline-md text-headline-md mb-4">Siti Aminah</h3><p class="text-on-surface-variant text-sm leading-relaxed mb-6">Siti is a certified K3 specialist with a decade of experience in industrial risk management. She developed PT. TAP's signature 'Crew First' protocol, maintaining our perfect LTI record through rigorous site-wide behavioral safety audits.</p><div class="flex items-center gap-2 text-secondary font-label-technical text-xs"><span class="material-symbols-outlined text-sm">security</span> HSE CERTIFIED</div></div></div><div class="glass-panel overflow-hidden border border-outline-variant/20 hover:border-secondary/40 transition-all group"><div class="aspect-[4/5] relative overflow-hidden"><img alt="Budi Santoso" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0l_rEeQHLQjRHbN82rLzDdc89ZnDNn8rr7MlS2hbBb6I9EpmCiodY6Wz7mvH948-GjxZcfmqhjUExnRrQe9NFjoimjzbfxIAvZs745Fc23Po3W-hoLb-e5WI2yC6NSZucOkyTE8kirAW4KbA3s0A4vXCYT8ddUxZ92j5kYIYOVtyb9oiYwNKfbsOp97o8RI6wXe44NjZrO_NOsXtlPAb8erUdmNwFeSXwdV749p5vETvAEG45iIQYHcZU9j4SCi825lY662k9uBN"/><div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div></div><div class="p-8"><div class="font-label-technical text-xs text-secondary uppercase tracking-widest mb-2">Principal Project Engineer</div><h3 class="font-headline-md text-headline-md mb-4">Budi Santoso</h3><p class="text-on-surface-variant text-sm leading-relaxed mb-6">Budi oversees the structural integrity of every deployment. Specializing in wind-load calculations and complex rigging strategies, he has been a cornerstone of PT. TAP's engineering excellence since 2008.</p><div class="flex items-center gap-2 text-secondary font-label-technical text-xs"><span class="material-symbols-outlined text-sm">architecture</span> P.ENG SPECIALIST</div></div></div></div></div></section>
+<!-- Field Assets Gallery -->
+<section class="px-margin-desktop py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Field Operations</h2>
+<p class="text-on-surface-variant max-w-xl">A visual record of our elite crew executing complex maneuvers on major infrastructure projects across the region.</p>
+</div>
+<button class="text-secondary flex items-center gap-2 font-bold hover:gap-4 transition-all">
+                        VIEW FULL ARCHIVE <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square relative group overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAONFJuKVn8smQJlmH9WHxGIklPOgqP7aVkjzQbbhrpvOuelzhsiOJ4C1ZHpC8Pi_UY1V3iUFcGeg0cUIQqoz04IgSG-1sfuRL0MtvcHoe8EpLuHwv1oDbWL1OZYPU8RsgdzBXWWtQx9YFfMv_nctOw9-6ZrvBUMh9Hwo9h-zmIQ3KT_5YdkAJVKMILDPdAW-QMR-MFMfJqjqWocwea2-P3mX5TgXnS-lWPFaZmzhrfVkHlcotodvWfoTG6HB5HOuMukR_Ow9Vu9wwY"/>
+<div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-white text-4xl">fullscreen</span>
+</div>
+</div>
+<div class="aspect-square relative group overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" data-alt="Action shot of a crane operator inside a high-tech cabin looking out over Jakarta's skyline. The operator is focused, hands on joysticks, with digital readouts reflecting on the window. High contrast, desaturated blue tones with safety orange accents from the control panels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2EMh1OSDtZWwe2LNVozeoz1V--7ks6M2delN95lL36yB43hxCkqciVmA3vYA39BrDVpy6trZpqz2NTNyCOX8EPhqA1x02vjf3P_l5uXazjnWgYvWiTWF0NnE5SfT1bDlUwX_aovUKvWBnLYI9YX3wpOHiQtBGHyHx8aiUqD0qfsL0j8EVekI7IUS3AMQfh7hTzbKGueNSmeD7GYLw00Ju-4gOAZ5fxlX16pZQMWN7mvRYHK7-AmAjHfc1gb6x2S9R2-CoSD0SAmhg"/>
+<div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-white text-4xl">fullscreen</span>
+</div>
+</div>
+<div class="aspect-square relative group overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" data-alt="A ground-level shot looking up at a massive tower crane structure being assembled by engineers in high-visibility gear. They are securing large bolts with industrial wrenches. Low angle, powerful perspective, industrial steel textures and a deep navy sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7YdyplBi3JSdDRlmLgVyxpvlmS-HBlyuH5YjQ5AvxCsXA5Gy7bjUgFCtGx7LguhQPPSkrH7VTEeZhYG5dUt_1j5Vt-95aDTPbByslIvxbRgYKCD6CVnYUrD0UelFMRuC4ts7TjZ3fHKNZx2UBScvwAEdUj2sPuxjV0cWtn5eb_8PMSCYPsAOPWfYZIyvGZLTqvR0XfTpzBsV48e0IMdzTwr4cMWZ6cO20HEvHbLpDeIQC7VrwzGnr674kUbZfd_6V7s9J5r-K-Fs9"/>
+<div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-white text-4xl">fullscreen</span>
+</div>
+</div>
+<div class="aspect-square relative group overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" data-alt="A project engineer and a safety officer standing on a concrete foundation, discussing technical drawings on a large industrial monitor. Rain and wind effects visible, emphasizing their resilience. Night lighting with high-powered floodlights creating sharp highlights and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhvCIpp74ObWMSutOzgWQQxsvAxshWCDRoeY9TYlBpCAz0HoyBrLBBAeQGbeWJogSb0b5ORQecSpKHNq-x7PbgqEFjPCEUdkj4gv6G6ZNvazwuq3hYAvnDpi2RW6j4vTSxzxqxkepWcPSj3huPE0PL-gQOZU-NjNpRWVuycmatV4rqW7whLTmJjrJ4nlb-Nc2wdsfzxVypvcG-z4H9CvWFkm-OnNbcOUSlEiUoysVTfhIghLyEJcUppcyRTLHETnPN-iRqrOEhoWO4"/>
+<div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-white text-4xl">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recruitment/CTA -->
+<section class="px-margin-desktop pb-section-gap">
+<div class="max-w-container-max mx-auto bg-secondary-container p-12 lg:p-24 relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 tech-grid opacity-20"></div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-secondary-fixed mb-8">Join Our Elite Team</h2>
+<p class="text-on-secondary-fixed-variant text-lg mb-12 font-medium">
+                        Are you a licensed specialist looking to build the future? We are always seeking certified operators and structural engineers to join our world-class workforce.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-on-secondary-fixed text-white px-10 py-5 font-bold hover:bg-black transition-colors shadow-xl">Apply Now</button>
+<button class="border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 font-bold hover:bg-on-secondary-fixed/10 transition-colors">Career Path PDF</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-dim dark:bg-surface-dim border-t border-outline-variant w-full mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-secondary-fixed-dim font-bold">PT. TRUST ANUGRAH PERSADA</div>
+<p class="text-on-surface-variant text-sm max-w-xs">Industrial-grade reliability in every bolt. Leading the Southeast Asian construction industry since 1993.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-on-surface uppercase text-xs tracking-widest">Navigation</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Guestbook</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Project Portfolio</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-on-surface uppercase text-xs tracking-widest">Legal</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Technical Specs</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="flex flex-col gap-6 items-start md:items-end">
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">language</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">mail</span>
+</button>
+</div>
+<div class="text-on-surface-variant text-xs text-left md:text-right">
+                        © 2026 PT. TRUST ANUGRAH PERSADA.<br/>Industrial-Grade Reliability.
+                    </div>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        // Micro-interactions for smooth parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if(heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
+        });
+
+        // Hover effect for expertise cards to add glow dynamically
+        const cards = document.querySelectorAll('.glass-panel');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

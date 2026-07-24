@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Genset Division | PT. TRUST ANUGRAH PERSADA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Hanken+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#fe6b00",
+                        "on-surface": "#e0e3e6",
+                        "inverse-on-surface": "#2d3133",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#ffb693",
+                        "surface-container-highest": "#323538",
+                        "outline-variant": "#44474d",
+                        "surface-dim": "#101416",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-fixed": "#351000",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "on-secondary": "#561f00",
+                        "on-primary-fixed-variant": "#39475f",
+                        "secondary": "#ffb693",
+                        "on-secondary-container": "#572000",
+                        "on-tertiary": "#00363a",
+                        "surface-container-lowest": "#0b0f11",
+                        "surface-bright": "#363a3c",
+                        "inverse-primary": "#515f78",
+                        "on-error": "#690005",
+                        "outline": "#8f9097",
+                        "on-background": "#e0e3e6",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "surface": "#101416",
+                        "on-surface-variant": "#c5c6cd",
+                        "inverse-surface": "#e0e3e6",
+                        "primary": "#b9c7e4",
+                        "surface-tint": "#b9c7e4",
+                        "on-tertiary-container": "#009099",
+                        "surface-container-low": "#191c1e",
+                        "secondary-fixed": "#ffdbcc",
+                        "surface-variant": "#323538",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#0d1c32",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "tertiary": "#00dbe9",
+                        "on-primary-container": "#74829d",
+                        "tertiary-fixed": "#7df4ff",
+                        "surface-container-high": "#272a2d",
+                        "primary-container": "#0a192f",
+                        "on-tertiary-fixed": "#002022",
+                        "error": "#ffb4ab",
+                        "on-primary": "#233148",
+                        "tertiary-fixed-dim": "#00dbe9",
+                        "surface-container": "#1d2022",
+                        "tertiary-container": "#001d1f",
+                        "background": "#101416"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "section-gap": "128px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-technical": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-technical": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(16, 20, 22, 0.4);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .orange-glow {
+            box-shadow: 0px 0px 15px rgba(254, 107, 0, 0.3);
+        }
+        .spec-row:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .scroll-mask {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container/30 selection:text-secondary-fixed">
+<!-- NAVIGATION SHELL -->
+<nav class="bg-surface-container/40 dark:bg-surface-container-high/40 backdrop-blur-xl border-b border-outline-variant/30 shadow-md docked full-width top-0 sticky z-50 flex justify-between items-center px-margin-desktop py-4 w-full transition-all duration-300 ease-in-out">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">
+            PT. TRUST ANUGRAH PERSADA
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Tower Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Passenger Hoist</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Manual Crane</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-headline-md text-body-md" href="#">Genset</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Gallery</a>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container font-bold rounded hover:brightness-110 transition-all orange-glow">Contact Us</button>
+</div>
+</nav>
+<!-- SIDE NAVIGATION (WEB ONLY) -->
+<aside class="bg-surface-container-low/60 dark:bg-surface-container-lowest/60 backdrop-blur-lg border-r border-outline-variant/20 shadow-2xl fixed left-0 h-full w-64 hidden lg:flex flex-col pt-24 pb-8 ease-out duration-200 z-40">
+<div class="px-6 mb-12">
+<h3 class="font-headline-md text-on-surface text-lg">Equipment Division</h3>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">Precision Engineering</p>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined">elevator</span>
+<span>Material Lift</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Sell</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span>Biodata</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined">description</span>
+<span>Manuals</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full py-4 bg-primary-container text-primary font-bold border border-primary/20 rounded-lg hover:bg-primary/10 transition-all">Request Quote</button>
+</div>
+</aside>
+<!-- MAIN CONTENT CANVAS -->
+<main class="lg:ml-64 min-h-screen relative overflow-hidden">
+<!-- HERO SECTION -->
+<section class="relative h-[819px] flex items-end px-margin-desktop pb-section-gap">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, low-angle shot of a high-performance industrial diesel generator set inside a modern engineering facility. The lighting is moody and dramatic, with Electric Blue highlights and Safety Orange accents reflecting off the brushed aluminum surfaces. Heavy industrial textures and technical grid overlays reinforce a sense of precision and power. The color palette consists of deep navy and steel gray tones with high contrast." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAiNfAFrcwNLRNxK_M__M3NxazRHok9Zq0kun8BlEn11grIBQlfG0srGPED-TYXiqJcFr31qzzQ3qSaq_KxlWjt7sJzuULvcOhZuVESfwFXacIXoPWzyTBKYxXNO6lU-Avap5DGqFOjQQe_oSuDcT5J1upY6Ww4svO7jkHN5UNPmrTHWNfZCJVOVTTg81wEInPFiHiJ11HON0Bjw7n98ss6KjhQhXNG2-OMFLOscrJ-V2W9HqjpEcT5SW12Bghm5wRKF4ylxgoMsPjL')"></div>
+</div>
+<div class="relative z-20 max-w-4xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-12 h-1 bg-secondary-container"></span>
+<span class="font-label-technical text-secondary uppercase tracking-[0.2em]">Division: Industrial Power</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6">Uninterrupted <span class="text-secondary">Precision</span> Energy.</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">
+                    Deploying elite diesel generator systems engineered for critical infrastructure, tower cranes, and high-load industrial environments. Reliability isn't a feature; it's our standard.
+                </p>
+</div>
+</section>
+<!-- BENTO GRID SPECIFICATIONS -->
+<section class="px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- CONTENT CARD: MISSION -->
+<div class="md:col-span-8 glass-panel p-10 rounded-xl">
+<h2 class="font-headline-lg text-headline-lg mb-6">Integrated Power Solutions</h2>
+<p class="text-body-md text-on-surface-variant leading-relaxed mb-8">
+                        A diesel generator is the synergy of a high-compression diesel engine and an precision alternator designed to generate high-fidelity electric energy. These units serve as critical life-lines for remote sites or emergency power failsafes where grid connection is unavailable or unstable.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="p-4 border-l-2 border-secondary/30">
+<h4 class="font-label-technical text-secondary text-xs uppercase mb-1">Brands</h4>
+<p class="text-on-surface font-bold">Mitsubishi, Nissan, Cummins</p>
+</div>
+<div class="p-4 border-l-2 border-secondary/30">
+<h4 class="font-label-technical text-secondary text-xs uppercase mb-1">Capacities</h4>
+<p class="text-on-surface font-bold">150 kVA — 250 kVA</p>
+</div>
+<div class="p-4 border-l-2 border-secondary/30">
+<h4 class="font-label-technical text-secondary text-xs uppercase mb-1">Compliance</h4>
+<p class="text-on-surface font-bold">ISO 8528-5</p>
+</div>
+<div class="p-4 border-l-2 border-secondary/30">
+<h4 class="font-label-technical text-secondary text-xs uppercase mb-1">Service</h4>
+<p class="text-on-surface font-bold">24/7 Support</p>
+</div>
+</div>
+</div>
+<!-- IMAGE CARD 1 -->
+<div class="md:col-span-4 glass-panel overflow-hidden rounded-xl group relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="Close-up detail of a professional Mitsubishi industrial generator engine. The focus is on the intricate fuel injection system and polished metal components. Cinematic lighting with subtle blue tones and orange reflections from the safety markings. Futuristic construction aesthetic with technical overlays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKobNQVqjkottnhH2R-PD7ydJDwdR1u-N5_mhfISYUJwQ0ameAxEJt0fDHezS7ZcvZ5fbZchFUq3h2dtZALCZ-bxAw4Q377BrRpmYoMkPVlq_boa7j35uWHb0VSJLEBuSr5YKcIBuYQJm6klLfxVprZVNjjLLPaYYRBdBpTEcpOKSoTYPlrNqiWyIneCsm3HRP3UdpbzQQOex0NqMhoJa9geXYEJfZebDJmnDYKYgICLAjVtvEmLNl2KCX7C1NvZwRJbXIXHNGl1KV')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent p-6 flex flex-col justify-end">
+<span class="font-label-technical text-secondary text-xs">SPEC: MITSUBISHI SERIES</span>
+</div>
+</div>
+<!-- IMAGE GRID: GALLERY -->
+<div class="md:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-gutter mt-gutter">
+<div class="aspect-square glass-panel overflow-hidden rounded-xl border border-white/5">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A row of heavy-duty Nissan industrial generators being prepared for shipping. The color palette is muted gray and navy with sharp highlights. High-performance industrial engineering style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnQLAW5Tj428D7hQFxuwizP0QuSghxyYQHd30P7Kex29p2NnSf-WSLIgyfreH8q7Te8rkNggEDjQzvCM87kHaVv8Y9EF6ndJli9gB1IvyfUtEJR6OpMxP6BJgTxIoD9hkEXSipYfZRGm_SdxGbaw7ETsfpEgOSzVe_NhgZf9THKPrb4ka9kQFoH1QHoGpUwB1k3O5PRWRSWBVlsjY_R8hMiy8llLT58CzdkLDK16AzPThso8NfqDxdhk3tmmBD6-AC-otsg1acYXc2"/>
+</div>
+<div class="aspect-square glass-panel overflow-hidden rounded-xl border border-white/5">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Large-scale Cummins generator set installation at a skyscraper construction site. The setting is sunset with high contrast shadows and warm industrial glows. Futuristic reliability theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF_MMbHWvCattY7i80wepN3UkTXJxfGh2RdPsRaiRlBhL88mNBzGL48IneIuzv_FKS0pDPadFA7EK4I_jtw__dDkOchNbzWK1uI6iX70jHSFqsDF84X1VbjUPTVBKoXPlUb8_GO6hWW6OpJavbLB_V3zThMcTlOmhD-nMbHuOeq1luMCFtVMOHoMX1Owxt-fvhOQn7ySliuDhVYm-nPp6llpd5_eE7NwdVmRT0XfjWPDOhx3Ommyum6DzcqmfCDUtLCYfpaiMLQMsw"/>
+</div>
+<div class="aspect-square glass-panel overflow-hidden rounded-xl border border-white/5">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Technician monitoring a digital control panel on a massive power generator. The UI on the screen shows wave patterns and diagnostic data in cyan. Blue ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLmhqMQJ32JIURilULwQFOHbp6vrr9tou_GMGBHdqUJugvtApnNN1tMNKlKTHG4e4bVeGgBeqeePtJhuAfdBasm2ZtbfDLs95oap4blbMCyo3TFLLgEKkcnMCMAiX5QZVB6y1DVB8drur8g7iYnfVT6w4mrv2WMQDOVGYeLb7U9GhZ6TFKbltmRKzSWkdl2jWOwGr-H_P5itRF_zoM1afz1wIVHN4QPxAhhH1oiY1v0s2npQIUdWZZ6Ej2jG_lWFxVlq5Aixsq-oJ_"/>
+</div>
+<div class="aspect-square glass-panel overflow-hidden rounded-xl border border-white/5">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Aerial view of a mobile generator unit providing power to a remote industrial complex. Rugged landscape, steel textures, and atmospheric lighting. Modern-industrial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClu5scgQbsiIiKl-R_mpdQQUHOK5VMDAQOl48AgWkw5ssu6xdYDPU57BUF3ts7vfl5RhecNzrcdZBA-9vD_r70se6JFsixC9M56WR80ZxGewXq1OZLQsJ_gtpCVVUdrqnYHI-hOiZ1Eyw6pufA4nlhxh52mYVxuEOzTY5nN468hbOSbXLAvIYXCAeCSQ04p-5z8TbsiQtHILGAo8aGiBmRtIHFcVK_5aXZMbi3uSAMXl5O0enJ3CCRWCY0sgUoCqxRBodXJRkw0-SG"/>
+</div>
+</div>
+<!-- SPEC SHEET LIST -->
+<div class="md:col-span-12 glass-panel rounded-xl mt-gutter overflow-hidden">
+<div class="bg-surface-container-high px-10 py-6 border-b border-outline-variant/30 flex justify-between items-center">
+<h3 class="font-headline-md text-on-surface">Technical Operational Requirements</h3>
+<span class="material-symbols-outlined text-secondary">power</span>
+</div>
+<div class="flex flex-col">
+<div class="spec-row grid grid-cols-12 px-10 py-5 group hover:bg-secondary-container/5 transition-colors">
+<div class="col-span-1 text-secondary font-label-technical">01</div>
+<div class="col-span-7 font-bold">Capacity Threshold</div>
+<div class="col-span-4 text-on-surface-variant">150 kVA to 250 kVA range compatibility</div>
+</div>
+<div class="spec-row grid grid-cols-12 px-10 py-5 group hover:bg-secondary-container/5 transition-colors">
+<div class="col-span-1 text-secondary font-label-technical">02</div>
+<div class="col-span-7 font-bold">Operator Availability</div>
+<div class="col-span-4 text-on-surface-variant">Full 24-hour stand-by professional personnel</div>
+</div>
+<div class="spec-row grid grid-cols-12 px-10 py-5 group hover:bg-secondary-container/5 transition-colors">
+<div class="col-span-1 text-secondary font-label-technical">03</div>
+<div class="col-span-7 font-bold">Maintenance Protocol</div>
+<div class="col-span-4 text-on-surface-variant">Monthly service cycles and comprehensive overhauls</div>
+</div>
+<div class="spec-row grid grid-cols-12 px-10 py-5 group hover:bg-secondary-container/5 transition-colors">
+<div class="col-span-1 text-secondary font-label-technical">04</div>
+<div class="col-span-7 font-bold">Leasing Model</div>
+<div class="col-span-4 text-on-surface-variant">Flexible monthly rental arrangements</div>
+</div>
+<div class="spec-row grid grid-cols-12 px-10 py-5 group hover:bg-secondary-container/5 transition-colors">
+<div class="col-span-1 text-secondary font-label-technical">05</div>
+<div class="col-span-7 font-bold">Hardware Support</div>
+<div class="col-span-4 text-on-surface-variant">Immediate spare part replacement and technical swaps</div>
+</div>
+<div class="spec-row grid grid-cols-12 px-10 py-5 group hover:bg-secondary-container/5 transition-colors">
+<div class="col-span-1 text-secondary font-label-technical">06</div>
+<div class="col-span-7 font-bold">Acoustic Shielding</div>
+<div class="col-span-4 text-on-surface-variant">Open-frame or Sound-proof (Silent) configurations</div>
+</div>
+</div>
+</div>
+<!-- APPLICATION CARDS -->
+<div class="md:col-span-4 glass-panel p-8 rounded-xl border-l-4 border-secondary-container">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary scale-125">construction</span>
+<h4 class="font-headline-md text-lg">Heavy Lifting</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">Optimized power delivery for high-surge loads required by Tower Cranes and Passenger Hoists.</p>
+<button class="text-secondary font-label-technical text-xs flex items-center gap-2 hover:translate-x-2 transition-transform">
+                        VIEW SCHEMATICS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="md:col-span-4 glass-panel p-8 rounded-xl border-l-4 border-tertiary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-tertiary scale-125">apartment</span>
+<h4 class="font-headline-md text-lg">Infrastructure</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">Backup power for residential apartments, housing complexes, and mission-critical labs.</p>
+<button class="text-tertiary font-label-technical text-xs flex items-center gap-2 hover:translate-x-2 transition-transform">
+                        DEPLOYMENT PLANS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="md:col-span-4 glass-panel p-8 rounded-xl border-l-4 border-primary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary scale-125">precision_manufacturing</span>
+<h4 class="font-headline-md text-lg">Factory Grid</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">Stable voltage regulation for factory automation and large-scale manufacturing lighting.</p>
+<button class="text-primary font-label-technical text-xs flex items-center gap-2 hover:translate-x-2 transition-transform">
+                        FACTORY SPECS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION SECTION -->
+<section class="px-margin-desktop py-section-gap relative overflow-hidden">
+<div class="absolute inset-0 bg-secondary-container/5 z-0"></div>
+<div class="relative z-10 glass-panel p-16 rounded-2xl flex flex-col items-center text-center max-w-5xl mx-auto border-outline-variant/30">
+<h2 class="font-display-xl text-headline-lg mb-4">Ready for Deployment?</h2>
+<p class="text-body-lg text-on-surface-variant mb-10 max-w-xl">Our experts handle everything from site assessment to 24/7 maintenance. Get a precise quote for your next project today.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="px-12 py-5 bg-secondary-container text-on-secondary-container font-extrabold rounded-lg hover:scale-105 active:scale-95 transition-all orange-glow">
+                        GET A CUSTOM QUOTE
+                    </button>
+<button class="px-12 py-5 border border-outline text-on-surface font-bold rounded-lg hover:bg-white/5 transition-all">
+                        VIEW PORTFOLIO
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="bg-surface-dim dark:bg-surface-dim border-t border-outline-variant w-full mt-section-gap opacity-80 hover:opacity-100 transition-opacity">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div>
+<h2 class="font-headline-md text-secondary-fixed-dim text-headline-md font-bold mb-6">PT. TRUST ANUGRAH PERSADA</h2>
+<p class="text-on-surface-variant text-body-md max-w-xs">
+                    Leading provider of industrial construction machinery and power solutions since 1998.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-label-technical text-on-surface font-bold mb-2">QUICK LINKS</h3>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Guestbook</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Technical Specs</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Project Portfolio</a>
+</div>
+<div class="flex flex-col justify-between items-end md:items-start lg:items-end">
+<div class="flex gap-6 mb-8">
+<span class="material-symbols-outlined text-secondary-fixed-dim cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+<p class="text-on-surface-variant text-sm font-label-technical">
+                    © 2026 PT. TRUST ANUGRAH PERSADA. Industrial-Grade Reliability.
+                </p>
+</div>
+</div>
+</footer>
+<!-- INTERACTION SCRIPTS -->
+<script>
+        // Smooth reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(panel);
+        });
+
+        // Hover effect for side nav
+        document.querySelectorAll('aside nav a').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
+            });
+            link.addEventListener('mouseleave', () => {
+                link.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 0";
+            });
+        });
+    </script>
+</body></html>

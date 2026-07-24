@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tower Crane | PT. TRUST ANUGRAH PERSADA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fe6b00",
+                    "on-surface": "#e0e3e6",
+                    "inverse-on-surface": "#2d3133",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb693",
+                    "surface-container-highest": "#323538",
+                    "outline-variant": "#44474d",
+                    "surface-dim": "#101416",
+                    "primary-fixed": "#d6e3ff",
+                    "on-secondary-fixed": "#351000",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "on-secondary": "#561f00",
+                    "on-primary-fixed-variant": "#39475f",
+                    "secondary": "#ffb693",
+                    "on-secondary-container": "#572000",
+                    "on-tertiary": "#00363a",
+                    "surface-container-lowest": "#0b0f11",
+                    "surface-bright": "#363a3c",
+                    "inverse-primary": "#515f78",
+                    "on-error": "#690005",
+                    "outline": "#8f9097",
+                    "on-background": "#e0e3e6",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "surface": "#101416",
+                    "on-surface-variant": "#c5c6cd",
+                    "inverse-surface": "#e0e3e6",
+                    "primary": "#b9c7e4",
+                    "surface-tint": "#b9c7e4",
+                    "on-tertiary-container": "#009099",
+                    "surface-container-low": "#191c1e",
+                    "secondary-fixed": "#ffdbcc",
+                    "surface-variant": "#323538",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#0d1c32",
+                    "on-secondary-fixed-variant": "#7a3000",
+                    "tertiary": "#00dbe9",
+                    "on-primary-container": "#74829d",
+                    "tertiary-fixed": "#7df4ff",
+                    "surface-container-high": "#272a2d",
+                    "primary-container": "#0a192f",
+                    "on-tertiary-fixed": "#002022",
+                    "error": "#ffb4ab",
+                    "on-primary": "#233148",
+                    "tertiary-fixed-dim": "#00dbe9",
+                    "surface-container": "#1d2022",
+                    "tertiary-container": "#001d1f",
+                    "background": "#101416"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1440px",
+                    "section-gap": "128px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-technical": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-xl": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-technical": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(16, 20, 22, 0.4);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(143, 144, 151, 0.2);
+            border-left: 1px solid rgba(143, 144, 151, 0.2);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(16, 20, 22, 0) 0%, rgba(16, 20, 22, 1) 100%);
+        }
+        .safety-glow {
+            box-shadow: 0px 0px 15px rgba(254, 107, 0, 0.3);
+        }
+        .technical-grid {
+            background-image: radial-gradient(circle, #44474d 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface-container/40 dark:bg-surface-container-high/40 backdrop-blur-xl border-b border-outline-variant/30 shadow-md flex justify-between items-center px-margin-desktop py-4 w-full">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">
+            PT. TRUST ANUGRAH PERSADA
+        </div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Home</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-headline-md text-body-md" href="#">Tower Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Passenger Hoist</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Manual Crane</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Genset</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-body-md" href="#">Gallery</a>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container font-bold rounded-lg hover:brightness-110 transition-all safety-glow">Contact Us</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface hover:bg-white/5 transition-colors rounded-lg">Guestbook</button>
+</div>
+</nav>
+<!-- Side Navigation (Suppressed on focus screens but shown here for Brand Anchor completeness) -->
+<aside class="fixed left-0 h-full w-64 hidden lg:flex flex-col bg-surface-container-low/60 dark:bg-surface-container-lowest/60 backdrop-blur-lg border-r border-outline-variant/20 shadow-2xl pt-24 pb-8 z-40">
+<div class="px-6 mb-8">
+<h3 class="font-headline-md text-on-surface text-lg">Equipment Division</h3>
+<p class="text-on-surface-variant text-xs opacity-70">Precision Engineering</p>
+</div>
+<div class="flex flex-col gap-1">
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform ease-out duration-200" href="#">
+<span class="material-symbols-outlined align-middle mr-3">elevator</span>Material Lift
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform ease-out duration-200" href="#">
+<span class="material-symbols-outlined align-middle mr-3">shopping_cart</span>Sell
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform ease-out duration-200" href="#">
+<span class="material-symbols-outlined align-middle mr-3">account_circle</span>Biodata
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high py-3 px-6 rounded-r-full hover:translate-x-1 transition-transform ease-out duration-200" href="#">
+<span class="material-symbols-outlined align-middle mr-3">description</span>Manuals
+            </a>
+</div>
+<div class="mt-auto px-6">
+<button class="w-full py-3 bg-secondary text-on-secondary font-bold rounded-lg">Request Quote</button>
+</div>
+</aside>
+<main class="lg:pl-64">
+<!-- Hero Section -->
+<header class="relative h-[819px] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="A cinematic, low-angle shot of a massive Potain tower crane silhouetted against a dramatic sunset at a metropolitan construction site. The lighting is high-contrast with deep blues and vibrant safety orange glows. The style is futuristic and industrial, with sharp architectural lines and a moody, atmospheric navy sky. Cinematic depth of field isolates the intricate steel lattice of the crane." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH72o4w5GvraeYyjfcMvW9d4SZxNEwDCpmbH9S1-r2TkG7awbCIe61Zd2cQXuCbEZyyY44FYn_PDpLIeOSN2yrCm0_D9JFs9l_K_oBB-vHhZd0Pfmp7XLjsnPjCFYnvqin10OFgvLajKLVSSBBkLYdquWWx6nau-mR4oS2iBz60segLpH0WmERKYx0Q85UFhPnQKqXwzLvB9qNGDtf8MIF8sseiaOUaZ-YCKEzEnlluKaMFVwpJx3X31kcm2UWGA7x9EtjmO8kNsVs"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-4xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-12 h-[2px] bg-secondary"></span>
+<span class="font-label-technical text-secondary tracking-widest uppercase">Precision Elevation Systems</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6 leading-tight">Tower Crane<br/><span class="text-secondary">Solutions 2026</span></h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
+                    Elevating the skyline of Jakarta and beyond. PT. TRUST ANUGRAH PERSADA provides comprehensive crane rental, erection, and dismantling services with industrial-grade reliability and certified precision.
+                </p>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-secondary-container text-on-secondary-container font-bold text-lg rounded hover:scale-105 transition-transform safety-glow">Explore Fleet</button>
+<button class="px-8 py-4 border border-secondary text-secondary font-bold text-lg rounded hover:bg-secondary/10 transition-colors">Technical Specs</button>
+</div>
+</div>
+</header>
+<!-- Equipment Showcase (Bento Grid) -->
+<section class="px-margin-desktop py-section-gap technical-grid">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">TC Equipment Fleet</h2>
+<p class="text-on-surface-variant">Global standard machinery for diverse construction requirements.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-4 rounded-full border border-outline-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="p-4 rounded-full border border-secondary text-secondary hover:bg-secondary/10 transition-colors"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Featured Item -->
+<div class="md:col-span-8 group relative overflow-hidden glass-panel rounded-xl aspect-video">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" data-alt="A detailed wide shot of a Potain Tower Crane active on a high-rise construction site in Jakarta. The image captures the immense scale of the equipment against a clear morning sky. High-contrast industrial tones, with visible steel textures and cable details. Sharp, professional architectural photography style with cool blue and warm orange highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO7N9hke1o7c3RuojarxAGJGenxTWCr6Mh17d4w1FeqyIOR6EzTPt5KMLSFAsQPz0m9sD8c1CkIqC9fbPr0vAcRymYtRUroqp1cFD8rgJQqwJLy1jAMmcftGW-CrN_OdLTLb3Ppvr6pbqrZYQ2tvzW_HjwBcNXZkmg_pQBtXItKuwIoG1XibDVmIRS3g1lp5nLojS4Nib3Zt2bN6BrGXGvALIBuvb8vBsqq3CXHHp766P-fXbkazmVCgVHOi4uckRhruRV9TJfHYj6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-secondary text-on-secondary font-label-technical text-xs rounded-full">MOST POPULAR</span>
+<span class="px-3 py-1 border border-outline text-on-surface font-label-technical text-xs rounded-full">FRENCH ENGINEERING</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Potain FO23 / B</h3>
+<p class="text-on-surface-variant max-w-md">The industry gold standard for versatility and load capacity. Optimized for Jakarta's dense urban environments.</p>
+</div>
+</div>
+<!-- Secondary Item -->
+<div class="md:col-span-4 group relative overflow-hidden glass-panel rounded-xl">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" data-alt="Close-up technical shot of a Raimondi ER180 crane's slewing unit and cabin. The focus is on the precision machinery and brushed aluminum surfaces. Lighting is dramatic, highlighting the structural rivets and heavy-duty components. Modern industrial aesthetic with a dark navy and slate gray palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo1_KIFgIZkR_gMz_xR3ax1K9-4_EpIoizJITOChe-azhefmbiocWm1UXNUdGinriybc-IHlxx6C6izkxHJXwq1Q8ihd75fdqIpX2aTMI18cZn0I8OAkwM1Jc4KRL-nCtRZP_RVGQ7YSyXlaJR28gNxdbbEvcy4yoI2SQyTbEcJqCJdiSLngp7_S8Y0Kq1y27oCxs4IRSpBPR1N2EkUpN5DJ3UzCxd7uLf5tQ4dk8dsGYoahQh3wweA_JhrwUaE3HtopJrttVzL85C"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
+<div class="absolute bottom-0 p-6">
+<h3 class="font-headline-md text-2xl mb-1">Raimondi ER180</h3>
+<p class="text-on-surface-variant text-sm">Italian precision for heavy lifting tasks.</p>
+<button class="mt-4 text-secondary font-label-technical flex items-center gap-2 group/btn">
+                            DATA SHEET <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">download</span>
+</button>
+</div>
+</div>
+<!-- Triple Row -->
+<div class="md:col-span-4 glass-panel p-6 rounded-xl border border-outline-variant/30">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+</div>
+<h4 class="font-headline-md text-xl mb-4">Jianglu JL120/JL150</h4>
+<p class="text-on-surface-variant text-sm mb-6">Robust performance with high-reliability electronics for continuous operation in variable weather conditions.</p>
+<ul class="space-y-2 font-label-technical text-xs text-secondary opacity-80">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> 50m Max Jib Length</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> 8T Load Capacity</li>
+</ul>
+</div>
+<div class="md:col-span-4 glass-panel p-6 rounded-xl border border-outline-variant/30">
+<div class="w-12 h-12 rounded bg-tertiary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary">settings_input_component</span>
+</div>
+<h4 class="font-headline-md text-xl mb-4">Potain H3/30 - H3/36</h4>
+<p class="text-on-surface-variant text-sm mb-6">Specialized series for high-speed lifting operations. Advanced LVF variable frequency hoisting systems.</p>
+<ul class="space-y-2 font-label-technical text-xs text-tertiary opacity-80">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-tertiary rounded-full"></span> 60m HUH Range</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-tertiary rounded-full"></span> Smart Control Sys</li>
+</ul>
+</div>
+<div class="md:col-span-4 glass-panel p-6 rounded-xl border border-outline-variant/30">
+<div class="w-12 h-12 rounded bg-secondary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+</div>
+<h4 class="font-headline-md text-xl mb-4">Tower Crane QT80</h4>
+<p class="text-on-surface-variant text-sm mb-6">Compact footprint optimized for restricted access sites. Rapid deployment architecture.</p>
+<ul class="space-y-2 font-label-technical text-xs text-secondary opacity-80">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> Quick Erection</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> Energy Efficient</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Comprehensive<br/>Lifecycle Services</h2>
+<div class="space-y-8">
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-16 h-16 rounded-lg bg-surface flex items-center justify-center border border-outline-variant group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-3xl">build</span>
+</div>
+<div>
+<h5 class="font-headline-md text-lg mb-2">Erection &amp; Dismantling</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Precision deployment of equipment up to 60T using advanced mobile cranes and expert technicians. We manage the entire lifecycle from arrival to site clearance.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-16 h-16 rounded-lg bg-surface flex items-center justify-center border border-outline-variant group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-3xl">electric_bolt</span>
+</div>
+<div>
+<h5 class="font-headline-md text-lg mb-2">Electrical Troubleshooting</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Certified diagnostic services for crane control systems, wirerope, and slewing rings. Parts sourced globally from France, Belgium, and China.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-16 h-16 rounded-lg bg-surface flex items-center justify-center border border-outline-variant group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-3xl">engineering</span>
+</div>
+<div>
+<h5 class="font-headline-md text-lg mb-2">Licensed Operators</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Providing experienced and professional crews with man power department licenses, ensuring safety-first operations on every shift.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A professional technician in high-visibility gear performing maintenance on a crane's motor at height. The image is shot with a shallow depth of field, highlighting the complexity of the machinery. The lighting is crisp and clear, emphasizing safety and technical proficiency. Industrial-modern style with vibrant orange safety accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjafieh3MRuxf5_-HeT1WyRgSzVWVT_0aRmjUskK16Z2P-42DLyAeXKV4PG9xebRBSRr37vlNIQYZ04FSBp0MZtsERe8t54wMsj0DHOVN0gXqJFtpkWnb7zMSv0lo4HJunwf104sWabLr4wzkX0nW1HN2dA_P-3kSBH5Rd9SsKWf9CDjmjm_3dZQLdgb9Ls8k4Ln_yZyoKiiN_K6SgAfyQjbAlDOR-VDODpHpTBlguhgn3UsKu22sNFVRPZg7G5ZGt21tGgWqtspw8"/>
+</div>
+<!-- Stats Floating Card -->
+<div class="absolute -bottom-10 -left-10 glass-panel p-8 rounded-xl shadow-2xl border border-secondary/30 hidden md:block">
+<div class="text-secondary font-display-xl text-5xl mb-1">10+</div>
+<div class="font-label-technical text-xs tracking-widest text-on-surface uppercase">Years Experience</div>
+</div>
+<div class="absolute -top-6 -right-6 w-32 h-32 glass-panel rounded-full border border-outline-variant/50 flex items-center justify-center animate-spin-slow">
+<span class="material-symbols-outlined text-4xl text-on-surface opacity-20">all_inclusive</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specification Table -->
+<section class="px-margin-desktop py-section-gap">
+<h2 class="font-headline-md text-3xl mb-12 flex items-center gap-4">
+<span class="w-2 h-8 bg-secondary"></span>
+                Technical Performance Metrics
+            </h2>
+<div class="overflow-hidden border border-outline-variant/30 rounded-xl">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high font-label-technical text-xs uppercase tracking-widest text-secondary">
+<th class="p-6 border-b border-outline-variant">Equipment Model</th>
+<th class="p-6 border-b border-outline-variant">Max Hook Height (HUH)</th>
+<th class="p-6 border-b border-outline-variant">Jib Length Range</th>
+<th class="p-6 border-b border-outline-variant">Load Capacity</th>
+<th class="p-6 border-b border-outline-variant text-right">Action</th>
+</tr>
+</thead>
+<tbody class="text-sm font-body-md">
+<tr class="bg-surface hover:bg-white/5 transition-colors group">
+<td class="p-6 border-b border-outline-variant/20 font-bold">Potain FO23 / B</td>
+<td class="p-6 border-b border-outline-variant/20">20m - 60m</td>
+<td class="p-6 border-b border-outline-variant/20">45m - 50m</td>
+<td class="p-6 border-b border-outline-variant/20">Varies per config</td>
+<td class="p-6 border-b border-outline-variant/20 text-right">
+<button class="px-4 py-2 border border-outline text-xs rounded hover:bg-secondary hover:text-on-secondary transition-all">SPECS</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-white/5 transition-colors group">
+<td class="p-6 border-b border-outline-variant/20 font-bold">MG Series (5023 - 7030)</td>
+<td class="p-6 border-b border-outline-variant/20">Variable</td>
+<td class="p-6 border-b border-outline-variant/20">40m - 70m</td>
+<td class="p-6 border-b border-outline-variant/20">Industrial Heavy</td>
+<td class="p-6 border-b border-outline-variant/20 text-right">
+<button class="px-4 py-2 border border-outline text-xs rounded hover:bg-secondary hover:text-on-secondary transition-all">SPECS</button>
+</td>
+</tr>
+<tr class="bg-surface hover:bg-white/5 transition-colors group">
+<td class="p-6 border-b border-outline-variant/20 font-bold">Raimondi ER180</td>
+<td class="p-6 border-b border-outline-variant/20">Custom Setup</td>
+<td class="p-6 border-b border-outline-variant/20">Up to 65m</td>
+<td class="p-6 border-b border-outline-variant/20">Precision Control</td>
+<td class="p-6 border-b border-outline-variant/20 text-right">
+<button class="px-4 py-2 border border-outline text-xs rounded hover:bg-secondary hover:text-on-secondary transition-all">SPECS</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full mt-section-gap border-t border-outline-variant bg-surface-dim dark:bg-surface-dim">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-secondary-fixed-dim text-2xl font-bold">PT. TRUST ANUGRAH PERSADA</div>
+<p class="text-on-surface-variant text-sm opacity-80">Industrial-grade reliability since inception. Dedicated to Jakarta's structural expansion with precision and safety.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+<a class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-3">
+<h6 class="font-label-technical text-xs uppercase text-on-surface mb-2">Services</h6>
+<a class="text-on-surface-variant hover:text-primary text-sm opacity-80 transition-opacity" href="#">Rental</a>
+<a class="text-on-surface-variant hover:text-primary text-sm opacity-80 transition-opacity" href="#">Sales</a>
+<a class="text-on-surface-variant hover:text-primary text-sm opacity-80 transition-opacity" href="#">Maintenance</a>
+</div>
+<div class="flex flex-col gap-3">
+<h6 class="font-label-technical text-xs uppercase text-on-surface mb-2">Company</h6>
+<a class="text-on-surface-variant hover:text-primary text-sm opacity-80 transition-opacity" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-primary text-sm opacity-80 transition-opacity" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary text-sm opacity-80 transition-opacity" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div>
+<h6 class="font-label-technical text-xs uppercase text-on-surface mb-4">Newsletter</h6>
+<div class="flex border border-outline-variant rounded p-1">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-grow" placeholder="Email" type="email"/>
+<button class="bg-secondary px-4 py-2 text-on-secondary rounded font-bold text-xs">SUBMIT</button>
+</div>
+</div>
+<div class="text-on-surface-variant text-xs opacity-60 mt-8">
+                        © 2026 PT. TRUST ANUGRAH PERSADA. Industrial-Grade Reliability.
+                    </div>
+</div>
+</div>
+</footer>
+</main>
+<!-- Interactive Atmospheric Elements -->
+<script>
+        // Micro-interaction for scroll reveals
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel, table tr').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(el);
+        });
+
+        // Sticky Nav subtle opacity shift
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-surface-container/90');
+                nav.classList.remove('bg-surface-container/40');
+            } else {
+                nav.classList.add('bg-surface-container/40');
+                nav.classList.remove('bg-surface-container/90');
+            }
+        });
+    </script>
+</body></html>

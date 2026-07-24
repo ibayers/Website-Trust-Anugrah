@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Static export — no /api/ or /admin/ paths exist.
+Sitemap: https://www.pt-trustap.com/sitemap.xml
