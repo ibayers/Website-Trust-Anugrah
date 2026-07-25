@@ -9,6 +9,16 @@ import { verifiedValue } from '@/lib/contact';
 // Home / Landing — ported from _archive/design/home_modernized/code.html.
 // Hero image: /images/A1 CRANE.jpg (local, from archive batch).
 // Stats: onlyVerified per PRD §4 rule 4 (design fabricates 142/85+/500+ — we ship 20+/500+ with caveat).
+
+// Pillar blurbs — indexed to align with company.coreBusiness order
+// (Equipment services, Construction services, Installation services, Mechanical & suppliers).
+const pillarDescriptions: readonly string[] = [
+  'Rental tower cranes, passenger hoists, material lifts, manual cranes, and gensets — backed by certified maintenance crews and 24/7 operator support.',
+  'Decades of on-site execution: erection, dismantling, and structural rebuilds for high-rise and infrastructure projects across Java and beyond.',
+  'Precision deployment with foundation work, wall tie-ins, and site-specific engineering. Full K3 / HSE compliance on every lift.',
+  'Direct supply of high-grade components — slewing rings, joysticks, wire ropes, and electronic modules sourced from France, Belgium, and China.',
+];
+
 export default function HomePage() {
   const tagline = verifiedValue(company.tagline);
   const motto = verifiedValue(company.motto);
@@ -80,14 +90,20 @@ export default function HomePage() {
           className="mb-12"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-          {coreBusiness.map((pillar, i) => (
-            <GlassCard key={pillar} className="p-6">
-              <span className="font-label-technical text-tertiary text-xs uppercase tracking-widest">
-                0{i + 1}
-              </span>
-              <p className="mt-3 font-headline-md text-body-lg text-on-surface font-semibold">{pillar}</p>
-            </GlassCard>
-          ))}
+          {coreBusiness.map((pillar, i) => {
+            const desc = pillarDescriptions[i] ?? '';
+            return (
+              <GlassCard key={pillar} className="p-6">
+                <span className="font-label-technical text-tertiary text-xs uppercase tracking-widest">
+                  0{i + 1}
+                </span>
+                <p className="mt-3 font-headline-md text-body-lg text-on-surface font-semibold">{pillar}</p>
+                {desc && (
+                  <p className="mt-3 text-sm text-on-surface-variant leading-relaxed">{desc}</p>
+                )}
+              </GlassCard>
+            );
+          })}
         </div>
       </section>
 
