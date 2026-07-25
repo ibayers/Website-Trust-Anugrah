@@ -1,7 +1,7 @@
-import type { ContentSlot, Verified, TBD } from '@/types/content';
+import type { ContentSlot, Verified } from '@/types/content';
 
-// PRD §3 + §5.11. All values Verified against Contact_Us.html unless marked TBD.
-// WhatsApp number blocked on client input (PRD §7 Q1).
+// PRD §3 + §5.11. All values Verified against Contact_Us.html unless marked Unconfirmed.
+// WhatsApp resolved 2026-07-25 (PRD §7 Q1). Phone/fax still pending sign-off (Q2/Q3).
 
 type Address = {
   street: string;
@@ -41,9 +41,11 @@ export const contact = {
     reason: 'Legacy 2017 fax — confirm still in use (PRD §7 Q3)',
   },
   whatsapp: {
-    status: 'tbd' as const,
-    reason: 'Awaiting client-supplied number in international format (PRD §7 Q1)',
-  } satisfies TBD,
+    status: 'verified' as const,
+    // ponytail: client gave 08121896949 (local format). wa.me butuh internasional tanpa leading 0 → 628121896949.
+    value: '628121896949',
+    source: 'Client-supplied 2026-07-25 (PRD §7 Q1 resolved)',
+  } satisfies Verified<string>,
   address: {
     status: 'verified' as const,
     value: {

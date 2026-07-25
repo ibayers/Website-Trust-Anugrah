@@ -5,9 +5,10 @@ import { contact } from '@/content/contact';
 import { verifiedValue } from '@/lib/contact';
 
 // PRD §5.11. No form (per user decision). No map embed (PRD §7 Q4 pending full address confirm).
-// WhatsApp link sementara: placeholder bebas sampai client berikan nomor resmi (PRD §7 Q1).
+// WhatsApp link aktif: nomor client 08121896949 (PRD §7 Q1 resolved).
 // Phone/fax: tampilkan angka legacy untuk sementara (PRD §7 Q2/Q3 masih pending sign-off).
-const WHATSAPP_PLACEHOLDER = 'https://wa.me/6281234567890';
+// ponytail: wa.me butuh format internasional tanpa leading 0 — 0812… → 62812…; jika nomor ganti, update sekalian di sini.
+const WHATSAPP_PLACEHOLDER = 'https://wa.me/628121896949';
 const PHONE_LEGACY = '021-87702337';
 const FAX_LEGACY = '021-8700119';
 
