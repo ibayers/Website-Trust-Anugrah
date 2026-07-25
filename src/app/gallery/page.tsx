@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { PageShell } from '@/components/layout/PageShell';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { ContactCTA } from '@/components/ui/ContactCTA';
@@ -6,36 +9,51 @@ import { verifiedValue } from '@/lib/contact';
 
 // PRD §5.10. Ported from _archive/design/gallery_modernized/code.html.
 // Photos curated from /public/images/ (verified local copies of archive batch).
-const categories = [
-  'ALL PROJECTS',
-  'TOWER CRANES',
-  'PASSENGER HOIST',
-  'GENSET',
-  'FIELD SERVICE',
-] as const;
+type Filter = 'ALL' | 'TOWER_CRANES' | 'PASSENGER_HOIST' | 'GENSET' | 'FIELD_SERVICE';
 
-// Bento gallery — flagship + standard items.
+const categories: { key: Filter; label: string }[] = [
+  { key: 'ALL', label: 'ALL PROJECTS' },
+  { key: 'TOWER_CRANES', label: 'TOWER CRANES' },
+  { key: 'PASSENGER_HOIST', label: 'PASSENGER HOIST' },
+  { key: 'GENSET', label: 'GENSET' },
+  { key: 'FIELD_SERVICE', label: 'FIELD SERVICE' },
+];
+
+// Bento gallery — flagship + standard items. Each tagged with a filter bucket.
 const flagshipItem = {
   src: '/images/design/gallery/flagship.jpg',
   tag: 'FLAGSHIP PROJECT',
   title: 'Central District Hoisting System',
   desc: 'Heavy lift series deployed for the skyline redevelopment project.',
+  filter: 'TOWER_CRANES' as Filter,
 };
 
-const galleryItems = [
-  { src: '/images/design/gallery/01-tower-crane.jpg', icon: 'precision_manufacturing', title: 'Tower Crane Unit', tag: 'EQUIPMENT' },
-  { src: '/images/design/gallery/02-crew.jpg', icon: 'engineering', title: 'On-Site Crew', tag: 'OPERATIONS' },
-  { src: '/images/design/gallery/03-manual-crane.jpg', icon: 'construction', title: 'Manual Crane Deploy', tag: 'FIELD SERVICE' },
-  { src: '/images/design/gallery/04-genset.jpg', icon: 'bolt', title: 'Genset Backup Array', tag: 'POWER SOLUTIONS' },
-  { src: '/images/Tower_Full..jpg', icon: 'fullscreen', title: 'Full Erection', tag: 'RENTAL' },
-  { src: '/images/A1 CRANE.jpg', icon: 'verified', title: 'Verified Unit', tag: 'CERTIFIED' },
-  { src: '/images/Picture 017.jpg', icon: 'build', title: 'Field Service', tag: 'MAINTENANCE' },
-  { src: '/images/Picture 234.jpg', icon: 'photo_camera', title: 'Field Coordination', tag: 'OPS' },
-] as const;
+const galleryItems: {
+  src: string;
+  icon: string;
+  title: string;
+  tag: string;
+  filter: Filter;
+}[] = [
+  { src: '/images/design/gallery/01-tower-crane.jpg', icon: 'precision_manufacturing', title: 'Tower Crane Unit', tag: 'EQUIPMENT', filter: 'TOWER_CRANES' },
+  { src: '/images/design/gallery/02-crew.jpg', icon: 'engineering', title: 'On-Site Crew', tag: 'OPERATIONS', filter: 'FIELD_SERVICE' },
+  { src: '/images/design/gallery/03-manual-crane.jpg', icon: 'construction', title: 'Manual Crane Deploy', tag: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
+  { src: '/images/design/gallery/04-genset.jpg', icon: 'bolt', title: 'Genset Backup Array', tag: 'POWER SOLUTIONS', filter: 'GENSET' },
+  { src: '/images/Tower_Full..jpg', icon: 'fullscreen', title: 'Full Erection', tag: 'RENTAL', filter: 'TOWER_CRANES' },
+  { src: '/images/A1 CRANE.jpg', icon: 'verified', title: 'Verified Unit', tag: 'CERTIFIED', filter: 'TOWER_CRANES' },
+  { src: '/images/Picture 017.jpg', icon: 'build', title: 'Field Service', tag: 'MAINTENANCE', filter: 'FIELD_SERVICE' },
+  { src: '/images/Picture 234.jpg', icon: 'photo_camera', title: 'Field Coordination', tag: 'OPS', filter: 'FIELD_SERVICE' },
+  { src: '/images/design/passenger-hoist/dual-cage.jpg', icon: 'elevator', title: 'Dual Cage Hoist', tag: 'VERTICAL TRANSPORT', filter: 'PASSENGER_HOIST' },
+  { src: '/images/design/passenger-hoist/feature-04.jpg', icon: 'height', title: 'High-Rise Hoist Deploy', tag: 'OPERATIONS', filter: 'PASSENGER_HOIST' },
+];
 
 export default function GalleryPage() {
   const narrative = verifiedValue(company.foundingNarrative);
   const motto = verifiedValue(company.motto);
+  const [active, setActive] = useState<Filter>('ALL');
+
+  const items = galleryItems.filter((it) => active === 'ALL' || it.filter === active);
+  const showFlagship = active === 'ALL' || flagshipItem.filter === active;
 
   return (
     <PageShell
@@ -74,17 +92,19 @@ export default function GalleryPage() {
       {/* Category chips */}
       <section className="px-margin-desktop">
         <div className="flex overflow-x-auto gap-4 mb-12 pb-4">
-          {categories.map((cat, i) => (
+          {categories.map((cat) => (
             <button
-              key={cat}
+              key={cat.key}
               type="button"
+              onClick={() => setActive(cat.key)}
+              aria-pressed={active === cat.key}
               className={
-                i === 0
+                active === cat.key
                   ? 'px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label-technical whitespace-nowrap'
                   : 'px-6 py-2 glass-panel border border-outline-variant/30 text-on-surface hover:border-secondary transition-all rounded-full font-label-technical whitespace-nowrap'
               }
             >
-              {cat}
+              {cat.label}
             </button>
           ))}
         </div>
@@ -93,27 +113,29 @@ export default function GalleryPage() {
       {/* Bento Masonry Gallery */}
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-          {/* Flagship large feature */}
-          <GlassCard className="lg:col-span-2 lg:row-span-2 relative group overflow-hidden cursor-pointer p-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={flagshipItem.src}
-              alt={flagshipItem.title}
-              className="w-full h-full min-h-[480px] object-cover transition-transform duration-700 group-hover:scale-110"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80" />
-            <div className="absolute bottom-0 left-0 p-8 w-full">
-              <span className="font-label-technical text-xs bg-secondary text-on-secondary-container px-2 py-1 mb-2 inline-block">
-                {flagshipItem.tag}
-              </span>
-              <h3 className="font-headline-md text-body-lg font-bold mb-2">{flagshipItem.title}</h3>
-              <p className="text-on-surface-variant text-sm line-clamp-2">{flagshipItem.desc}</p>
-            </div>
-          </GlassCard>
+          {/* Flagship large feature — hidden when filter excludes it. */}
+          {showFlagship && (
+            <GlassCard className="lg:col-span-2 lg:row-span-2 relative group overflow-hidden cursor-pointer p-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={flagshipItem.src}
+                alt={flagshipItem.title}
+                className="w-full h-full min-h-[480px] object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80" />
+              <div className="absolute bottom-0 left-0 p-8 w-full">
+                <span className="font-label-technical text-xs bg-secondary text-on-secondary-container px-2 py-1 mb-2 inline-block">
+                  {flagshipItem.tag}
+                </span>
+                <h3 className="font-headline-md text-body-lg font-bold mb-2">{flagshipItem.title}</h3>
+                <p className="text-on-surface-variant text-sm line-clamp-2">{flagshipItem.desc}</p>
+              </div>
+            </GlassCard>
+          )}
 
           {/* Standard items */}
-          {galleryItems.map((item) => (
+          {items.map((item) => (
             <GlassCard key={item.src} className="relative group overflow-hidden cursor-pointer p-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

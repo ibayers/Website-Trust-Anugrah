@@ -2,60 +2,71 @@ import { PageShell } from '@/components/layout/PageShell';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { ContactCTA } from '@/components/ui/ContactCTA';
 import { contact } from '@/content/contact';
-import { mailtoLink, verifiedValue, formatPhone } from '@/lib/contact';
-import { shouldDisplay } from '@/types/content';
+import { verifiedValue } from '@/lib/contact';
 
 // PRD §5.11. No form (per user decision). No map embed (PRD §7 Q4 pending full address confirm).
-// Phone/fax ship only when Verified — current state: Unconfirmed, so gated.
+// WhatsApp link sementara: placeholder bebas sampai client berikan nomor resmi (PRD §7 Q1).
+// Phone/fax: tampilkan angka legacy untuk sementara (PRD §7 Q2/Q3 masih pending sign-off).
+const WHATSAPP_PLACEHOLDER = 'https://wa.me/6281234567890';
+const PHONE_LEGACY = '021-87702337';
+const FAX_LEGACY = '021-8700119';
+
 export default function ContactPage() {
   const address = verifiedValue(contact.address);
-  const email = verifiedValue(contact.email);
-  const emailSecondary = verifiedValue(contact.emailSecondary);
-  const mailHref = mailtoLink(contact.email);
-  const mailSecondaryHref = mailtoLink(contact.emailSecondary);
-
-  const phoneLocal = formatPhone(contact.phoneLocal);
-  const phoneDisplay = phoneLocal ?? null;
-  const phonePending = !shouldDisplay(contact.phoneLocal);
 
   return (
     <PageShell
       heroEyebrow="Get in Touch"
       heroTitle="Contact"
-      heroSubtitle="Email is our primary channel. WhatsApp coming soon. No online form — direct conversations only."
+      heroSubtitle="WhatsApp is our primary channel — direct conversations only. No online form."
     >
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
           <GlassCard className="p-8">
-            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">Email</h2>
+            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">WhatsApp</h2>
+            <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-2">
+              Chat langsung
+            </p>
+            <a
+              href={WHATSAPP_PLACEHOLDER}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-on-surface hover:text-secondary transition-colors text-body-lg break-all"
+            >
+              <span className="material-symbols-outlined text-secondary" aria-hidden>
+                chat
+              </span>
+              Tap to start chat
+            </a>
+            <p className="mt-6 text-on-surface-variant text-sm">
+              Link aktif ke WhatsApp — nomor final diganti setelah sign-off client.
+            </p>
+          </GlassCard>
+
+          <GlassCard className="p-8">
+            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">Phone &amp; Fax</h2>
             <ul className="space-y-4">
               <li>
                 <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-1">
-                  Primary
+                  Phone
                 </p>
-                {mailHref && email ? (
-                  <a
-                    href={mailHref}
-                    className="text-on-surface hover:text-secondary transition-colors text-body-lg break-all"
-                  >
-                    {email}
-                  </a>
-                ) : null}
+                <a
+                  href={`tel:${PHONE_LEGACY.replace(/[^0-9]/g, '')}`}
+                  className="text-on-surface hover:text-secondary transition-colors text-body-lg"
+                >
+                  {PHONE_LEGACY}
+                </a>
               </li>
               <li>
                 <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-1">
-                  Secondary (fallback)
+                  Fax
                 </p>
-                {mailSecondaryHref && emailSecondary ? (
-                  <a
-                    href={mailSecondaryHref}
-                    className="text-on-surface-variant hover:text-secondary transition-colors text-body-md break-all"
-                  >
-                    {emailSecondary}
-                  </a>
-                ) : null}
+                <span className="text-on-surface text-body-md">{FAX_LEGACY}</span>
               </li>
             </ul>
+            <p className="mt-6 text-on-surface-variant text-sm">
+              Angka lama — dipakai sementara sampai verifikasi selesai.
+            </p>
           </GlassCard>
 
           <GlassCard className="p-8">
@@ -75,23 +86,31 @@ export default function ContactPage() {
           </GlassCard>
 
           <GlassCard className="p-8">
-            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">Phone &amp; Fax</h2>
-            {phonePending ? (
-              <p className="text-on-surface-variant text-sm leading-relaxed">
-                Legacy numbers (021-87702337 / 021-8700119) are pending client confirmation that
-                they are still active. Display gated behind PRD §7 Q2 / Q3 sign-off.
-              </p>
-            ) : (
-              phoneDisplay && <p className="text-body-md text-on-surface">{phoneDisplay}</p>
-            )}
-          </GlassCard>
-
-          <GlassCard className="p-8">
-            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">WhatsApp</h2>
-            <p className="text-on-surface-variant text-sm leading-relaxed">
-              Direct wa.me link pending client-supplied number in international format
-              (PRD §7 Q1). Once supplied, the WhatsApp button below activates automatically.
-            </p>
+            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">Email</h2>
+            <ul className="space-y-4">
+              <li>
+                <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-1">
+                  Primary
+                </p>
+                <a
+                  href={`mailto:${contact.email.value}`}
+                  className="text-on-surface hover:text-secondary transition-colors text-body-md break-all"
+                >
+                  {contact.email.value}
+                </a>
+              </li>
+              <li>
+                <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-1">
+                  Secondary (fallback)
+                </p>
+                <a
+                  href={`mailto:${contact.emailSecondary.value}`}
+                  className="text-on-surface-variant hover:text-secondary transition-colors text-body-md break-all"
+                >
+                  {contact.emailSecondary.value}
+                </a>
+              </li>
+            </ul>
           </GlassCard>
         </div>
       </section>
@@ -102,7 +121,7 @@ export default function ContactPage() {
             Start a conversation
           </h2>
           <p className="text-on-surface-variant text-body-lg mb-8 max-w-2xl mx-auto">
-            Email is checked throughout the business day. WhatsApp number is being set up.
+            WhatsApp dipantau sepanjang jam kerja. Email untuk dokumen &amp; kontrak.
           </p>
           <ContactCTA
             emailSubject="Website Inquiry"

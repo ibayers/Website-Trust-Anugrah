@@ -20,6 +20,24 @@ export default function AboutPage() {
     >
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-start">
+          <div className="relative">
+            <div className="aspect-[4/5] glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/design/tower-crane/hero.jpg"
+                alt="PT Trust Anugrah field operation"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <GlassCard className="absolute -bottom-8 -right-4 p-6 w-48 hidden md:block">
+              <div className="font-display-xl text-headline-lg text-secondary">1985</div>
+              <div className="font-label-technical text-xs text-on-surface-variant uppercase">
+                Experienced Since
+              </div>
+            </GlassCard>
+          </div>
+
           <div>
             <span className="font-label-technical text-secondary uppercase tracking-widest text-xs">
               {tagline}
@@ -29,8 +47,13 @@ export default function AboutPage() {
             </h2>
             <p className="text-body-lg text-on-surface-variant leading-relaxed">{narrative}</p>
           </div>
+        </div>
+      </section>
 
-          <GlassCard className="p-8">
+      {/* Core pillars + fleet image. */}
+      <section className="px-margin-desktop py-section-gap">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-stretch">
+          <GlassCard className="p-8 order-2 lg:order-1">
             <h3 className="font-headline-md text-headline-md text-on-surface mb-4">
               Core business pillars
             </h3>
@@ -45,6 +68,27 @@ export default function AboutPage() {
               ))}
             </ul>
           </GlassCard>
+
+          <div className="relative order-1 lg:order-2 min-h-[320px]">
+            <GlassCard className="absolute inset-0 overflow-hidden p-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/design/gallery/02-crew.jpg"
+                alt="Crew on-site during operation"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <span className="font-label-technical text-xs text-secondary uppercase tracking-widest">
+                  FIELD OPERATIONS
+                </span>
+                <p className="text-on-surface-variant text-sm mt-1">
+                  Licensed crews deployed across Java and beyond.
+                </p>
+              </div>
+            </GlassCard>
+          </div>
         </div>
       </section>
 
