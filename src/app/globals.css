@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ponytail: text-headline-lg token is responsive via these vars.
+   Mobile 28/36 (fits inside cards); md+ restores desktop 48/56. */
+:root {
+  --text-headline-lg: 28px;
+  --leading-headline-lg: 36px;
+}
+@media (min-width: 768px) {
+  :root {
+    --text-headline-lg: 48px;
+    --leading-headline-lg: 56px;
+  }
+}
+
 /* Lifted verbatim from _archive/design/home_modernized/code.html lines 102-121. */
 .glass-panel {
   background: rgba(16, 20, 22, 0.4);

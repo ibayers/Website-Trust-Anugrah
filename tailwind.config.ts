@@ -83,7 +83,7 @@ const config: Config = {
         'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
         'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
         'headline-md': ['32px', { lineHeight: '40px', fontWeight: '600' }],
-        'headline-lg': ['48px', { lineHeight: '56px', fontWeight: '700' }],
+        'headline-lg': ['var(--text-headline-lg, 48px)', { lineHeight: 'var(--leading-headline-lg, 56px)', fontWeight: '700' }],
         'headline-lg-mobile': ['36px', { lineHeight: '44px', fontWeight: '700' }],
         'display-xl': ['72px', { lineHeight: '80px', letterSpacing: '-0.02em', fontWeight: '800' }],
         'label-technical': ['14px', { lineHeight: '20px', letterSpacing: '0.05em', fontWeight: '500' }],
