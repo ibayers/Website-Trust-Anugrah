@@ -49,11 +49,11 @@ export const contact = {
   address: {
     status: 'verified' as const,
     value: {
-      street: 'Jl. Kelapa Dua Wetan No.1',
-      city: 'Jakarta Timur, DKI Jakarta',
-      postal: '13730',
+      street: 'Kp. Kebayunan RT.02 RW.016',
+      city: 'Kel. Tapos, Kec. Tapos',
+      postal: 'Depok, Jawa Barat',
     } as Address,
-    source: 'Contact_Us.html (map URL: city=Jakarta Timur, pin=13730)',
+    source: 'Client-supplied 2026-07-27 (PRD §7 Q4 resolved)',
   } satisfies Verified<Address>,
 } as const;
 

@@ -1,5 +1,6 @@
 import './globals.css';
 import { inter, hanken, jetbrains } from './fonts';
+import { Agentation } from 'agentation';
 
 // metadataBase uses placeholder domain — PRD §7 Q5 pending. OG paths resolve against this.
 export const metadata = {
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
         {children}
+        {process.env.NODE_ENV === 'development' && <Agentation />}
       </body>
     </html>
   );

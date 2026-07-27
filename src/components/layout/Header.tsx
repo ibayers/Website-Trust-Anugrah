@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
-import { navMain, equipmentLinks, isEquipmentActive } from '@/lib/nav';
-import { company } from '@/content/company';
-import { verifiedValue } from '@/lib/contact';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { navMain, equipmentLinks, isEquipmentActive } from "@/lib/nav";
+import { company } from "@/content/company";
+import { verifiedValue } from "@/lib/contact";
 
 // Compact top-nav: 5 visible items + Equipment dropdown (design top-bar pattern).
 // 'use client' for mobile menu toggle + dropdown toggle + usePathname active link.
@@ -30,7 +30,11 @@ export function Header() {
           {/* Home */}
           <Link
             href="/"
-            className={pathname === '/' ? 'text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors' : 'text-on-surface-variant hover:text-on-surface transition-colors'}
+            className={
+              pathname === "/"
+                ? "text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors"
+                : "text-on-surface-variant hover:text-on-surface transition-colors"
+            }
           >
             Home
           </Link>
@@ -46,8 +50,8 @@ export function Header() {
               onClick={() => setEquipOpen((v) => !v)}
               className={
                 equipmentActive
-                  ? 'text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors inline-flex items-center gap-1'
-                  : 'text-on-surface-variant hover:text-on-surface transition-colors inline-flex items-center gap-1'
+                  ? "text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors inline-flex items-center gap-1"
+                  : "text-on-surface-variant hover:text-on-surface transition-colors inline-flex items-center gap-1"
               }
               aria-expanded={equipOpen}
             >
@@ -67,8 +71,8 @@ export function Header() {
                           href={item.href}
                           className={
                             active
-                              ? 'block px-6 py-3 text-body-md text-secondary bg-secondary/10'
-                              : 'block px-6 py-3 text-body-md text-on-surface hover:text-secondary hover:bg-white/5 transition-colors'
+                              ? "block px-6 py-3 text-body-md text-secondary bg-secondary/10"
+                              : "block px-6 py-3 text-body-md text-on-surface hover:text-secondary hover:bg-white/5 transition-colors"
                           }
                         >
                           {item.label}
@@ -83,7 +87,7 @@ export function Header() {
 
           {/* Remaining flat items */}
           {navMain
-            .filter((i) => i.href !== '/')
+            .filter((i) => i.href !== "/")
             .map((item) => {
               const active = pathname === item.href;
               return (
@@ -92,8 +96,8 @@ export function Header() {
                   href={item.href}
                   className={
                     active
-                      ? 'text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors'
-                      : 'text-on-surface-variant hover:text-on-surface transition-colors'
+                      ? "text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors"
+                      : "text-on-surface-variant hover:text-on-surface transition-colors"
                   }
                 >
                   {item.label}
@@ -117,7 +121,7 @@ export function Header() {
             className="lg:hidden p-2 border border-outline-variant text-on-surface rounded-lg"
           >
             <span className="material-symbols-outlined" aria-hidden>
-              {mobileOpen ? 'close' : 'menu'}
+              {mobileOpen ? "close" : "menu"}
             </span>
           </button>
         </div>
@@ -131,9 +135,9 @@ export function Header() {
                 href="/"
                 onClick={() => setMobileOpen(false)}
                 className={
-                  pathname === '/'
-                    ? 'block px-margin-desktop py-3 font-body-md text-body-md text-secondary font-bold bg-surface-container-high/50'
-                    : 'block px-margin-desktop py-3 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-white/5'
+                  pathname === "/"
+                    ? "block px-margin-desktop py-3 font-body-md text-body-md text-secondary font-bold bg-surface-container-high/50"
+                    : "block px-margin-desktop py-3 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-white/5"
                 }
               >
                 Home
@@ -145,14 +149,14 @@ export function Header() {
             {equipmentLinks.map((item) => {
               const active = pathname === item.href;
               return (
-                <li key={item.href} className="pl-8">
+                <li key={item.href} className="pl-16">
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={
                       active
-                        ? 'block px-4 py-2 font-body-md text-body-md text-secondary'
-                        : 'block px-4 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface'
+                        ? "block px-4 py-2 font-body-md text-body-md text-outline"
+                        : "block px-4 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface"
                     }
                   >
                     {item.label}
@@ -161,7 +165,7 @@ export function Header() {
               );
             })}
             {navMain
-              .filter((i) => i.href !== '/')
+              .filter((i) => i.href !== "/")
               .map((item) => {
                 const active = pathname === item.href;
                 return (
@@ -171,8 +175,8 @@ export function Header() {
                       onClick={() => setMobileOpen(false)}
                       className={
                         active
-                          ? 'block px-margin-desktop py-3 font-body-md text-body-md text-secondary font-bold bg-surface-container-high/50'
-                          : 'block px-margin-desktop py-3 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-white/5'
+                          ? "block px-margin-desktop py-3 font-body-md text-body-md text-secondary font-bold bg-surface-container-high/50"
+                          : "block px-margin-desktop py-3 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-white/5"
                       }
                     >
                       {item.label}
