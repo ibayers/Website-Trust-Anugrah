@@ -1,16 +1,18 @@
-import { PageShell } from '@/components/layout/PageShell';
-import { GlassCard } from '@/components/ui/GlassCard';
-import { ContactCTA } from '@/components/ui/ContactCTA';
-import { contact } from '@/content/contact';
-import { verifiedValue } from '@/lib/contact';
+import { PageShell } from "@/components/layout/PageShell";
+import { GlassCard } from "@/components/ui/GlassCard";
+import { ContactCTA } from "@/components/ui/ContactCTA";
+import { contact } from "@/content/contact";
+import { verifiedValue } from "@/lib/contact";
 
 // PRD §5.11. No form (per user decision). No map embed (PRD §7 Q4 pending full address confirm).
 // WhatsApp link aktif: nomor client 08121896949 (PRD §7 Q1 resolved).
 // Phone/fax: tampilkan angka legacy untuk sementara (PRD §7 Q2/Q3 masih pending sign-off).
-// ponytail: wa.me butuh format internasional tanpa leading 0 — 0812… → 62812…; jika nomor ganti, update sekalian di sini.
-const WHATSAPP_PLACEHOLDER = 'https://wa.me/628121896949';
-const PHONE_LEGACY = '021-87702337';
-const FAX_LEGACY = '021-8700119';
+// ponytail: api.whatsapp.com/send? — mobile + desktop sama, draft pesan ikut tersimpan di web.
+const WHATSAPP_PLACEHOLDER =
+  "https://api.whatsapp.com/send?phone=628121896949&text=" +
+  encodeURIComponent("Hello, I'd like to ask about your services.");
+const PHONE_LEGACY = "021-87702337";
+const FAX_LEGACY = "021-8700119";
 
 export default function ContactPage() {
   const address = verifiedValue(contact.address);
@@ -24,7 +26,9 @@ export default function ContactPage() {
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
           <GlassCard className="p-8">
-            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">WhatsApp</h2>
+            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">
+              WhatsApp
+            </h2>
             <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-2">
               Chat langsung
             </p>
@@ -34,25 +38,27 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-on-surface hover:text-secondary transition-colors text-body-lg break-all"
             >
-              <span className="material-symbols-outlined text-secondary" aria-hidden>
+              <span
+                className="material-symbols-outlined text-secondary"
+                aria-hidden
+              >
                 chat
               </span>
               Tap to start chat
             </a>
-            <p className="mt-6 text-on-surface-variant text-sm">
-              Link aktif ke WhatsApp — nomor final diganti setelah sign-off client.
-            </p>
           </GlassCard>
 
           <GlassCard className="p-8">
-            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">Phone &amp; Fax</h2>
+            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">
+              Phone &amp; Fax
+            </h2>
             <ul className="space-y-4">
               <li>
                 <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-1">
                   Phone
                 </p>
                 <a
-                  href={`tel:${PHONE_LEGACY.replace(/[^0-9]/g, '')}`}
+                  href={`tel:${PHONE_LEGACY.replace(/[^0-9]/g, "")}`}
                   className="text-on-surface hover:text-secondary transition-colors text-body-lg"
                 >
                   {PHONE_LEGACY}
@@ -62,16 +68,17 @@ export default function ContactPage() {
                 <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-1">
                   Fax
                 </p>
-                <span className="text-on-surface text-body-md">{FAX_LEGACY}</span>
+                <span className="text-on-surface text-body-md">
+                  {FAX_LEGACY}
+                </span>
               </li>
             </ul>
-            <p className="mt-6 text-on-surface-variant text-sm">
-              Angka lama — dipakai sementara sampai verifikasi selesai.
-            </p>
           </GlassCard>
 
           <GlassCard className="p-8">
-            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">Address</h2>
+            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">
+              Address
+            </h2>
             {address && (
               <address className="not-italic text-body-md text-on-surface leading-relaxed">
                 {address.street}
@@ -81,13 +88,12 @@ export default function ContactPage() {
                 {address.postal}
               </address>
             )}
-            <p className="mt-6 text-on-surface-variant text-sm">
-              Map embed pending full address confirmation (PRD §7 Q4).
-            </p>
           </GlassCard>
 
           <GlassCard className="p-8">
-            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">Email</h2>
+            <h2 className="font-headline-md text-headline-md text-on-surface mb-6">
+              Email
+            </h2>
             <ul className="space-y-4">
               <li>
                 <p className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-1">
@@ -122,7 +128,8 @@ export default function ContactPage() {
             Start a conversation
           </h2>
           <p className="text-on-surface-variant text-body-lg mb-8 max-w-2xl mx-auto">
-            WhatsApp dipantau sepanjang jam kerja. Email untuk dokumen &amp; kontrak.
+            WhatsApp dipantau sepanjang jam kerja. Email untuk dokumen &amp;
+            kontrak.
           </p>
           <ContactCTA
             emailSubject="Website Inquiry"

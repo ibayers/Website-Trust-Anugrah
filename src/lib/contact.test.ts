@@ -49,17 +49,21 @@ describe('contact helpers — anti-hallucination gate', () => {
   });
 
   describe('waLink', () => {
-    it('builds wa.me link from raw international format', () => {
-      expect(waLink(verified('62 812 3456 7890'))).toBe('https://wa.me/6281234567890');
+    it('builds api.whatsapp.com link from raw international format', () => {
+      expect(waLink(verified('62 812 3456 7890'))).toBe(
+        'https://api.whatsapp.com/send?phone=6281234567890',
+      );
     });
 
     it('strips non-digits (dashes, plus, spaces)', () => {
-      expect(waLink(verified('+62-812-3456-7890'))).toBe('https://wa.me/6281234567890');
+      expect(waLink(verified('+62-812-3456-7890'))).toBe(
+        'https://api.whatsapp.com/send?phone=6281234567890',
+      );
     });
 
     it('appends URL-encoded text when provided', () => {
       expect(waLink(verified('6281234567890'), "I'd like a quote")).toBe(
-        "https://wa.me/6281234567890?text=I'd%20like%20a%20quote",
+        "https://api.whatsapp.com/send?phone=6281234567890&text=I'd%20like%20a%20quote",
       );
     });
 

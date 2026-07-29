@@ -18,7 +18,8 @@ export function mailtoLink(emailSlot: ContentSlot<string>, subject?: string): st
 }
 
 /**
- * Build a wa.me link. Number must be international digits only (no "+", spaces, or dashes).
+ * Build a WhatsApp click-to-chat link. Number must be international digits only (no "+", spaces, or dashes).
+ * Uses api.whatsapp.com/send? — same behavior on mobile + desktop, and the text draft is preserved on web.
  * Returns null if the slot is TBD/Unconfirmed so CTAs can render an alternative action.
  */
 export function waLink(numberSlot: ContentSlot<string>, text?: string): string | null {
@@ -26,8 +27,9 @@ export function waLink(numberSlot: ContentSlot<string>, text?: string): string |
   if (!raw) return null;
   const digits = raw.replace(/[^\d]/g, '');
   if (!digits) return null;
-  if (!text) return `https://wa.me/${digits}`;
-  return `https://wa.me/${digits}?text=${encodeURIComponent(text)}`;
+  const base = `https://api.whatsapp.com/send?phone=${digits}`;
+  if (!text) return base;
+  return `${base}&text=${encodeURIComponent(text)}`;
 }
 
 /** Format a phone number for display, returning null for non-verified slots. */
