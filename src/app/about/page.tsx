@@ -24,7 +24,7 @@ export default function AboutPage() {
             <div className="aspect-[4/5] glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/design/tower-crane/hero.jpg"
+                src="/images/design/field-service/fs-2.jpg"
                 alt="PT Trust Anugrah field operation"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <GlassCard className="absolute inset-0 overflow-hidden p-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/design/gallery/02-crew.jpg"
+                src="/images/design/passenger-hoist/ph-3.jpg"
                 alt="Crew on-site during operation"
                 className="w-full h-full object-cover"
                 loading="lazy"

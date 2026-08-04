@@ -9,7 +9,7 @@ import { verifiedValue } from "@/lib/contact";
 // Phone/fax: tampilkan angka legacy untuk sementara (PRD §7 Q2/Q3 masih pending sign-off).
 // ponytail: api.whatsapp.com/send? — mobile + desktop sama, draft pesan ikut tersimpan di web.
 const WHATSAPP_PLACEHOLDER =
-  "https://api.whatsapp.com/send?phone=628121896949&text=" +
+  "https://api.whatsapp.com/send?phone=6285156996949&text=" +
   encodeURIComponent("Hello, I'd like to ask about your services.");
 const PHONE_LEGACY = "021-87702337";
 const FAX_LEGACY = "021-8700119";

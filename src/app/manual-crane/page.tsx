@@ -34,7 +34,7 @@ export default function ManualCranePage() {
         </>
       }
       heroSubtitle="Where small mobile cranes cannot reach, manual cranes take over — dismantle tower cranes from difficult areas with lower cost and high reliability."
-      heroImage="/images/design/manual-crane/01.jpg"
+      heroImage="/images/design/tower-crane/tc-2.jpg"
     >
       {/* Main: Specialized Access Logic + spec card. */}
       <section className="px-margin-desktop py-section-gap">
@@ -97,7 +97,7 @@ export default function ManualCranePage() {
               <div className="h-40 w-full rounded overflow-hidden border border-outline-variant/30">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/design/manual-crane/02.jpg"
+                  src="/images/design/field-service/fs-1.jpg"
                   alt="Manual crane deployment detail"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -147,36 +147,39 @@ export default function ManualCranePage() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {[
             {
-              src: "/images/design/manual-crane/03.jpg",
+              src: "/images/design/tower-crane/tc-3.jpg",
               label: "Rigging setup",
             },
             {
-              src: "/images/design/manual-crane/04.jpg",
+              src: "/images/design/tower-crane/tc-fix-1.jpg",
               label: "Structural anchor",
             },
             {
-              src: "/images/design/manual-crane/05.jpg",
+              src: "/images/design/tower-crane/tc-4.jpg",
               label: "Lift operation",
             },
             {
-              src: "/images/design/manual-crane/06.jpg",
+              src: "/images/design/passenger-hoist/ph-1.jpg",
               label: "Compact footprint",
             },
             {
-              src: "/images/design/manual-crane/07.jpg",
+              src: "/images/design/tower-crane/tc-fix-2.jpg",
               label: "Dismantling sequence",
             },
             {
-              src: "/images/design/manual-crane/08.jpg",
+              src: "/images/design/passenger-hoist/ph-2.jpg",
               label: "Component detail",
             },
             {
-              src: "/images/design/manual-crane/09.jpg",
+              src: "/images/design/field-service/fs-2.jpg",
               label: "Site integration",
             },
-            { src: "/images/design/manual-crane/01.jpg", label: "Hero unit" },
             {
-              src: "/images/design/manual-crane/02.jpg",
+              src: "/images/design/tower-crane/tc-fix-3.jpg",
+              label: "Hero unit",
+            },
+            {
+              src: "/images/design/field-service/fs-3.jpg",
               label: "Deployment detail",
             },
           ].map((p, i) => (

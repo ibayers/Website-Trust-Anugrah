@@ -61,7 +61,7 @@ export default function TowerCranePage() {
         </>
       }
       heroSubtitle="Elevating the skyline of Jakarta and beyond. Rental, erection, dismantling, parts, and certified operators — industrial-grade reliability."
-      heroImage="/images/design/tower-crane/hero.jpg"
+      heroImage="/images/design/tower-crane/tc-2.jpg"
     >
       {/* Equipment Fleet — bento grid: featured + secondary + 3 spec cards. */}
       <section className="px-margin-desktop py-section-gap">
@@ -86,7 +86,7 @@ export default function TowerCranePage() {
           <GlassCard className="md:col-span-8 group relative overflow-hidden aspect-video">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/design/tower-crane/fleet-potain.jpg"
+              src="/images/design/tower-crane/tc-3.jpg"
               alt="Potain tower crane on Jakarta construction site"
               className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
@@ -112,7 +112,7 @@ export default function TowerCranePage() {
           <GlassCard className="md:col-span-4 group relative overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/design/tower-crane/fleet-raimondi.jpg"
+              src="/images/design/tower-crane/tc-fix-1.jpg"
               alt="Raimondi ER180 crane detail"
               className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
@@ -175,10 +175,10 @@ export default function TowerCranePage() {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+            <div className="aspect-[4/3] glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/design/tower-crane/lifecycle-technician.jpg"
+                src="/images/design/tower-crane/tc-fix-2.jpg"
                 alt="Technician performing crane maintenance"
                 className="w-full h-full object-cover"
                 loading="lazy"
