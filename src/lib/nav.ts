@@ -1,41 +1,47 @@
 // trailingSlash:true in next.config means every route ends with "/".
+// label = English, labelId = Indonesian. Use navLabel(item, lang) to pick.
 export interface NavItem {
   href: string;
   label: string;
+  labelId: string;
+}
+
+export function navLabel(item: NavItem, lang: 'id' | 'en'): string {
+  return lang === 'id' ? item.labelId : item.label;
 }
 
 // Full set — used by Footer quick-links (split into equipment + primary there).
 export const navItems: readonly NavItem[] = [
-  { href: '/', label: 'Home' },
-  { href: '/about/', label: 'About' },
-  { href: '/services/', label: 'Services' },
-  { href: '/tower-crane/', label: 'Tower Crane' },
-  { href: '/passenger-hoist/', label: 'Passenger Hoist' },
-  { href: '/material-lift/', label: 'Material Lift' },
-  { href: '/manual-crane/', label: 'Manual Crane' },
-  { href: '/genset/', label: 'Genset' },
-  { href: '/parts/', label: 'Parts' },
-  { href: '/gallery/', label: 'Gallery' },
-  { href: '/sell/', label: 'Sell' },
-  { href: '/contact/', label: 'Contact' },
-] as const;
+  { href: '/', label: 'Home', labelId: 'Beranda' },
+  { href: '/about/', label: 'About', labelId: 'Tentang Kami' },
+  { href: '/services/', label: 'Services', labelId: 'Layanan' },
+  { href: '/tower-crane/', label: 'Tower Crane', labelId: 'Tower Crane' },
+  { href: '/passenger-hoist/', label: 'Passenger Hoist', labelId: 'Passenger Hoist' },
+  { href: '/material-lift/', label: 'Material Lift', labelId: 'Material Lift' },
+  { href: '/manual-crane/', label: 'Manual Crane', labelId: 'Manual Crane' },
+  { href: '/genset/', label: 'Genset', labelId: 'Genset' },
+  { href: '/parts/', label: 'Parts', labelId: 'Sparepart' },
+  { href: '/gallery/', label: 'Gallery', labelId: 'Galeri' },
+  { href: '/sell/', label: 'Sell', labelId: 'Penjualan' },
+  { href: '/contact/', label: 'Contact', labelId: 'Kontak' },
+];
 
 // Compact top-nav — design top bar shows 6 items; equipment grouped in dropdown.
 export const navMain: readonly NavItem[] = [
-  { href: '/', label: 'Home' },
-  { href: '/services/', label: 'Services' },
-  { href: '/gallery/', label: 'Gallery' },
-  { href: '/about/', label: 'About' },
-  { href: '/contact/', label: 'Contact' },
+  { href: '/', label: 'Home', labelId: 'Beranda' },
+  { href: '/services/', label: 'Services', labelId: 'Layanan' },
+  { href: '/gallery/', label: 'Gallery', labelId: 'Galeri' },
+  { href: '/about/', label: 'About', labelId: 'Tentang Kami' },
+  { href: '/contact/', label: 'Contact', labelId: 'Kontak' },
 ];
 
 // Dropdown contents for "Equipment" group.
 export const equipmentLinks: readonly NavItem[] = [
-  { href: '/tower-crane/', label: 'Tower Crane' },
-  { href: '/passenger-hoist/', label: 'Passenger Hoist' },
-  { href: '/material-lift/', label: 'Material Lift' },
-  { href: '/manual-crane/', label: 'Manual Crane' },
-  { href: '/genset/', label: 'Genset' },
+  { href: '/tower-crane/', label: 'Tower Crane', labelId: 'Tower Crane' },
+  { href: '/passenger-hoist/', label: 'Passenger Hoist', labelId: 'Passenger Hoist' },
+  { href: '/material-lift/', label: 'Material Lift', labelId: 'Material Lift' },
+  { href: '/manual-crane/', label: 'Manual Crane', labelId: 'Manual Crane' },
+  { href: '/genset/', label: 'Genset', labelId: 'Genset' },
 ];
 
 // Active if pathname starts with any equipment href.

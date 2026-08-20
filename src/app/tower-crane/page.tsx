@@ -5,6 +5,12 @@ import { ContactCTA } from '@/components/ui/ContactCTA';
 
 // PRD §5.4. All content Verified against Tower_Crane.html (legacy backup).
 // Page ported from _archive/design/tower_crane_modernized/code.html.
+//
+// Halaman ini DIKOSONGKAN sementara atas permintaan client (2026-08-20).
+// Untuk mengembalikan: ubah `const PAGE_ENABLED = false` menjadi `true`.
+// Semua konten asli tetap utuh di komponen <TowerCraneFull /> di bawah.
+const PAGE_ENABLED = false;
+
 const tcTypesForRent = [
   { name: 'Potain FO23 / B', note: 'Industry standard for versatility' },
   { name: 'Potain H30/30', note: 'High-speed lifting series' },
@@ -51,6 +57,22 @@ const otherServices = [
 ];
 
 export default function TowerCranePage() {
+  if (!PAGE_ENABLED) {
+    // State kosong: hanya hero minimal + pesan, tanpa konten lain.
+    return (
+      <PageShell heroTitle="Tower Crane">
+        <section className="px-margin-desktop py-section-gap">
+          <p className="text-on-surface-variant text-body-lg">
+            Halaman sedang diperbarui. Hubungi kami untuk informasi tower crane.
+          </p>
+        </section>
+      </PageShell>
+    );
+  }
+  return <TowerCraneFull />;
+}
+
+function TowerCraneFull() {
   return (
     <PageShell
       heroEyebrow="Precision Elevation Systems"

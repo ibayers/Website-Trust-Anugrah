@@ -1,22 +1,67 @@
+'use client';
+
 import { PageShell } from '@/components/layout/PageShell';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { ContactCTA } from '@/components/ui/ContactCTA';
-import { company } from '@/content/company';
+import { company, companyId } from '@/content/company';
 import { verifiedValue } from '@/lib/contact';
+import { useLang } from '@/lib/i18n';
 
 // PRD §5.2. Team section, projects counter, years counter intentionally absent
 // (PRD §5.2 ❌ → TBD: needs client sign-off). Ship only Verified content.
+const C = {
+  id: {
+    heroEyebrow: 'Berpengalaman sejak 1985',
+    heroTitle: 'Tentang Kami',
+    heroSubtitle:
+      'CV berdiri 9 Oktober 1993. Menjadi PT pada 13 Oktober 1998. Empat dekade jasa peralatan, konstruksi, instalasi, dan suplai mekanikal.',
+    sinceLabel: 'Berpengalaman Sejak',
+    coreTitle: 'Pilar bisnis inti',
+    fieldLabel: 'OPERASI LAPANGAN',
+    fieldDesc: 'Kru bersertifikat dikerahkan di seluruh Jawa dan luar Jawa.',
+    awardLabel: 'PENGHARGAAN',
+    awardTitle: 'Piagam Penghargaan',
+    awardDesc:
+      'Apresiasi atas komitmen PT Trust Anugrah dalam layanan peralatan konstruksi yang aman dan andal selama berpuluh tahun.',
+    ctaTitle: 'Kerja sama dengan kami',
+    ctaDesc: 'Sewa, servis, sparepart, troubleshooting, bangun & rebuild. Sampaikan kebutuhan Anda.',
+    emailSubject: 'Pertanyaan Umum',
+    waText: 'Halo, saya ingin mendiskusikan sebuah proyek.',
+  },
+  en: {
+    heroEyebrow: 'Experienced since 1985',
+    heroTitle: 'About',
+    heroSubtitle:
+      'CV established October 9, 1993. Incorporated as PT on October 13, 1998. Four decades of equipment services, construction, installation, and mechanical supply.',
+    sinceLabel: 'Experienced Since',
+    coreTitle: 'Core business pillars',
+    fieldLabel: 'FIELD OPERATIONS',
+    fieldDesc: 'Licensed crews deployed across Java and beyond.',
+    awardLabel: 'AWARDS',
+    awardTitle: 'Certificate of Appreciation',
+    awardDesc:
+      'Recognition of PT Trust Anugrah\'s commitment to safe and reliable construction equipment services over the decades.',
+    ctaTitle: 'Work with us',
+    ctaDesc: 'Rental, service, parts, troubleshooting, build & rebuild. Tell us what you need.',
+    emailSubject: 'General Inquiry',
+    waText: "Hello, I'd like to discuss a project.",
+  },
+} as const;
+
 export default function AboutPage() {
-  const narrative = verifiedValue(company.foundingNarrative) ?? '';
-  const motto = verifiedValue(company.motto) ?? '';
-  const tagline = verifiedValue(company.tagline) ?? '';
-  const coreBusiness = verifiedValue(company.coreBusiness) ?? [];
+  const { lang } = useLang();
+  const L = C[lang];
+  const narrative =
+    (lang === 'id' ? companyId.foundingNarrative : verifiedValue(company.foundingNarrative)) ?? '';
+  const motto = (lang === 'id' ? companyId.motto : verifiedValue(company.motto)) ?? '';
+  const tagline = (lang === 'id' ? companyId.tagline : verifiedValue(company.tagline)) ?? '';
+  const coreBusiness = lang === 'id' ? companyId.coreBusiness : verifiedValue(company.coreBusiness) ?? [];
 
   return (
     <PageShell
-      heroEyebrow="Experienced since 1985"
-      heroTitle="About"
-      heroSubtitle="CV established October 9, 1993. Incorporated as PT on October 13, 1998. Four decades of equipment services, construction, installation, and mechanical supply."
+      heroEyebrow={L.heroEyebrow}
+      heroTitle={L.heroTitle}
+      heroSubtitle={L.heroSubtitle}
     >
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-start">
@@ -33,7 +78,7 @@ export default function AboutPage() {
             <GlassCard className="absolute -bottom-8 -right-4 p-6 w-48 hidden md:block">
               <div className="font-display-xl text-headline-lg text-secondary">1985</div>
               <div className="font-label-technical text-xs text-on-surface-variant uppercase">
-                Experienced Since
+                {L.sinceLabel}
               </div>
             </GlassCard>
           </div>
@@ -55,7 +100,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-stretch">
           <GlassCard className="p-8 order-2 lg:order-1">
             <h3 className="font-headline-md text-headline-md text-on-surface mb-4">
-              Core business pillars
+              {L.coreTitle}
             </h3>
             <ul className="space-y-3">
               {coreBusiness.map((pillar, i) => (
@@ -81,13 +126,37 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
               <div className="absolute bottom-6 left-6 right-6">
                 <span className="font-label-technical text-xs text-secondary uppercase tracking-widest">
-                  FIELD OPERATIONS
+                  {L.fieldLabel}
                 </span>
-                <p className="text-on-surface-variant text-sm mt-1">
-                  Licensed crews deployed across Java and beyond.
-                </p>
+                <p className="text-on-surface-variant text-sm mt-1">{L.fieldDesc}</p>
               </div>
             </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Penghargaan / Awards — piagam dari asset client (2026-08-20). */}
+      <section className="px-margin-desktop py-section-gap">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+          <div className="relative">
+            <div className="aspect-[3/4] max-w-md mx-auto glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/piagam-trust-anugrah.jpg"
+                alt="Piagam penghargaan PT Trust Anugrah"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div>
+            <span className="font-label-technical text-secondary uppercase tracking-widest text-xs">
+              {L.awardLabel}
+            </span>
+            <h2 className="mt-4 font-headline-lg text-headline-lg text-on-surface mb-6 leading-tight">
+              {L.awardTitle}
+            </h2>
+            <p className="text-body-lg text-on-surface-variant leading-relaxed">{L.awardDesc}</p>
           </div>
         </div>
       </section>
@@ -95,14 +164,14 @@ export default function AboutPage() {
       <section className="px-margin-desktop py-section-gap">
         <GlassCard className="p-12 text-center">
           <h2 className="font-headline-lg text-headline-lg text-on-surface mb-4">
-            Work with us
+            {L.ctaTitle}
           </h2>
           <p className="text-on-surface-variant text-body-lg mb-8 max-w-2xl mx-auto">
-            Rental, service, parts, troubleshooting, build &amp; rebuild. Tell us what you need.
+            {L.ctaDesc}
           </p>
           <ContactCTA
-            emailSubject="General Inquiry"
-            waText="Hello, I'd like to discuss a project."
+            emailSubject={L.emailSubject}
+            waText={L.waText}
             className="justify-center"
           />
         </GlassCard>

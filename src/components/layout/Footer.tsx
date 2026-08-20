@@ -1,18 +1,38 @@
+'use client';
+
 import Link from 'next/link';
-import { navItems } from '@/lib/nav';
-import { company } from '@/content/company';
+import { navItems, navLabel } from '@/lib/nav';
+import { company, companyId } from '@/content/company';
 import { contact } from '@/content/contact';
 import { mailtoLink, verifiedValue } from '@/lib/contact';
+import { useLang } from '@/lib/i18n';
 
 // Synthesized footer (PRD §5.13 — no design has a real footer).
 // 4 columns: brand/about, quick links, equipment, contact.
 // Copyright year is dynamic via build-time new Date().
 export function Footer() {
+  const { lang } = useLang();
   const year = new Date().getFullYear();
   const legalName = verifiedValue(company.legalName);
-  const narrative = verifiedValue(company.foundingNarrative);
+  const narrative =
+    lang === 'id' ? companyId.foundingNarrative : verifiedValue(company.foundingNarrative);
   const mailHref = mailtoLink(contact.email);
   const address = verifiedValue(contact.address);
+
+  const t = {
+    id: {
+      company: 'Perusahaan',
+      equipment: 'Peralatan',
+      contact: 'Kontak',
+      rights: 'Hak cipta dilindungi.',
+    },
+    en: {
+      company: 'Company',
+      equipment: 'Equipment',
+      contact: 'Contact',
+      rights: 'All rights reserved.',
+    },
+  }[lang];
 
   const equipmentLinksList = navItems.filter((i) =>
     ['/tower-crane/', '/passenger-hoist/', '/material-lift/', '/manual-crane/', '/genset/', '/sell/'].includes(i.href),
@@ -31,13 +51,13 @@ export function Footer() {
 
         <div>
           <h4 className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-4">
-            Company
+            {t.company}
           </h4>
           <ul className="space-y-2">
             {primaryLinks.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="text-on-surface hover:text-secondary transition-colors text-body-md">
-                  {item.label}
+                  {navLabel(item, lang)}
                 </Link>
               </li>
             ))}
@@ -46,13 +66,13 @@ export function Footer() {
 
         <div>
           <h4 className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-4">
-            Equipment
+            {t.equipment}
           </h4>
           <ul className="space-y-2">
             {equipmentLinksList.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="text-on-surface hover:text-secondary transition-colors text-body-md">
-                  {item.label}
+                  {navLabel(item, lang)}
                 </Link>
               </li>
             ))}
@@ -61,7 +81,7 @@ export function Footer() {
 
         <div>
           <h4 className="font-label-technical text-on-surface-variant uppercase tracking-widest text-xs mb-4">
-            Contact
+            {t.contact}
           </h4>
           {mailHref && (
             <p className="mb-2">
@@ -82,10 +102,10 @@ export function Footer() {
 
       <div className="border-t border-outline-variant/20 px-margin-desktop py-6 flex flex-col md:flex-row justify-between items-center gap-2">
         <p className="font-label-technical text-on-surface-variant text-xs uppercase tracking-widest">
-          &copy; {year} {legalName}. All rights reserved.
+          &copy; {year} {legalName}. {t.rights}
         </p>
         <p className="font-label-technical text-on-surface-variant text-xs uppercase tracking-widest">
-          Safety is Number 1!
+          {lang === 'id' ? companyId.motto : verifiedValue(company.motto)}
         </p>
       </div>
     </footer>

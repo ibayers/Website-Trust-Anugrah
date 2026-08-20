@@ -1,6 +1,7 @@
 import './globals.css';
 import { inter, hanken, jetbrains } from './fonts';
 import { Agentation } from 'agentation';
+import { LangProvider } from '@/lib/i18n';
 
 // metadataBase uses placeholder domain — PRD §7 Q5 pending. OG paths resolve against this.
 export const metadata = {
@@ -43,7 +44,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${hanken.variable} ${jetbrains.variable}`}>
+    <html lang="id" className={`dark ${inter.variable} ${hanken.variable} ${jetbrains.variable}`}>
       <head>
         {/* Icon font — kept as a link; icon glyphs are progressive, not render-critical. */}
         <link
@@ -52,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
-        {children}
+        <LangProvider>{children}</LangProvider>
         {process.env.NODE_ENV === 'development' && <Agentation />}
       </body>
     </html>

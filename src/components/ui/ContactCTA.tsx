@@ -1,6 +1,9 @@
+'use client';
+
 import { Button } from './Button';
 import { mailtoLink, waLink } from '@/lib/contact';
 import { contact } from '@/content/contact';
+import { useLang } from '@/lib/i18n';
 
 // Canonical CTA pair: primary email + WhatsApp.
 // PRD §5.11: no form. PRD §7 Q1: WhatsApp number TBD — when TBD, render email-only.
@@ -11,6 +14,7 @@ interface ContactCTAProps {
 }
 
 export function ContactCTA({ emailSubject, waText, className = '' }: ContactCTAProps) {
+  const { lang } = useLang();
   const mailHref = mailtoLink(contact.email, emailSubject);
   const waHref = waLink(contact.whatsapp, waText);
 
@@ -21,7 +25,7 @@ export function ContactCTA({ emailSubject, waText, className = '' }: ContactCTAP
           <span className="material-symbols-outlined" aria-hidden>
             mail
           </span>
-          Email Us
+          {lang === 'id' ? 'Email Kami' : 'Email Us'}
         </Button>
       )}
       {waHref && (

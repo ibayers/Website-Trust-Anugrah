@@ -1,60 +1,140 @@
-import { PageShell } from '@/components/layout/PageShell';
-import { GlassCard } from '@/components/ui/GlassCard';
-import { ContactCTA } from '@/components/ui/ContactCTA';
-import { company } from '@/content/company';
-import { verifiedValue } from '@/lib/contact';
+'use client';
+
+import { PageShell } from "@/components/layout/PageShell";
+import { GlassCard } from "@/components/ui/GlassCard";
+import { ContactCTA } from "@/components/ui/ContactCTA";
+import { company, companyId } from "@/content/company";
+import { verifiedValue } from "@/lib/contact";
+import { useLang } from "@/lib/i18n";
 
 // Ported from _archive/design/crew_professional_workforce/code.html.
 // Per PRD §5.2 + §7 Q12: NO fabricated names, bios, or stock photos ship here.
-// Division-of-expertise cards describe verified general roles from company.foundingNarrative
-// ("experienced & professional crew ... licensed from man power department").
-const expertise = [
-  {
-    icon: 'construction',
-    title: 'Tower Crane Operators',
-    desc: 'Licensed professionals trained for extreme height precision and heavy load management.',
-    badge: 'Man Power Dept. Licensed',
+const C = {
+  id: {
+    heroEyebrow: "Kru Elite Lapangan",
+    heroTitle: (
+      <>
+        Denyut <br />
+        <span className="text-secondary">Presisi</span>
+      </>
+    ),
+    heroSubtitle:
+      "Spesialis bersertifikat penggerak pembangunan skyline. Tenaga kerja kami adalah fondasi setiap gedung tinggi yang kami dukung.",
+    missionPrefix: "Keselamatan adalah",
+    missionAccent: "Nomor 1",
+    missionP:
+      "Di PT. TRUST ANUGRAH PERSADA, keunggulan teknis tak terpisahkan dari keselamatan. Protokol kru-first kami memastikan setiap operator, insinyur, dan petugas keselamatan bersertifikat dari depnaker. Kami tidak sekadar mengangkat beban — kami mengelola risiko dengan presisi mutlak.",
+    licensedPolicy: "Kebijakan Kru Bersertifikat",
+    mottoLabel: "Motto Kami",
+    divisionPrefix: "Divisi",
+    divisionAccent: "Keahlian",
+    expertise: [
+      {
+        icon: "construction",
+        title: "Operator Tower Crane",
+        desc: "Profesional bersertifikat terlatih untuk presisi ketinggian ekstrem dan manajemen beban berat.",
+        badge: "Bersertifikat Depnaker",
+      },
+      {
+        icon: "build",
+        title: "Perawatan Teknis",
+        desc: "Tim respons cepat untuk diagnosis mekanikal, pelumasan, dan pemeriksaan integritas struktural.",
+        badge: "Siklus Servis Bulanan",
+      },
+      {
+        icon: "architecture",
+        title: "Insinyur Proyek",
+        desc: "Spesialis struktural yang mengawasi strategi deployment dan kalkulasi beban angin untuk gedung tinggi.",
+        badge: "Teknik Sipil",
+      },
+      {
+        icon: "verified_user",
+        title: "Petugas Keselamatan",
+        desc: "Spesialis K3 khusus yang memastikan kepatuhan HSE penuh dan protokol keselamatan perilaku di seluruh lokasi.",
+        badge: "Kepatuhan HSE",
+      },
+    ],
+    fieldTitle: "Operasi Lapangan",
+    fieldDesc:
+      "Rekam visual kru kami mengeksekusi manuver kompleks di proyek infrastruktur besar. Foto asli dari arsip perusahaan — bukan stok.",
+    partnerTitle: "Bermitra dengan Kru Kami",
+    partnerDesc:
+      "Butuh operator bersertifikat, insinyur tersertifikasi, atau kru deployment lengkap? Kami sediakan profesional berpengalaman untuk proyek jangka pendek maupun kontrak jangka panjang.",
+    emailSubject: "Pertanyaan Kru / Operator",
+    waText: "Halo, saya ingin bertanya tentang sewa operator atau kru.",
   },
-  {
-    icon: 'build',
-    title: 'Technical Maintenance',
-    desc: 'Rapid response team for mechanical diagnostics, lubrication, and structural integrity checks.',
-    badge: 'Monthly Service Cycle',
+  en: {
+    heroEyebrow: "On-Site Elite Crew",
+    heroTitle: (
+      <>
+        The Pulse of <br />
+        <span className="text-secondary">Precision</span>
+      </>
+    ),
+    heroSubtitle:
+      "Licensed specialists driving skyline development. Our workforce is the foundation of every high-rise we support.",
+    missionPrefix: "Safety is",
+    missionAccent: "Number 1",
+    missionP:
+      "At PT. TRUST ANUGRAH PERSADA, technical excellence is inseparable from safety. Our crew-first protocol ensures every operator, engineer, and safety officer is licensed by the man power department. We don't just move loads — we manage risk with absolute precision.",
+    licensedPolicy: "Licensed Crew Policy",
+    mottoLabel: "Standing Motto",
+    divisionPrefix: "Division of",
+    divisionAccent: "Expertise",
+    expertise: [
+      {
+        icon: "construction",
+        title: "Tower Crane Operators",
+        desc: "Licensed professionals trained for extreme height precision and heavy load management.",
+        badge: "Man Power Dept. Licensed",
+      },
+      {
+        icon: "build",
+        title: "Technical Maintenance",
+        desc: "Rapid response team for mechanical diagnostics, lubrication, and structural integrity checks.",
+        badge: "Monthly Service Cycle",
+      },
+      {
+        icon: "architecture",
+        title: "Project Engineers",
+        desc: "Structural specialists overseeing deployment strategies and wind-load calculations for skyscrapers.",
+        badge: "Civil Engineering",
+      },
+      {
+        icon: "verified_user",
+        title: "Safety Officers",
+        desc: "Dedicated K3 specialists ensuring full HSE compliance and site-wide behavioral safety protocols.",
+        badge: "HSE Compliance",
+      },
+    ],
+    fieldTitle: "Field Operations",
+    fieldDesc:
+      "A visual record of our crew executing complex maneuvers on major infrastructure projects. Real photos from the company archive — no stock imagery.",
+    partnerTitle: "Partner With Our Crew",
+    partnerDesc:
+      "Need licensed operators, certified engineers, or a full deployment crew? We provide experienced professionals for short-term projects and long-term contracts.",
+    emailSubject: "Crew / Operator Inquiry",
+    waText: "Hello, I'd like to ask about operator or crew rental.",
   },
-  {
-    icon: 'architecture',
-    title: 'Project Engineers',
-    desc: 'Structural specialists overseeing deployment strategies and wind-load calculations for skyscrapers.',
-    badge: 'Civil Engineering',
-  },
-  {
-    icon: 'verified_user',
-    title: 'Safety Officers',
-    desc: 'Dedicated K3 specialists ensuring full HSE compliance and site-wide behavioral safety protocols.',
-    badge: 'HSE Compliance',
-  },
-] as const;
+} as const;
 
 const fieldPhotos = [
-  { src: '/images/design/crew/field-01.jpg', alt: 'Crew on-site' },
-  { src: '/images/design/crew/field-02.jpg', alt: 'Operations field' },
-  { src: '/images/design/crew/field-03.jpg', alt: 'Maintenance work' },
-  { src: '/images/design/crew/field-04.jpg', alt: 'Field coordination' },
+  { src: "/images/design/crew/field-01.jpg", alt: "Crew on-site" },
+  { src: "/images/design/crew/field-02.jpg", alt: "Operations field" },
+  { src: "/images/design/crew/field-03.jpg", alt: "Maintenance work" },
+  { src: "/images/design/crew/field-04.jpg", alt: "Field coordination" },
 ] as const;
 
 export default function CrewPage() {
-  const motto = verifiedValue(company.motto);
+  const { lang } = useLang();
+  const L = C[lang];
+  const motto = lang === "id" ? companyId.motto : verifiedValue(company.motto);
 
   return (
     <PageShell
-      heroEyebrow="On-Site Elite Crew"
-      heroTitle={
-        <>
-          The Pulse of <br />
-          <span className="text-secondary">Precision</span>
-        </>
-      }
-      heroSubtitle="Licensed specialists driving Southeast Asia's skyline development. Our workforce is the foundation of every high-rise we support."
+      heroEyebrow={L.heroEyebrow}
+      heroTitle={L.heroTitle}
+      heroSubtitle={L.heroSubtitle}
       heroImage="/images/design/crew/hero.jpg"
     >
       {/* Mission statement + stats. */}
@@ -62,23 +142,23 @@ export default function CrewPage() {
         <div className="max-w-container-max mx-auto grid lg:grid-cols-2 gap-gutter items-center">
           <GlassCard className="p-12">
             <h2 className="font-headline-lg text-headline-lg mb-8">
-              Safety is <span className="text-secondary">Number 1</span>
+              {L.missionPrefix} <span className="text-secondary">{L.missionAccent}</span>
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
-              At PT. TRUST ANUGRAH PERSADA, technical excellence is inseparable from safety. Our crew-first protocol
-              ensures every operator, engineer, and safety officer is licensed by the man power department.
-              We don&apos;t just move loads — we manage risk with absolute precision.
+              {L.missionP}
             </p>
             <div className="grid grid-cols-2 gap-8 border-t border-outline-variant/30 pt-8">
               <div>
                 <div className="font-display-xl text-headline-lg text-secondary">100%</div>
                 <div className="font-label-technical text-on-surface-variant uppercase">
-                  Licensed Crew Policy
+                  {L.licensedPolicy}
                 </div>
               </div>
               <div>
                 <div className="font-display-xl text-headline-lg text-secondary">{motto}</div>
-                <div className="font-label-technical text-on-surface-variant uppercase">Standing Motto</div>
+                <div className="font-label-technical text-on-surface-variant uppercase">
+                  {L.mottoLabel}
+                </div>
               </div>
             </div>
           </GlassCard>
@@ -102,13 +182,16 @@ export default function CrewPage() {
         <div className="px-margin-desktop max-w-container-max mx-auto">
           <div className="mb-16">
             <h2 className="font-headline-lg text-headline-lg mb-4 text-center">
-              Division of <span className="text-secondary">Expertise</span>
+              {L.divisionPrefix} <span className="text-secondary">{L.divisionAccent}</span>
             </h2>
             <div className="w-24 h-1 bg-secondary mx-auto" />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {expertise.map((e) => (
-              <GlassCard key={e.title} className="p-8 hover:border-secondary/40 transition-colors group">
+            {L.expertise.map((e) => (
+              <GlassCard
+                key={e.title}
+                className="p-8 hover:border-secondary/40 transition-colors group"
+              >
                 <div className="mb-6 text-secondary group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-5xl" aria-hidden>
                     {e.icon}
@@ -130,11 +213,8 @@ export default function CrewPage() {
         <div className="max-w-container-max mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
             <div>
-              <h2 className="font-headline-lg text-headline-lg mb-4">Field Operations</h2>
-              <p className="text-on-surface-variant max-w-xl">
-                A visual record of our crew executing complex maneuvers on major infrastructure projects across the
-                region. Real photos from the company archive — no stock imagery.
-              </p>
+              <h2 className="font-headline-lg text-headline-lg mb-4">{L.fieldTitle}</h2>
+              <p className="text-on-surface-variant max-w-xl">{L.fieldDesc}</p>
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -167,15 +247,14 @@ export default function CrewPage() {
           <div className="absolute inset-0 grid-overlay opacity-20" />
           <div className="relative z-10 max-w-2xl">
             <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-secondary-fixed mb-8">
-              Partner With Our Crew
+              {L.partnerTitle}
             </h2>
             <p className="text-on-secondary-fixed-variant text-lg mb-12 font-medium">
-              Need licensed operators, certified engineers, or a full deployment crew? We provide experienced
-              professionals for short-term projects and long-term contracts.
+              {L.partnerDesc}
             </p>
             <ContactCTA
-              emailSubject="Crew / Operator Inquiry"
-              waText="Hello, I'd like to ask about operator or crew rental."
+              emailSubject={L.emailSubject}
+              waText={L.waText}
               className="justify-center"
             />
           </div>

@@ -36,3 +36,19 @@ export const company = {
     source: 'Gallery.html',
   } satisfies Verified<readonly string[]>,
 } as const;
+
+// Indonesian counterparts of the verified English fields above.
+// Translations derived from `company` (source of truth); keyed identically
+// so pages can pick via `lang === 'id' ? companyId : verifiedValue(company.x)`.
+export const companyId = {
+  tagline: 'Mitra Terpercaya Anda',
+  motto: 'Keselamatan Nomor 1!',
+  foundingNarrative:
+    'Berpengalaman sejak 1985. CV berdiri pada 9 Oktober 1993. Menjadi PT pada 13 Oktober 1998. PT. TRUST ANUGRAH PERSADA bergerak di bidang jasa peralatan, jasa konstruksi, jasa instalasi, mekanikal dan supplier.',
+  coreBusiness: [
+    'Jasa peralatan',
+    'Jasa konstruksi',
+    'Jasa instalasi',
+    'Mekanikal & supplier',
+  ] as readonly string[],
+} as const;
