@@ -16,9 +16,9 @@ export const navItems: readonly NavItem[] = [
   { href: '/about/', label: 'About', labelId: 'Tentang Kami' },
   { href: '/services/', label: 'Services', labelId: 'Layanan' },
   { href: '/tower-crane/', label: 'Tower Crane', labelId: 'Tower Crane' },
-  { href: '/passenger-hoist/', label: 'Passenger Hoist', labelId: 'Passenger Hoist' },
-  { href: '/material-lift/', label: 'Material Lift', labelId: 'Material Lift' },
-  { href: '/manual-crane/', label: 'Manual Crane', labelId: 'Manual Crane' },
+  { href: '/passenger-hoist/', label: 'Passenger Hoist', labelId: 'Lift Penumpang' },
+  { href: '/material-lift/', label: 'Material Lift', labelId: 'Lift Material' },
+  { href: '/manual-crane/', label: 'Manual Crane', labelId: 'Derek Manual' },
   { href: '/genset/', label: 'Genset', labelId: 'Genset' },
   { href: '/parts/', label: 'Parts', labelId: 'Sparepart' },
   { href: '/gallery/', label: 'Gallery', labelId: 'Galeri' },
@@ -38,9 +38,9 @@ export const navMain: readonly NavItem[] = [
 // Dropdown contents for "Equipment" group.
 export const equipmentLinks: readonly NavItem[] = [
   { href: '/tower-crane/', label: 'Tower Crane', labelId: 'Tower Crane' },
-  { href: '/passenger-hoist/', label: 'Passenger Hoist', labelId: 'Passenger Hoist' },
-  { href: '/material-lift/', label: 'Material Lift', labelId: 'Material Lift' },
-  { href: '/manual-crane/', label: 'Manual Crane', labelId: 'Manual Crane' },
+  { href: '/passenger-hoist/', label: 'Passenger Hoist', labelId: 'Lift Penumpang' },
+  { href: '/material-lift/', label: 'Material Lift', labelId: 'Lift Material' },
+  { href: '/manual-crane/', label: 'Manual Crane', labelId: 'Derek Manual' },
   { href: '/genset/', label: 'Genset', labelId: 'Genset' },
 ];
 
