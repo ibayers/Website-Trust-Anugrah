@@ -18,6 +18,10 @@ const C = {
     ctaDesc: 'Sampaikan kebutuhan Anda; kami arahkan ke tim yang tepat.',
     emailSubject: 'Pertanyaan Layanan',
     waText: 'Halo, saya ingin bertanya tentang layanan.',
+    photoLabel: 'LAYANAN LAPANGAN',
+    photoTitle: 'Siap di Lokasi Proyek Anda',
+    photoDesc:
+      'Operator dan teknisi bersertifikat kami bekerja langsung di lokasi — perakitan, perawatan, dan perbaikan peralatan angkat di seluruh Indonesia.',
     services: [
       { icon: 'workspace_premium', title: 'Operator dan teknisi bersertifikat untuk tower crane dan passenger hoist', href: '/crew/' },
       { icon: 'build', title: 'Servis elektrikal dan mekanikal', href: '/contact/' },
@@ -39,6 +43,10 @@ const C = {
     ctaDesc: 'Share your requirements; we will route to the right team.',
     emailSubject: 'Service Inquiry',
     waText: "Hello, I'd like to ask about a service.",
+    photoLabel: 'FIELD SERVICES',
+    photoTitle: 'Ready on Your Project Site',
+    photoDesc:
+      'Our certified operators and technicians work directly on site — assembly, maintenance, and repair of lifting equipment across Indonesia.',
     services: [
       { icon: 'workspace_premium', title: 'Provide certified operators and technicians for tower crane and passenger hoist', href: '/crew/' },
       { icon: 'build', title: 'Electrical and mechanical servicing', href: '/contact/' },
@@ -91,16 +99,29 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Foto lapangan — services2.jpg, full-color. */}
+      {/* Foto lapangan (kecil) + penjelasan singkat di sebelahnya. */}
       <section className="px-margin-desktop py-section-gap">
-        <div className="wm glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/services2.jpg"
-            alt="PT Trust Anugrah field services"
-            className="w-full h-auto"
-            loading="lazy"
-          />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+          <div className="wm glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/services2.jpg"
+              alt="PT Trust Anugrah field services"
+              className="w-full max-h-[420px] object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <span className="font-label-technical text-secondary uppercase tracking-widest text-xs">
+              {L.photoLabel}
+            </span>
+            <h2 className="mt-3 font-headline-md text-headline-md text-on-surface mb-4">
+              {L.photoTitle}
+            </h2>
+            <p className="text-body-lg text-on-surface-variant leading-relaxed">
+              {L.photoDesc}
+            </p>
+          </div>
         </div>
       </section>
 
