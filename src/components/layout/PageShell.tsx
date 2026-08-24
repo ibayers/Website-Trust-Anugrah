@@ -25,10 +25,11 @@ export function PageShell({ heroEyebrow, heroTitle, heroSubtitle, heroImage, chi
               <img
                 src={heroImage}
                 alt=""
-                className="w-full h-full object-cover grayscale opacity-40"
+                className="w-full h-full object-cover"
                 loading="eager"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/70 to-background" />
+              {/* Scrim kiri tipis agar teks terbaca — gambar tetap terang/full-color. */}
+              <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/30 to-transparent" />
             </div>
           )}
           <div className="relative z-10 px-margin-desktop max-w-4xl py-24 md:py-32">

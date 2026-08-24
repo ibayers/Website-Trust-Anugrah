@@ -149,7 +149,7 @@ export default function PassengerHoistPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           {/* Featured unit */}
-          <GlassCard className="md:col-span-8 h-[400px] relative overflow-hidden group">
+          <GlassCard className="wm md:col-span-8 h-[400px] relative overflow-hidden group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/design/passenger-hoist/ph-2.jpg"
@@ -172,7 +172,7 @@ export default function PassengerHoistPage() {
           {/* Side feature cards */}
           <div className="md:col-span-4 flex flex-col gap-gutter">
             <GlassCard className="p-0 overflow-hidden flex flex-col">
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="wm aspect-[4/3] overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/design/passenger-hoist/ph-3.jpg"
@@ -187,7 +187,7 @@ export default function PassengerHoistPage() {
               </div>
             </GlassCard>
             <GlassCard className="p-0 overflow-hidden flex flex-col">
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="wm aspect-[4/3] overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/design/passenger-hoist/service-lifecycle.jpg"

@@ -14,7 +14,7 @@ const C = {
     heroEyebrow: 'Berpengalaman sejak 1985',
     heroTitle: 'Tentang Kami',
     heroSubtitle:
-      'CV berdiri 9 Oktober 1993. Menjadi PT pada 13 Oktober 1998. Empat dekade jasa peralatan, konstruksi, instalasi, dan suplai mekanikal.',
+      'Berpengalaman sejak 1985 di tower crane, passenger hoist, material lift, manual crane, dan genset.',
     sinceLabel: 'Berpengalaman Sejak',
     coreTitle: 'Pilar bisnis inti',
     fieldLabel: 'OPERASI LAPANGAN',
@@ -23,6 +23,10 @@ const C = {
     awardTitle: 'Piagam Penghargaan',
     awardDesc:
       'Apresiasi atas komitmen PT Trust Anugrah dalam layanan peralatan konstruksi yang aman dan andal selama berpuluh tahun.',
+    qualityLabel: 'SERTIFIKAT',
+    qualityTitle: 'Sertifikat Kualitas',
+    qualityDesc:
+      'Sertifikat kualitas yang menegaskan standar layanan peralatan angkat PT Trust Anugrah — komitmen pada keselamatan dan keandalan di setiap operasi.',
     ctaTitle: 'Kerja sama dengan kami',
     ctaDesc: 'Sewa, servis, sparepart, troubleshooting, bangun & rebuild. Sampaikan kebutuhan Anda.',
     emailSubject: 'Pertanyaan Umum',
@@ -32,7 +36,7 @@ const C = {
     heroEyebrow: 'Experienced since 1985',
     heroTitle: 'About',
     heroSubtitle:
-      'CV established October 9, 1993. Incorporated as PT on October 13, 1998. Four decades of equipment services, construction, installation, and mechanical supply.',
+      'Experienced since 1985 in tower crane, passenger hoist, material lift, manual crane, and genset.',
     sinceLabel: 'Experienced Since',
     coreTitle: 'Core business pillars',
     fieldLabel: 'FIELD OPERATIONS',
@@ -41,6 +45,10 @@ const C = {
     awardTitle: 'Certificate of Appreciation',
     awardDesc:
       'Recognition of PT Trust Anugrah\'s commitment to safe and reliable construction equipment services over the decades.',
+    qualityLabel: 'CERTIFICATE',
+    qualityTitle: 'Quality Certificate',
+    qualityDesc:
+      'A quality certificate affirming PT Trust Anugrah\'s service standards for lifting equipment — commitment to safety and reliability in every operation.',
     ctaTitle: 'Work with us',
     ctaDesc: 'Rental, service, parts, troubleshooting, build & rebuild. Tell us what you need.',
     emailSubject: 'General Inquiry',
@@ -62,16 +70,17 @@ export default function AboutPage() {
       heroEyebrow={L.heroEyebrow}
       heroTitle={L.heroTitle}
       heroSubtitle={L.heroSubtitle}
+      heroImage="/images/quality-certificate.jpg"
     >
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-start">
           <div className="relative">
-            <div className="aspect-[4/5] glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+            <div className="wm glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/design/field-service/fs-2.jpg"
+                src="/images/about.jpg"
                 alt="PT Trust Anugrah field operation"
-                className="w-full h-full object-cover"
+                className="w-auto h-auto max-w-full max-h-[560px] mx-auto block"
                 loading="lazy"
               />
             </div>
@@ -114,13 +123,13 @@ export default function AboutPage() {
             </ul>
           </GlassCard>
 
-          <div className="relative order-1 lg:order-2 min-h-[320px]">
-            <GlassCard className="absolute inset-0 overflow-hidden p-0">
+          <div className="relative order-1 lg:order-2">
+            <GlassCard className="wm relative overflow-hidden p-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/design/passenger-hoist/ph-3.jpg"
+                src="/images/about2.jpg"
                 alt="Crew on-site during operation"
-                className="w-full h-full object-cover"
+                className="w-full h-auto"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
@@ -135,29 +144,46 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Penghargaan / Awards — piagam dari asset client (2026-08-20). */}
+      {/* Penghargaan & Sertifikat — 2 dokumen dari asset client. */}
       <section className="px-margin-desktop py-section-gap">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
-          <div className="relative">
-            <div className="aspect-[3/4] max-w-md mx-auto glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
+          <GlassCard className="p-6">
+            <div className="wm glass-panel rounded-2xl overflow-hidden border border-outline-variant/30 mb-6">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/piagam-trust-anugrah.jpg"
                 alt="Piagam penghargaan PT Trust Anugrah"
-                className="w-full h-full object-cover"
+                className="w-auto h-auto max-w-full max-h-[480px] mx-auto block"
                 loading="lazy"
               />
             </div>
-          </div>
-          <div>
             <span className="font-label-technical text-secondary uppercase tracking-widest text-xs">
               {L.awardLabel}
             </span>
-            <h2 className="mt-4 font-headline-lg text-headline-lg text-on-surface mb-6 leading-tight">
+            <h3 className="mt-3 font-headline-md text-headline-md text-on-surface mb-3 leading-tight">
               {L.awardTitle}
-            </h2>
-            <p className="text-body-lg text-on-surface-variant leading-relaxed">{L.awardDesc}</p>
-          </div>
+            </h3>
+            <p className="text-body-md text-on-surface-variant leading-relaxed">{L.awardDesc}</p>
+          </GlassCard>
+
+          <GlassCard className="p-6">
+            <div className="wm glass-panel rounded-2xl overflow-hidden border border-outline-variant/30 mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/quality-certificate.jpg"
+                alt="Sertifikat kualitas PT Trust Anugrah"
+                className="w-auto h-auto max-w-full max-h-[480px] mx-auto block"
+                loading="lazy"
+              />
+            </div>
+            <span className="font-label-technical text-secondary uppercase tracking-widest text-xs">
+              {L.qualityLabel}
+            </span>
+            <h3 className="mt-3 font-headline-md text-headline-md text-on-surface mb-3 leading-tight">
+              {L.qualityTitle}
+            </h3>
+            <p className="text-body-md text-on-surface-variant leading-relaxed">{L.qualityDesc}</p>
+          </GlassCard>
         </div>
       </section>
 

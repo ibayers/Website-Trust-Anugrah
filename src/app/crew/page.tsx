@@ -164,12 +164,12 @@ export default function CrewPage() {
           </GlassCard>
 
           <div className="relative group">
-            <div className="aspect-square glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+            <div className="wm aspect-square glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/design/crew/mission-gear.jpg"
                 alt="Field crew performing crane foundation work"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover transition-all duration-700"
                 loading="lazy"
               />
             </div>
@@ -221,13 +221,13 @@ export default function CrewPage() {
             {fieldPhotos.map((p) => (
               <div
                 key={p.src}
-                className="aspect-square relative group overflow-hidden bg-surface-variant rounded-xl"
+                className="wm aspect-square relative group overflow-hidden bg-surface-variant rounded-xl"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={p.src}
                   alt={p.alt}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">

@@ -22,7 +22,7 @@ export const navItems: readonly NavItem[] = [
   { href: '/genset/', label: 'Genset', labelId: 'Genset' },
   { href: '/parts/', label: 'Parts', labelId: 'Sparepart' },
   { href: '/gallery/', label: 'Gallery', labelId: 'Galeri' },
-  { href: '/sell/', label: 'Sell', labelId: 'Penjualan' },
+  { href: '/sell/', label: 'Marketing Your Used TC & PH', labelId: 'Marketing Your Used TC & PH' },
   { href: '/contact/', label: 'Contact', labelId: 'Kontak' },
 ];
 

@@ -8,7 +8,7 @@ import { useLang } from "@/lib/i18n";
 // PRD §5.7. Content Verified against Manual_Crane.html (legacy backup).
 const C = {
   id: {
-    heroEyebrow: "Dismantling Akses Sulit",
+    heroEyebrow: "Solusi Dismantling Tower Crane Akses Sulit",
     heroTitle: (
       <>
         Manual Crane <br />
@@ -16,8 +16,8 @@ const C = {
       </>
     ),
     heroSubtitle:
-      "Saat mobile crane kecil tak bisa menjangkau, manual crane mengambil alih — bongkar tower crane dari area sulit dengan biaya lebih rendah dan keandalan tinggi.",
-    logicTitle: "Logika Akses Khusus",
+      "Saat mobile crane kecil tak bisa menjangkau, manual crane mengambil alih — bongkar tower crane dari area sulit dengan biaya lebih rendah dan keandalan tinggi. Dalam kondisi sulit seperti di tengah gedung tinggi, biayanya lebih rendah dibanding mobile crane.",
+    logicTitle: "Berpengalaman Dismantling Biaya Rendah dengan Manual Crane",
     logicP:
       "Dalam konstruksi urban modern, keterbatasan ruang sering membuat mobile crane standar tidak bisa dipakai. Manual crane dibutuhkan untuk membongkar tower crane dari area sulit yang tidak bisa didekati mobile crane kecil. Sistem rekayasa kami menjembatani kebutuhan itu — alternatif biaya rendah dengan keandalan tinggi yang menyerupai fungsi tower crane dengan jejak ruang jauh lebih kecil.",
     metrics: "METRIK DEPLOYMENT",
@@ -46,15 +46,15 @@ const C = {
       "Selain menyewakan manual crane ke klien, insinyur kami juga telah merancang dan memproduksi manual crane. Konfigurasi kustom tersedia — sampaikan kendala lokasi Anda kepada kami.",
     galleryTitle: "Deployment Lapangan",
     gallery: [
-      { src: "/images/design/tower-crane/tc-3.jpg", label: "Setup rigging" },
-      { src: "/images/design/tower-crane/tc-fix-1.jpg", label: "Jangkar struktural" },
-      { src: "/images/design/tower-crane/tc-4.jpg", label: "Operasi angkat" },
-      { src: "/images/design/passenger-hoist/ph-1.jpg", label: "Jejak ringkas" },
+      { src: "/images/design/tower-crane/tc-3.jpg", label: "Proses casting jangkar tower" },
+      { src: "/images/design/tower-crane/tc-fix-1.jpg", label: "Jib tower crane" },
+      { src: "/images/design/tower-crane/tc-4.jpg", label: "Jangkar struktural tower crane" },
+      { src: "/images/design/passenger-hoist/ph-1.jpg", label: "Telescope tower crane" },
       { src: "/images/design/tower-crane/tc-fix-2.jpg", label: "Sekuens dismantling" },
-      { src: "/images/design/passenger-hoist/ph-2.jpg", label: "Detail komponen" },
-      { src: "/images/design/field-service/fs-2.jpg", label: "Integrasi lokasi" },
+      { src: "/images/design/passenger-hoist/ph-2.jpg", label: "Kru operator dan teknisi" },
+      { src: "/images/design/field-service/fs-2.jpg", label: "Inspeksi SHE" },
       { src: "/images/design/tower-crane/tc-fix-3.jpg", label: "Unit utama" },
-      { src: "/images/design/field-service/fs-3.jpg", label: "Detail deployment" },
+      { src: "/images/design/field-service/fs-3.jpg", label: "Inspeksi dan sertifikasi PJK3" },
     ],
     ctaTitle: "Diskusikan kendala dismantling Anda",
     ctaDesc: "Kami usulkan unit sewa atau manual crane fabrikasi kustom.",
@@ -62,7 +62,7 @@ const C = {
     waText: "Halo, saya ingin bertanya tentang sewa atau fabrikasi manual crane.",
   },
   en: {
-    heroEyebrow: "Difficult-Access Dismantling",
+    heroEyebrow: "Difficult Access Tower Crane Dismantling Solution",
     heroTitle: (
       <>
         Manual Crane <br />
@@ -70,8 +70,8 @@ const C = {
       </>
     ),
     heroSubtitle:
-      "Where small mobile cranes cannot reach, manual cranes take over — dismantle tower cranes from difficult areas with lower cost and high reliability.",
-    logicTitle: "Specialized Access Logic",
+      "Where small mobile cranes cannot reach, manual cranes take over — dismantle tower cranes from difficult areas with lower cost and high reliability. In difficult conditions such as in the middle of a high-rise building, it is lower cost than a mobile crane.",
+    logicTitle: "Experienced in the Lower-Cost Dismantling with Manual Crane",
     logicP:
       "In modern urban construction, spatial constraints often render standard mobile cranes obsolete. Manual cranes are needed to dismantle tower cranes from difficult areas that small mobile cranes cannot approach. Our engineered systems bridge this gap, offering a low-cost, high-reliability alternative that mirrors tower crane functionality at a fraction of the spatial footprint.",
     metrics: "DEPLOYMENT METRICS",
@@ -100,15 +100,15 @@ const C = {
       "Beside rental manual crane to our client, our engineers have been designing and manufacturing manual cranes too. Custom configurations available — share your site constraints with us.",
     galleryTitle: "Field Deployments",
     gallery: [
-      { src: "/images/design/tower-crane/tc-3.jpg", label: "Rigging setup" },
-      { src: "/images/design/tower-crane/tc-fix-1.jpg", label: "Structural anchor" },
-      { src: "/images/design/tower-crane/tc-4.jpg", label: "Lift operation" },
-      { src: "/images/design/passenger-hoist/ph-1.jpg", label: "Compact footprint" },
+      { src: "/images/design/tower-crane/tc-3.jpg", label: "Tower anchor casting process" },
+      { src: "/images/design/tower-crane/tc-fix-1.jpg", label: "Jib tower crane" },
+      { src: "/images/design/tower-crane/tc-4.jpg", label: "Structural anchor tower crane" },
+      { src: "/images/design/passenger-hoist/ph-1.jpg", label: "Telescope tower crane" },
       { src: "/images/design/tower-crane/tc-fix-2.jpg", label: "Dismantling sequence" },
-      { src: "/images/design/passenger-hoist/ph-2.jpg", label: "Component detail" },
-      { src: "/images/design/field-service/fs-2.jpg", label: "Site integration" },
+      { src: "/images/design/passenger-hoist/ph-2.jpg", label: "Crew operators and technicians" },
+      { src: "/images/design/field-service/fs-2.jpg", label: "SHE inspection" },
       { src: "/images/design/tower-crane/tc-fix-3.jpg", label: "Hero unit" },
-      { src: "/images/design/field-service/fs-3.jpg", label: "Deployment detail" },
+      { src: "/images/design/field-service/fs-3.jpg", label: "PJK3 inspection and certification" },
     ],
     ctaTitle: "Discuss your dismantling constraints",
     ctaDesc: "We will propose either a rental unit or a custom-manufactured manual crane.",
@@ -175,7 +175,7 @@ export default function ManualCranePage() {
               </div>
             </div>
             <div className="mt-8">
-              <div className="h-40 w-full rounded overflow-hidden border border-outline-variant/30">
+              <div className="wm h-40 w-full rounded overflow-hidden border border-outline-variant/30">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/design/field-service/fs-1.jpg"
@@ -222,13 +222,13 @@ export default function ManualCranePage() {
           {L.gallery.map((p, i) => (
             <div
               key={p.src + "-" + i}
-              className="aspect-square relative group overflow-hidden bg-surface-variant rounded-xl"
+              className="wm aspect-square relative group overflow-hidden bg-surface-variant rounded-xl"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.src}
                 alt={p.label}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">

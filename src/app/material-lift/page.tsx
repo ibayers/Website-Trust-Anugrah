@@ -9,10 +9,10 @@ import { useLang } from "@/lib/i18n";
 // Specs verified against Material_Lift.html (engine: Peter-Lister, 800kg, 40m max).
 const C = {
   id: {
-    heroEyebrow: "Keunggulan Rekayasa",
-    heroTitle: "Sistem Material Lift",
+    heroEyebrow: "Medium Lifting Equipment",
+    heroTitle: "Medium Lifting Equipment",
     heroSubtitle:
-      "Elevator barang heavy-duty yang dirancang untuk efisiensi vertikal maksimal selama periode finishing konstruksi intensif. Direkayasa untuk keandalan, keselamatan, dan deployment cepat.",
+      "Elevator barang untuk efisiensi vertikal selama periode finishing konstruksi. Umumnya hingga tinggi 30m dan kapasitas 700kg — biaya lebih rendah, efisien, dan tercepat untuk konstruksi gedung 3-4 lantai.",
     specTitle: "Spesifikasi Teknis",
     specs: [
       { label: "Nama Alat", value: "Material Lift (Tunggal / Ganda)" },
@@ -64,10 +64,10 @@ const C = {
     waText: "Halo, saya ingin bertanya tentang sewa material lift.",
   },
   en: {
-    heroEyebrow: "Engineering Excellence",
-    heroTitle: "Material Lift Systems",
+    heroEyebrow: "Medium Lifting Equipment",
+    heroTitle: "Medium Lifting Equipment",
     heroSubtitle:
-      "Heavy-duty freight elevators designed for maximum vertical efficiency during intensive construction finishing periods. Engineered for reliability, safety, and rapid deployment.",
+      "Freight elevator for vertical efficiency during construction finishing periods. Normally up to 30m height and 700kg capacity — lower cost, efficient, and fastest for 3-4 floors building construction.",
     specTitle: "Technical Specifications",
     specs: [
       { label: "Device Name", value: "Material Lifts (Single / Double)" },
@@ -194,7 +194,7 @@ export default function MaterialLiftPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
           {L.configs.map((s) => (
             <GlassCard key={s.src} className="p-0 overflow-hidden group">
-              <div className="aspect-video overflow-hidden">
+              <div className="wm aspect-video overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={s.src}

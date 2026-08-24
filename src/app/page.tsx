@@ -17,22 +17,23 @@ const C = {
   id: {
     heroTitle: (
       <>
-        Keandalan <br />
-        <span className="text-secondary">Industri</span> di Setiap Angkatan.
+        Berpengalaman di <br />
+        <span className="text-secondary">Peralatan Angkat</span> untuk Segala
+        Konstruksi Gedung.
       </>
     ),
     heroSubtitle:
-      'PT. TRUST ANUGRAH PERSADA menyediakan mesin industri berkinerja tinggi yang dirancang untuk presisi, keselamatan, dan tuntutan ekstrem konstruksi modern.',
+      'Tower crane, passenger hoist, material lift, dan manual crane untuk segala jenis konstruksi gedung. Layanan mencakup perawatan, mobilisasi/demobilisasi, loading/unloading, dan erection/dismantling — termasuk operator dan teknisi bersertifikat untuk semua peralatan angkat.',
     pillars: {
       eyebrow: 'Yang Kami Lakukan',
       title: 'Empat pilar layanan',
       subtitle: 'Aktivitas bisnis inti terverifikasi dari narasi pendirian perusahaan.',
     },
     pillarDescriptions: [
-      'Sewa tower crane, passenger hoist, material lift, manual crane, dan genset — didukung kru perawatan bersertifikat dan dukungan operator 24/7.',
-      'Puluhan tahun eksekusi di lapangan: erection, dismantling, dan rebuild struktural untuk proyek high-rise dan infrastruktur di Jawa dan luar Jawa.',
-      'Deployment presisi dengan pekerjaan pondasi, wall tie-in, dan rekayasa khusus lokasi. Kepatuhan K3 / HSE penuh di setiap pengangkatan.',
-      'Suplai langsung komponen berkualitas tinggi — slewing ring, joystick, wire rope, dan modul elektronik dari Prancis, Belgia, dan China.',
+      'Sewa tower crane, passenger hoist, material lift, manual crane, dan genset — dengan servis, perawatan, serta operator dan teknisi bersertifikat.',
+      'Operator dan teknisi tower crane serta passenger hoist bersertifikat dengan pengalaman puluhan tahun di seluruh Indonesia.',
+      'Deployment presisi: pondasi, wall tie-in, setting anchor, mobilisasi dan demobilisasi, loading dan unloading, erection dan dismantling, jack up dan jack down, repair dan rebuild. Kepatuhan K3 / HSE penuh.',
+      'Suplai langsung komponen mekanikal dan elektrikal berkualitas tinggi — slewing ring, joystick, wire rope, dan modul elektronik dari Prancis, Belgia, dan China.',
     ] as readonly string[],
     capabilitiesTitle: 'Kapabilitas Inti Kami',
     services: [
@@ -67,11 +68,11 @@ const C = {
         ],
       },
     ],
-    featuredLabel: 'PERALATAN UNGGULAN',
-    featuredTitle: 'Armada Tower Crane',
+    featuredLabel: 'PENGHARGAAN',
+    featuredTitle: 'Piagam Penghargaan',
     featuredDesc:
-      'Dibangun untuk skyline Jakarta. Potain, Raimondi, Jianglu, QT80 — erection, dismantling, sparepart, dan operator bersertifikat.',
-    viewEquipment: 'LIHAT PERALATAN →',
+      'Apresiasi ini dipersembahkan bagi para operator, teknisi, dan manajemen yang karyanya mencerminkan dedikasi mendalam serta komitmen puluhan tahun pada peralatan angkat berat — khususnya tower crane dan passenger hoist.',
+    viewEquipment: 'LIHAT TENTANG KAMI →',
     profileLabel: 'PROFIL TERVERIFIKASI',
     profile: [
       ['Berdiri', '1985'],
@@ -96,22 +97,23 @@ const C = {
   en: {
     heroTitle: (
       <>
-        Industrial <br />
-        <span className="text-secondary">Reliability</span> In Every Lift.
+        Experienced in <br />
+        <span className="text-secondary">Lifting Equipment</span> for Any Kind
+        of Building Construction.
       </>
     ),
     heroSubtitle:
-      'PT. TRUST ANUGRAH PERSADA delivers high-performance industrial machinery designed for precision, safety, and the extreme demands of modern construction.',
+      'Tower cranes, passenger hoists, material lifts, and manual cranes for any kind of building construction. Services covering maintenance, mobilization/demobilization, loading/unloading, and erection/dismantling — including certified operators and technicians for all lifting equipment.',
     pillars: {
       eyebrow: 'What We Do',
       title: 'Four pillars of service',
       subtitle: 'Core business activities verified against the company founding narrative.',
     },
     pillarDescriptions: [
-      'Rental tower cranes, passenger hoists, material lifts, manual cranes, and gensets — backed by certified maintenance crews and 24/7 operator support.',
-      'Decades of on-site execution: erection, dismantling, and structural rebuilds for high-rise and infrastructure projects across Java and beyond.',
-      'Precision deployment with foundation work, wall tie-ins, and site-specific engineering. Full K3 / HSE compliance on every lift.',
-      'Direct supply of high-grade components — slewing rings, joysticks, wire ropes, and electronic modules sourced from France, Belgium, and China.',
+      'Rental, service, and maintenance with certified operators and technicians — for tower cranes, passenger hoists, material lifts, manual cranes, and gensets.',
+      'With certified tower crane and passenger hoist operators and technicians possessing decades of experience across Indonesia.',
+      'Precision deployment: foundation work, wall tie-in, setting anchor, mobilization and demobilization, loading and unloading, erection and dismantling, jack up and jack down, repair and rebuild. Full K3 / HSE compliance.',
+      'Direct supply of high-grade mechanical and electrical components — slewing rings, joysticks, wire ropes, and electronic modules sourced from France, Belgium, and China.',
     ] as readonly string[],
     capabilitiesTitle: 'Our Core Capabilities',
     services: [
@@ -146,11 +148,11 @@ const C = {
         ],
       },
     ],
-    featuredLabel: 'FEATURED EQUIPMENT',
-    featuredTitle: 'Tower Crane Fleet',
+    featuredLabel: 'AWARD',
+    featuredTitle: 'Certificate of Appreciation',
     featuredDesc:
-      "Built for Jakarta's skyline. Potain, Raimondi, Jianglu, QT80 — erection, dismantling, parts, and certified operators.",
-    viewEquipment: 'VIEW EQUIPMENT →',
+      'This award is dedicated to the operators, technicians, and management whose work reflects deep dedication and a commitment spanning decades to heavy lifting equipment—specifically tower cranes and passenger hoists.',
+    viewEquipment: 'VIEW ABOUT →',
     profileLabel: 'VERIFIED PROFILE',
     profile: [
       ['Founded', '1985'],
@@ -180,36 +182,36 @@ const equipment = [
     href: '/tower-crane/',
     icon: 'precision_manufacturing',
     title: 'Tower Crane',
-    descId: 'Potain, Raimondi, Jianglu, QT80, Peinner.',
-    descEn: 'Potain, Raimondi, Jianglu, QT80, Peinner.',
+    descId: 'Tower crane dengan panjang jib 50m–70m untuk gedung freestanding / high-rise.',
+    descEn: 'Tower cranes with 50m–70m jib length for freestanding / high-rise buildings.',
   },
   {
     href: '/passenger-hoist/',
     icon: 'elevator',
     title: 'Passenger Hoist',
-    descId: 'Kemampuan sewa hingga 80–100 m.',
-    descEn: '80–100 m height rental capabilities.',
+    descId: 'Passenger hoist atau Alimak, single atau double cage, hingga 100m.',
+    descEn: 'Passenger hoist or Alimak, single or double cage, up to 100m.',
   },
   {
     href: '/material-lift/',
     icon: 'forklift',
     title: 'Material Lift',
-    descId: 'Konfigurasi tunggal & ganda.',
-    descEn: 'Single & double configurations.',
+    descId: 'Kapasitas angkat kecil hingga 400kg/angkatan untuk area terbatas, hingga 4 lantai.',
+    descEn: 'Small lifting capacity up to 400 kg/lift for limited areas, up to 4 floors.',
   },
   {
     href: '/manual-crane/',
     icon: 'construction',
     title: 'Manual Crane',
-    descId: 'Alternatif dismantling biaya rendah.',
-    descEn: 'Low-cost dismantling alternative.',
+    descId: 'Alternatif biaya rendah dibanding mobile crane untuk membongkar tower crane di tengah gedung atau yang tak terjangkau mobile crane.',
+    descEn: 'Lower cost alternative compared to a mobile crane for dismantling tower cranes located in the middle of a building or that cannot be reached by a mobile crane.',
   },
   {
-    href: '/genset/',
-    icon: 'bolt',
-    title: 'Generator Set',
-    descId: '150–250 kVA Mitsubishi & Nissan.',
-    descEn: '150–250 kVA Mitsubishi & Nissan.',
+    href: '/services/',
+    icon: 'groups',
+    title: 'Marketing & Manpower Services',
+    descId: 'Membantu memasarkan penjualan dan sewa tower crane serta passenger hoist milik pihak lain.',
+    descEn: 'Assisting in marketing the sale and rental of tower cranes and passenger hoists owned by others.',
   },
   {
     href: '/sell/',
@@ -234,7 +236,7 @@ export default function HomePage() {
       heroEyebrow={tagline ?? 'Your Trusty Partners'}
       heroTitle={L.heroTitle}
       heroSubtitle={L.heroSubtitle}
-      heroImage="/images/design/home/hero.jpg"
+      heroImage="/images/homepage.jpg"
     >
       {/* Core business pillars — Verified from company foundingNarrative. */}
       <section className="px-margin-desktop py-section-gap">
@@ -298,20 +300,20 @@ export default function HomePage() {
       <section className="px-margin-desktop py-section-gap bg-surface-dim/40">
         <div className="grid grid-cols-12 gap-gutter h-auto lg:h-[640px]">
           {/* Main featured image */}
-          <div className="col-span-12 lg:col-span-8 relative overflow-hidden glass-panel rounded-xl group">
+          <div className="wm col-span-12 lg:col-span-8 relative overflow-hidden glass-panel rounded-xl group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/design/tower-crane/tc-1.jpg"
-              alt="Featured tower crane on Jakarta construction site"
-              className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
+              src="/images/piagam-trust-anugrah.jpg"
+              alt="Piagam penghargaan PT Trust Anugrah"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-12">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-12">
               <span className="font-label-technical text-tertiary mb-2">{L.featuredLabel}</span>
               <h3 className="font-headline-lg text-headline-lg mb-4">{L.featuredTitle}</h3>
               <p className="text-on-surface-variant max-w-xl mb-6">{L.featuredDesc}</p>
               <Link
-                href="/tower-crane/"
+                href="/about/"
                 className="self-start px-6 py-2 border border-tertiary text-tertiary font-label-technical hover:bg-tertiary/20 transition-all"
               >
                 {L.viewEquipment}

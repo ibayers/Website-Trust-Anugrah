@@ -67,6 +67,7 @@ export default function PartsPage() {
       heroEyebrow={L.heroEyebrow}
       heroTitle={L.heroTitle}
       heroSubtitle={L.heroSubtitle}
+      heroImage="/images/parts.jpg"
     >
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-start">

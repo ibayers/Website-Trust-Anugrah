@@ -9,45 +9,45 @@ import { useLang } from '@/lib/i18n';
 // PRD §5.3. Eight services lifted from Home.html job description (§3).
 const C = {
   id: {
-    heroEyebrow: 'Layanan Peralatan Menyeluruh',
-    heroTitle: 'Layanan',
+    heroEyebrow: 'Man Power Services',
+    heroTitle: 'Dukungan Penuh Operator & Teknisi',
     heroSubtitle:
-      'Delapan layanan inti mencakup sewa, suplai sparepart, troubleshooting, dan rekayasa khusus — untuk tower crane, hoist, material lift, genset, dan manual crane.',
+      'Operator dan teknisi bersertifikat untuk tower crane dan passenger hoist; servis dan perawatan elektrikal & mekanikal; erection dan dismantling; mobilisasi/demobilisasi; loading/unloading kontainer; wall tie-in; serta perbaikan unit rusak.',
     learnMore: 'Pelajari',
     ctaTitle: 'Butuh sesuatu yang spesifik?',
     ctaDesc: 'Sampaikan kebutuhan Anda; kami arahkan ke tim yang tepat.',
     emailSubject: 'Pertanyaan Layanan',
     waText: 'Halo, saya ingin bertanya tentang layanan.',
     services: [
-      { icon: 'precision_manufacturing', title: 'Tower Crane — Sewa, Servis & Perawatan', href: '/tower-crane/' },
-      { icon: 'elevator', title: 'Passenger Hoist — Sewa, Servis & Perawatan', href: '/passenger-hoist/' },
-      { icon: 'forklift', title: 'Material Lift — Sewa, Servis & Perawatan', href: '/material-lift/' },
-      { icon: 'bolt', title: 'Genset — Sewa, Servis & Perawatan', href: '/genset/' },
-      { icon: 'settings_input_component', title: 'Suplai Sparepart — slewing ring, joystick, wire rope, dll.', href: '/parts/' },
-      { icon: 'build_circle', title: 'Bangun & Rebuild Sparepart', href: '/parts/' },
-      { icon: 'troubleshoot', title: 'Troubleshooting', href: '/contact/' },
-      { icon: 'engineering', title: 'Manual Crane — desain, manufaktur, dukungan dismantling', href: '/manual-crane/' },
+      { icon: 'workspace_premium', title: 'Operator dan teknisi bersertifikat untuk tower crane dan passenger hoist', href: '/crew/' },
+      { icon: 'build', title: 'Servis elektrikal dan mekanikal', href: '/contact/' },
+      { icon: 'handyman', title: 'Perawatan elektrikal dan mekanikal', href: '/contact/' },
+      { icon: 'construction', title: 'Erection dan dismantling', href: '/manual-crane/' },
+      { icon: 'local_shipping', title: 'Mobilisasi dan demobilisasi', href: '/contact/' },
+      { icon: 'inventory_2', title: 'Loading dan unloading kontainer', href: '/contact/' },
+      { icon: 'link', title: 'Wall tie-in', href: '/contact/' },
+      { icon: 'build_circle', title: 'Perbaikan unit rusak (bengkok atau patah)', href: '/parts/' },
     ],
   },
   en: {
-    heroEyebrow: 'Full-Spectrum Equipment Services',
-    heroTitle: 'Services',
+    heroEyebrow: 'Man Power Services',
+    heroTitle: 'Full Support for Operators and Technicians',
     heroSubtitle:
-      'Eight core services covering rental, parts supply, troubleshooting, and custom engineering — for tower crane, hoist, material lift, genset, and manual crane.',
+      'Certified operators and technicians for tower crane and passenger hoist; electrical and mechanical servicing and maintenance; erection and dismantling; mobilization/demobilization; container loading/unloading; wall tie-in; and repair of damaged units.',
     learnMore: 'Learn more',
     ctaTitle: 'Need something specific?',
     ctaDesc: 'Share your requirements; we will route to the right team.',
     emailSubject: 'Service Inquiry',
     waText: "Hello, I'd like to ask about a service.",
     services: [
-      { icon: 'precision_manufacturing', title: 'Tower Crane — Rental, Service & Maintenance', href: '/tower-crane/' },
-      { icon: 'elevator', title: 'Passenger Hoist — Rental, Service & Maintenance', href: '/passenger-hoist/' },
-      { icon: 'forklift', title: 'Material Lift — Rental, Service & Maintenance', href: '/material-lift/' },
-      { icon: 'bolt', title: 'Generator Set — Rental, Service & Maintenance', href: '/genset/' },
-      { icon: 'settings_input_component', title: 'Parts Supply — slewing ring, joystick, wire rope, etc.', href: '/parts/' },
-      { icon: 'build_circle', title: 'Build & Rebuild Parts', href: '/parts/' },
-      { icon: 'troubleshoot', title: 'Troubleshooting', href: '/contact/' },
-      { icon: 'engineering', title: 'Manual Crane — design, manufacture, dismantling support', href: '/manual-crane/' },
+      { icon: 'workspace_premium', title: 'Provide certified operators and technicians for tower crane and passenger hoist', href: '/crew/' },
+      { icon: 'build', title: 'Electrical and mechanical servicing', href: '/contact/' },
+      { icon: 'handyman', title: 'Electrical and mechanical maintenance', href: '/contact/' },
+      { icon: 'construction', title: 'Erection and dismantling', href: '/manual-crane/' },
+      { icon: 'local_shipping', title: 'Mobilization and demobilization', href: '/contact/' },
+      { icon: 'inventory_2', title: 'Container loading and unloading', href: '/contact/' },
+      { icon: 'link', title: 'Wall tie-in', href: '/contact/' },
+      { icon: 'build_circle', title: 'Repair of damaged units (bent or broken)', href: '/parts/' },
     ],
   },
 } as const;
@@ -61,6 +61,7 @@ export default function ServicesPage() {
       heroEyebrow={L.heroEyebrow}
       heroTitle={L.heroTitle}
       heroSubtitle={L.heroSubtitle}
+      heroImage="/images/services.jpg"
     >
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
@@ -87,6 +88,19 @@ export default function ServicesPage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Foto lapangan — services2.jpg, full-color. */}
+      <section className="px-margin-desktop py-section-gap">
+        <div className="wm glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/services2.jpg"
+            alt="PT Trust Anugrah field services"
+            className="w-full h-auto"
+            loading="lazy"
+          />
         </div>
       </section>
 

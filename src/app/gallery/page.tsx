@@ -14,14 +14,14 @@ type Filter = 'ALL' | 'TOWER_CRANES' | 'PASSENGER_HOIST' | 'FIELD_SERVICE';
 const ITEMS = [
   { src: '/images/design/tower-crane/tc-4.jpg', icon: 'precision_manufacturing', titleId: 'Unit Tower Crane', titleEn: 'Tower Crane Unit', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
   { src: '/images/design/tower-crane/tc-fix-1.jpg', icon: 'engineering', titleId: 'Detail Crane', titleEn: 'Crane Detail', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
-  { src: '/images/design/field-service/fs-2.jpg', icon: 'construction', titleId: 'Deployment Manual Crane', titleEn: 'Manual Crane Deploy', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
-  { src: '/images/design/gallery/03-manual-crane.jpg', icon: 'build', titleId: 'Rig Manual Crane', titleEn: 'Manual Crane Rig', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
-  { src: '/images/Tower_Full..jpg', icon: 'fullscreen', titleId: 'Erection Penuh', titleEn: 'Full Erection', tagId: 'SEWA', tagEn: 'RENTAL', filter: 'TOWER_CRANES' },
-  { src: '/images/A1 CRANE.jpg', icon: 'verified', titleId: 'Unit Terverifikasi', titleEn: 'Verified Unit', tagId: 'TERSERTIFIKASI', tagEn: 'CERTIFIED', filter: 'TOWER_CRANES' },
-  { src: '/images/design/field-service/fs-3.jpg', icon: 'build', titleId: 'Layanan Lapangan', titleEn: 'Field Service', tagId: 'PERAWATAN', tagEn: 'MAINTENANCE', filter: 'FIELD_SERVICE' },
-  { src: '/images/Picture 234.jpg', icon: 'photo_camera', titleId: 'Koordinasi Lapangan', titleEn: 'Field Coordination', tagId: 'OPS', tagEn: 'OPS', filter: 'FIELD_SERVICE' },
-  { src: '/images/design/passenger-hoist/ph-2.jpg', icon: 'elevator', titleId: 'Hoist Dual Cage', titleEn: 'Dual Cage Hoist', tagId: 'TRANSPORT VERTIKAL', tagEn: 'VERTICAL TRANSPORT', filter: 'PASSENGER_HOIST' },
-  { src: '/images/design/passenger-hoist/feature-04.jpg', icon: 'height', titleId: 'Deployment Hoist Gedung Tinggi', titleEn: 'High-Rise Hoist Deploy', tagId: 'OPERASI', tagEn: 'OPERATIONS', filter: 'PASSENGER_HOIST' },
+  { src: '/images/design/field-service/fs-2.jpg', icon: 'construction', titleId: 'Inspeksi PJK3 & SHE', titleEn: 'PJK3 and SHE Inspection', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
+  { src: '/images/ph1-full.jpg', icon: 'build', titleId: 'Setelah Perbaikan Passenger Hoist Rusak', titleEn: 'After Repairing Broken Passenger Hoist', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
+  { src: '/images/design/tower-crane/tc-2.jpg', icon: 'fullscreen', titleId: 'Erection Penuh', titleEn: 'Full Erection', tagId: 'SEWA', tagEn: 'RENTAL', filter: 'TOWER_CRANES' },
+  { src: '/images/design/tower-crane/tc-3.jpg', icon: 'verified', titleId: 'Unit Terverifikasi', titleEn: 'Verified Unit', tagId: 'TERSERTIFIKASI', tagEn: 'CERTIFIED', filter: 'TOWER_CRANES' },
+  { src: '/images/design/field-service/fs-3.jpg', icon: 'build', titleId: 'Layanan Lapangan', titleEn: 'Field Service', tagId: 'INSPEKSI SHE & PJK3', tagEn: 'SHE & PJK3 INSPECTION', filter: 'FIELD_SERVICE' },
+  { src: '/images/design/field-service/fs-1.jpg', icon: 'photo_camera', titleId: 'Perbaikan Passenger Hoist Rusak', titleEn: 'Repairing Broken Passenger Hoist', tagId: 'OPS', tagEn: 'OPS', filter: 'FIELD_SERVICE' },
+  { src: '/images/design/passenger-hoist/ph-2.jpg', icon: 'elevator', titleId: 'Kru Erection Tower Crane Siap Bertugas', titleEn: 'Tower Crane Erection Crew Ready for Action', tagId: 'TRANSPORT VERTIKAL', tagEn: 'VERTICAL TRANSPORT', filter: 'PASSENGER_HOIST' },
+  { src: '/images/design/passenger-hoist/ph-3.jpg', icon: 'height', titleId: 'Deployment Hoist Gedung Tinggi', titleEn: 'High-Rise Hoist Deploy', tagId: 'OPERASI', tagEn: 'OPERATIONS', filter: 'PASSENGER_HOIST' },
 ] as const;
 
 const FLAGSHIP_SRC = '/images/design/tower-crane/tc-fix-3.jpg';
@@ -57,7 +57,7 @@ export default function GalleryPage() {
       flagshipDesc: 'Seri heavy lift untuk proyek pembangunan kawasan skyline.',
       identityTitle: 'Identitas & Misi Perusahaan',
       foundationLabel: 'FONDASI',
-      foundation: 'CV berdiri 9 Oktober 1993. Menjadi PT pada 13 Oktober 1998.',
+      foundation: 'Berpengalaman sejak 1985.',
       expertiseLabel: 'KEAHLIAN',
       expertise:
         'Bertahun-tahun pengalaman khususnya dalam konstruksi tower crane dan alat lainnya.',
@@ -89,7 +89,7 @@ export default function GalleryPage() {
       flagshipDesc: 'Heavy lift series deployed for the skyline redevelopment project.',
       identityTitle: 'Corporate Identity & Mission',
       foundationLabel: 'FOUNDATION',
-      foundation: 'CV established October 9, 1993. Incorporated as PT on October 13, 1998.',
+      foundation: 'Experienced since 1985.',
       expertiseLabel: 'EXPERTISE',
       expertise:
         'Many years of experience in particular construction of tower cranes and other tools.',
@@ -155,7 +155,7 @@ export default function GalleryPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
           {/* Flagship large feature — hidden when filter excludes it. */}
           {showFlagship && (
-            <GlassCard className="lg:col-span-2 lg:row-span-2 relative group overflow-hidden cursor-pointer p-0">
+            <GlassCard className="wm lg:col-span-2 lg:row-span-2 relative group overflow-hidden cursor-pointer p-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={FLAGSHIP_SRC}
@@ -176,7 +176,7 @@ export default function GalleryPage() {
 
           {/* Standard items */}
           {items.map((item) => (
-            <GlassCard key={item.src} className="relative group overflow-hidden cursor-pointer p-0">
+            <GlassCard key={item.src} className="wm relative group overflow-hidden cursor-pointer p-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={item.src}

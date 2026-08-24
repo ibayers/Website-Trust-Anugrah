@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { PageShell } from '@/components/layout/PageShell';
-import { GlassCard } from '@/components/ui/GlassCard';
-import { ContactCTA } from '@/components/ui/ContactCTA';
+import Link from "next/link";
+import { PageShell } from "@/components/layout/PageShell";
+import { GlassCard } from "@/components/ui/GlassCard";
+import { ContactCTA } from "@/components/ui/ContactCTA";
 
 // PRD §5.4. All content Verified against Tower_Crane.html (legacy backup).
 // Page ported from _archive/design/tower_crane_modernized/code.html.
@@ -9,51 +9,66 @@ import { ContactCTA } from '@/components/ui/ContactCTA';
 // Halaman ini DIKOSONGKAN sementara atas permintaan client (2026-08-20).
 // Untuk mengembalikan: ubah `const PAGE_ENABLED = false` menjadi `true`.
 // Semua konten asli tetap utuh di komponen <TowerCraneFull /> di bawah.
-const PAGE_ENABLED = false;
+const PAGE_ENABLED = true;
 
 const tcTypesForRent = [
-  { name: 'Potain FO23 / B', note: 'Industry standard for versatility' },
-  { name: 'Potain H30/30', note: 'High-speed lifting series' },
-  { name: 'Potain H3/36', note: 'Advanced variable frequency' },
-  { name: 'Raimondi ER180', note: 'Italian precision, heavy lifting' },
-  { name: 'Jianglu JL120', note: 'Robust performance, 50m jib' },
-  { name: 'Jianglu JL150', note: 'High-reliability electronics' },
-  { name: 'Tower Crane QT80', note: 'Compact footprint, quick erection' },
-  { name: 'TC Peinner', note: 'Specialized deployments' },
+  { name: "Potain FO23 / B", note: "Industry standard for versatility" },
+  { name: "Potain H30/30", note: "High-speed lifting series" },
+  { name: "Potain H3/36", note: "Advanced variable frequency" },
+  { name: "Raimondi ER180", note: "Italian precision, heavy lifting" },
+  { name: "Jianglu JL120", note: "Robust performance, 50m jib" },
+  { name: "Jianglu JL150", note: "High-reliability electronics" },
+  { name: "Tower Crane QT80", note: "Compact footprint, quick erection" },
+  { name: "TC Peinner", note: "Specialized deployments" },
 ];
 
-const tcForSale = ['MG5023', 'MG6015', 'MG6036', 'MG7030'];
+const tcForSale = ["MG5023", "MG6015", "MG6036", "MG7030"];
 
 const tcCapabilities = [
   {
-    icon: 'build',
-    title: 'Erection & Dismantling',
-    desc: 'Precision deployment of equipment up to 60T using advanced mobile cranes and expert technicians. We manage the entire lifecycle from arrival to site clearance.',
+    icon: "build",
+    title: "Erection & Dismantling",
+    desc: "Precision deployment of equipment up to 60T using advanced mobile cranes and expert technicians. We manage the entire lifecycle from arrival to site clearance.",
   },
   {
-    icon: 'electric_bolt',
-    title: 'Electrical Troubleshooting',
-    desc: 'Certified diagnostics for crane control systems, wirerope, and slewing rings. Parts sourced globally from France, Belgium, and China.',
+    icon: "electric_bolt",
+    title: "Electrical Troubleshooting",
+    desc: "Certified diagnostics for crane control systems, wirerope, and slewing rings. Parts sourced globally from France, Belgium, and China.",
   },
   {
-    icon: 'engineering',
-    title: 'Licensed Operators',
-    desc: 'Experienced and professional crews with man power department licenses, ensuring safety-first operations on every shift.',
+    icon: "engineering",
+    title: "Licensed Operators",
+    desc: "Experienced and professional crews with man power department licenses, ensuring safety-first operations on every shift.",
   },
 ];
 
 const tcSpecs = [
-  { model: 'Potain FO23 / B', huh: '20m - 60m', jib: '45m - 50m', load: 'Varies per config' },
-  { model: 'MG Series (5023 - 7030)', huh: 'Variable', jib: '40m - 70m', load: 'Industrial Heavy' },
-  { model: 'Raimondi ER180', huh: 'Custom Setup', jib: 'Up to 65m', load: 'Precision Control' },
+  {
+    model: "Potain FO23 / B",
+    huh: "20m - 60m",
+    jib: "45m - 50m",
+    load: "Varies per config",
+  },
+  {
+    model: "MG Series (5023 - 7030)",
+    huh: "Variable",
+    jib: "40m - 70m",
+    load: "Industrial Heavy",
+  },
+  {
+    model: "Raimondi ER180",
+    huh: "Custom Setup",
+    jib: "Up to 65m",
+    load: "Precision Control",
+  },
 ];
 
 const otherServices = [
-  'Services and maintenance periodically every month',
-  'Trucking tower crane to destination in/out side Java',
-  'Normal Erection and dismantling',
-  'Erection and dismantling that needs 60T mobile crane or manual crane',
-  'Bressing or wall tie in',
+  "Services and maintenance periodically every month",
+  "Trucking tower crane to destination in/out side Java",
+  "Normal Erection and dismantling",
+  "Erection and dismantling that needs 60T mobile crane or manual crane",
+  "Bressing or wall tie in",
 ];
 
 export default function TowerCranePage() {
@@ -89,8 +104,12 @@ function TowerCraneFull() {
       <section className="px-margin-desktop py-section-gap">
         <div className="flex justify-between items-end mb-16">
           <div>
-            <h2 className="font-headline-lg text-headline-lg text-on-surface mb-2">TC Equipment Fleet</h2>
-            <p className="text-on-surface-variant">Global standard machinery for diverse construction requirements.</p>
+            <h2 className="font-headline-lg text-headline-lg text-on-surface mb-2">
+              TC Equipment Fleet
+            </h2>
+            <p className="text-on-surface-variant">
+              Global standard machinery for diverse construction requirements.
+            </p>
           </div>
           <Link
             href="/sell/"
@@ -105,7 +124,7 @@ function TowerCraneFull() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           {/* Featured main */}
-          <GlassCard className="md:col-span-8 group relative overflow-hidden aspect-video">
+          <GlassCard className="wm md:col-span-8 group relative overflow-hidden aspect-video">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/design/tower-crane/tc-3.jpg"
@@ -123,15 +142,18 @@ function TowerCraneFull() {
                   FRENCH ENGINEERING
                 </span>
               </div>
-              <h3 className="font-headline-md text-headline-md mb-2">Potain FO23 / B</h3>
+              <h3 className="font-headline-md text-headline-md mb-2">
+                Potain FO23 / B
+              </h3>
               <p className="text-on-surface-variant max-w-md">
-                The industry gold standard for versatility and load capacity. Optimized for Jakarta&apos;s dense urban environments.
+                The industry gold standard for versatility and load capacity.
+                Optimized for Jakarta&apos;s dense urban environments.
               </p>
             </div>
           </GlassCard>
 
           {/* Secondary */}
-          <GlassCard className="md:col-span-4 group relative overflow-hidden">
+          <GlassCard className="wm md:col-span-4 group relative overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/design/tower-crane/tc-fix-1.jpg"
@@ -142,12 +164,20 @@ function TowerCraneFull() {
             <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80" />
             <div className="absolute bottom-0 p-6">
               <h3 className="font-headline-md text-2xl mb-1">Raimondi ER180</h3>
-              <p className="text-on-surface-variant text-sm">Italian precision for heavy lifting tasks.</p>
+              <p className="text-on-surface-variant text-sm">
+                Italian precision for heavy lifting tasks.
+              </p>
               <Link
                 href="/contact/"
                 className="mt-4 text-secondary font-label-technical inline-flex items-center gap-2 group/btn"
               >
-                INQUIRE <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" aria-hidden>download</span>
+                INQUIRE{" "}
+                <span
+                  className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform"
+                  aria-hidden
+                >
+                  download
+                </span>
               </Link>
             </div>
           </GlassCard>
@@ -156,7 +186,10 @@ function TowerCraneFull() {
           {tcTypesForRent.slice(2, 5).map((t) => (
             <GlassCard key={t.name} className="md:col-span-4 p-6">
               <div className="w-12 h-12 rounded bg-secondary/10 flex items-center justify-center mb-6">
-                <span className="material-symbols-outlined text-secondary" aria-hidden>
+                <span
+                  className="material-symbols-outlined text-secondary"
+                  aria-hidden
+                >
                   precision_manufacturing
                 </span>
               </div>
@@ -164,9 +197,51 @@ function TowerCraneFull() {
               <p className="text-on-surface-variant text-sm mb-6">{t.note}</p>
               <ul className="space-y-2 font-label-technical text-xs text-secondary opacity-80">
                 <li className="flex items-center gap-2">
-                  <span className="w-1 h-1 bg-secondary rounded-full" /> Verified rental unit
+                  <span className="w-1 h-1 bg-secondary rounded-full" />{" "}
+                  Verified rental unit
                 </li>
               </ul>
+            </GlassCard>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-margin-desktop ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          {[
+            {
+              src: "/images/tower.jpg",
+              title: "Tower Crane Unit",
+              tag: "EQUIPMENT",
+            },
+            {
+              src: "/images/tower2.jpg",
+              title: "On-Site Operation",
+              tag: "OPERATIONS",
+            },
+            {
+              src: "/images/tower3.jpg",
+              title: "Verified Unit",
+              tag: "CERTIFIED",
+            },
+          ].map((p) => (
+            <GlassCard
+              key={p.src}
+              className="wm relative group overflow-hidden cursor-pointer p-0"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={p.src}
+                alt={p.title}
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="p-4 border-t border-outline-variant/20">
+                <h4 className="font-bold text-sm">{p.title}</h4>
+                <p className="text-xs text-on-surface-variant font-label-technical">
+                  {p.tag}
+                </p>
+              </div>
             </GlassCard>
           ))}
         </div>
@@ -184,20 +259,27 @@ function TowerCraneFull() {
               {tcCapabilities.map((cap) => (
                 <div key={cap.title} className="flex gap-6 group">
                   <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-surface flex items-center justify-center border border-outline-variant group-hover:border-secondary transition-colors">
-                    <span className="material-symbols-outlined text-3xl" aria-hidden>
+                    <span
+                      className="material-symbols-outlined text-3xl"
+                      aria-hidden
+                    >
                       {cap.icon}
                     </span>
                   </div>
                   <div>
-                    <h5 className="font-headline-md text-lg mb-2">{cap.title}</h5>
-                    <p className="text-on-surface-variant text-sm leading-relaxed">{cap.desc}</p>
+                    <h5 className="font-headline-md text-lg mb-2">
+                      {cap.title}
+                    </h5>
+                    <p className="text-on-surface-variant text-sm leading-relaxed">
+                      {cap.desc}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
+            <div className="wm aspect-[4/3] glass-panel rounded-2xl overflow-hidden border border-outline-variant/30">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/design/tower-crane/tc-fix-2.jpg"
@@ -208,7 +290,9 @@ function TowerCraneFull() {
             </div>
             {/* Stats floating card */}
             <GlassCard className="absolute -bottom-10 -left-10 p-8 shadow-2xl border-secondary/30 hidden md:block">
-              <div className="text-secondary font-display-xl text-5xl mb-1">20+</div>
+              <div className="text-secondary font-display-xl text-5xl mb-1">
+                20+
+              </div>
               <div className="font-label-technical text-xs tracking-widest text-on-surface uppercase">
                 Years Experience
               </div>
@@ -229,7 +313,10 @@ function TowerCraneFull() {
               key={cap}
               className="flex items-center gap-3 px-4 py-3 bg-surface-container-low/40 rounded font-body-md text-body-md text-on-surface"
             >
-              <span className="material-symbols-outlined text-secondary text-sm" aria-hidden>
+              <span
+                className="material-symbols-outlined text-secondary text-sm"
+                aria-hidden
+              >
                 check_circle
               </span>
               {cap}
@@ -248,11 +335,21 @@ function TowerCraneFull() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-surface-container-high font-label-technical text-xs uppercase tracking-widest text-secondary">
-                <th className="p-6 border-b border-outline-variant">Equipment Model</th>
-                <th className="p-6 border-b border-outline-variant">Max Hook Height (HUH)</th>
-                <th className="p-6 border-b border-outline-variant">Jib Length Range</th>
-                <th className="p-6 border-b border-outline-variant">Load Capacity</th>
-                <th className="p-6 border-b border-outline-variant text-right">Action</th>
+                <th className="p-6 border-b border-outline-variant">
+                  Equipment Model
+                </th>
+                <th className="p-6 border-b border-outline-variant">
+                  Max Hook Height (HUH)
+                </th>
+                <th className="p-6 border-b border-outline-variant">
+                  Jib Length Range
+                </th>
+                <th className="p-6 border-b border-outline-variant">
+                  Load Capacity
+                </th>
+                <th className="p-6 border-b border-outline-variant text-right">
+                  Action
+                </th>
               </tr>
             </thead>
             <tbody className="text-sm font-body-md">
@@ -261,14 +358,22 @@ function TowerCraneFull() {
                   key={row.model}
                   className={
                     i % 2 === 0
-                      ? 'bg-surface hover:bg-white/5 transition-colors'
-                      : 'bg-surface-container-lowest hover:bg-white/5 transition-colors'
+                      ? "bg-surface hover:bg-white/5 transition-colors"
+                      : "bg-surface-container-lowest hover:bg-white/5 transition-colors"
                   }
                 >
-                  <td className="p-6 border-b border-outline-variant/20 font-bold">{row.model}</td>
-                  <td className="p-6 border-b border-outline-variant/20">{row.huh}</td>
-                  <td className="p-6 border-b border-outline-variant/20">{row.jib}</td>
-                  <td className="p-6 border-b border-outline-variant/20">{row.load}</td>
+                  <td className="p-6 border-b border-outline-variant/20 font-bold">
+                    {row.model}
+                  </td>
+                  <td className="p-6 border-b border-outline-variant/20">
+                    {row.huh}
+                  </td>
+                  <td className="p-6 border-b border-outline-variant/20">
+                    {row.jib}
+                  </td>
+                  <td className="p-6 border-b border-outline-variant/20">
+                    {row.load}
+                  </td>
                   <td className="p-6 border-b border-outline-variant/20 text-right">
                     <Link
                       href="/contact/"
@@ -292,7 +397,9 @@ function TowerCraneFull() {
               <span className="font-label-technical text-tertiary uppercase tracking-widest text-xs">
                 Available Now
               </span>
-              <h2 className="font-headline-md text-headline-md text-on-surface mt-2">New units for sale</h2>
+              <h2 className="font-headline-md text-headline-md text-on-surface mt-2">
+                New units for sale
+              </h2>
             </div>
             <Link
               href="/sell/"
@@ -324,7 +431,8 @@ function TowerCraneFull() {
             Request tower crane rental
           </h2>
           <p className="text-on-surface-variant text-body-lg mb-8 max-w-2xl mx-auto">
-            Tell us your site, height, and jib requirements. We will match the right model.
+            Tell us your site, height, and jib requirements. We will match the
+            right model.
           </p>
           <ContactCTA
             emailSubject="Tower Crane Inquiry"

@@ -147,10 +147,10 @@ export default function GensetPage() {
           </GlassCard>
 
           {/* Featured genset image */}
-          <GlassCard className="lg:col-span-5 relative overflow-hidden min-h-[400px] group">
+          <GlassCard className="wm lg:col-span-5 relative overflow-hidden min-h-[400px] group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/design/genset/hero.jpg"
+              src="/images/genset.jpg"
               alt="Industrial diesel generator set"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
@@ -172,7 +172,7 @@ export default function GensetPage() {
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
           <GlassCard className="lg:col-span-5 p-0 overflow-hidden">
-            <div className="aspect-[4/3]">
+            <div className="wm aspect-[4/3]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/design/genset/feature-02.jpg"
