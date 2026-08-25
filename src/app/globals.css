@@ -7,11 +7,16 @@
 :root {
   --text-headline-lg: 28px;
   --leading-headline-lg: 36px;
+  /* Hero h1: mobile 34/40 agar muat di layar HP; md+ kembali 72/80. */
+  --text-display-xl: 34px;
+  --leading-display-xl: 40px;
 }
 @media (min-width: 768px) {
   :root {
     --text-headline-lg: 48px;
     --leading-headline-lg: 56px;
+    --text-display-xl: 72px;
+    --leading-display-xl: 80px;
   }
 }
 

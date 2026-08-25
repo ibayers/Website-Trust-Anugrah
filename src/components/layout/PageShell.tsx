@@ -28,8 +28,10 @@ export function PageShell({ heroEyebrow, heroTitle, heroSubtitle, heroImage, chi
                 className="w-full h-full object-cover"
                 loading="eager"
               />
-              {/* Scrim kiri tipis agar teks terbaca — gambar tetap terang/full-color. */}
-              <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/30 to-transparent" />
+              {/* Mobile: scrim gelap penuh agar teks terbaca (bg bisa terang, mis. sertifikat).
+                  Desktop: gradient kiri tipis — gambar tetap terang/full-color. */}
+              <div className="absolute inset-0 bg-background/75 md:hidden" />
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-background/85 via-background/30 to-transparent" />
             </div>
           )}
           <div className="relative z-10 px-margin-desktop max-w-4xl py-24 md:py-32">

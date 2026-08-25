@@ -29,7 +29,7 @@ export function Header() {
       <nav className="flex justify-between items-center px-margin-desktop py-4 w-full">
         <Link
           href="/"
-          className="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter"
+          className="font-headline-md text-lg md:text-headline-md font-bold text-on-surface tracking-tighter"
         >
           {legalName}
         </Link>
