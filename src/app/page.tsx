@@ -305,7 +305,7 @@ export default function HomePage() {
             <img
               src="/images/piagam-trust-anugrah.jpg"
               alt="Piagam penghargaan PT Trust Anugrah"
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-12">

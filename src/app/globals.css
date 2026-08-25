@@ -82,3 +82,8 @@ body {
   pointer-events: none;
   user-select: none;
 }
+
+/* Varian watermark hitam 30% — untuk dokumen terang (sertifikat). Pakai: class="wm wm-black" */
+.wm-black::after {
+  color: rgba(0, 0, 0, 0.3);
+}
