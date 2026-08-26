@@ -2,6 +2,7 @@ import './globals.css';
 import { inter, hanken, jetbrains } from './fonts';
 import { Agentation } from 'agentation';
 import { LangProvider } from '@/lib/i18n';
+import Script from 'next/script';
 
 // metadataBase uses placeholder domain — PRD §7 Q5 pending. OG paths resolve against this.
 export const metadata = {
@@ -55,6 +56,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
         <LangProvider>{children}</LangProvider>
         {process.env.NODE_ENV === 'development' && <Agentation />}
+
+        {/* Google Analytics (gtag.js) — ID pengukuran klien. */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-8KC8R9NDDB"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8KC8R9NDDB');
+          `}
+        </Script>
       </body>
     </html>
   );
