@@ -10,6 +10,9 @@
   /* Hero h1: mobile 34/40 agar muat di layar HP; md+ kembali 72/80. */
   --text-display-xl: 34px;
   --leading-display-xl: 40px;
+  /* Judul kartu: mobile 22/28 agar tidak keluar card; md+ kembali 32/40. */
+  --text-headline-md: 22px;
+  --leading-headline-md: 28px;
 }
 @media (min-width: 768px) {
   :root {
@@ -17,6 +20,8 @@
     --leading-headline-lg: 56px;
     --text-display-xl: 72px;
     --leading-display-xl: 80px;
+    --text-headline-md: 32px;
+    --leading-headline-md: 40px;
   }
 }
 
