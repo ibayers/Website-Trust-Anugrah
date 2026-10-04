@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
+import { SplitHero } from "@/components/layout/SplitHero";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ContactCTA } from "@/components/ui/ContactCTA";
 
@@ -14,15 +15,15 @@ const PAGE_ENABLED = true;
 const tcTypesForRent = [
   { name: "Potain FO23 / B", note: "Industry standard for versatility" },
   { name: "Potain H30/30", note: "High-speed lifting series" },
-  { name: "Potain H3/36", note: "Advanced variable frequency" },
-  { name: "Raimondi ER180", note: "Italian precision, heavy lifting" },
-  { name: "Jianglu JL120", note: "Robust performance, 50m jib" },
+  { name: "Erection & dismantling Tower Crane", note: "We provide tower crane installation and dismantling services using experienced and certified technicians." },
+  { name: "Dismantling with manual crane portable", note: "We provide tower crane dismantling services in the middle of a building using a manual crane portable." },
+  { name: "Spare part and component tower crane", note: "We supply spare parts and mechanical-electronic components for tower cranes, such as bearings, pulleys, MCBs, anemometers, and wire ropes." },
   { name: "Jianglu JL150", note: "High-reliability electronics" },
   { name: "Tower Crane QT80", note: "Compact footprint, quick erection" },
   { name: "TC Peinner", note: "Specialized deployments" },
 ];
 
-const tcForSale = ["MG5023", "MG6015", "MG6036", "MG7030"];
+// ponytail: tcForSale array dibuang (chip MG5023-7030 dihapus client); /sell/ tetap punya list lengkap.
 
 const tcCapabilities = [
   {
@@ -45,21 +46,21 @@ const tcCapabilities = [
 const tcSpecs = [
   {
     model: "Potain FO23 / B",
-    huh: "20m - 60m",
-    jib: "45m - 50m",
-    load: "Varies per config",
+    huh: "FREE STANDING - 100M",
+    jib: "TOWER CRANE JIB LENGTH 50M",
+    load: "2.3 T",
   },
   {
     model: "MG Series (5023 - 7030)",
-    huh: "Variable",
-    jib: "40m - 70m",
-    load: "Industrial Heavy",
+    huh: "FREE STANDING-100M",
+    jib: "TOWER CRANE JIB LENGTH 60M",
+    load: "2T-2,4T",
   },
   {
     model: "Raimondi ER180",
-    huh: "Custom Setup",
-    jib: "Up to 65m",
-    load: "Precision Control",
+    huh: "FREE STANDING - 100M",
+    jib: "TOWER CRANE JIB LENGTH 70M",
+    load: "2.5T-3,2T",
   },
 ];
 
@@ -89,17 +90,18 @@ export default function TowerCranePage() {
 
 function TowerCraneFull() {
   return (
-    <PageShell
-      heroEyebrow="Precision Elevation Systems"
-      heroTitle={
-        <>
-          Tower Crane <br />
-          <span className="text-secondary">Solutions 2026</span>
-        </>
-      }
-      heroSubtitle="Elevating the skyline of Jakarta and beyond. Rental, erection, dismantling, parts, and certified operators — industrial-grade reliability."
-      heroImage="/images/design/tower-crane/tc-2.jpg"
-    >
+    <PageShell>
+      <SplitHero
+        eyebrow="Precision Elevation Systems"
+        title={
+          <>
+            Tower Crane <br />
+            <span className="text-secondary">Solutions 2026</span>
+          </>
+        }
+        subtitle="Elevating the skyline of Jakarta and beyond. Rental, erection, dismantling, parts, and certified operators — industrial-grade reliability."
+        image="/images/design/tower-crane/tc-2.jpg"
+      />
       {/* Equipment Fleet — bento grid: featured + secondary + 3 spec cards. */}
       <section className="px-margin-desktop py-section-gap">
         <div className="flex justify-between items-end mb-16">
@@ -127,8 +129,8 @@ function TowerCraneFull() {
           <GlassCard className="wm md:col-span-8 group relative overflow-hidden aspect-video">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/design/tower-crane/tc-3.jpg"
-              alt="Potain tower crane on Jakarta construction site"
+              src="/images/revisi/7.jpg"
+              alt="Tower crane for rental PT Trust Anugrah"
               className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
@@ -143,11 +145,14 @@ function TowerCraneFull() {
                 </span>
               </div>
               <h3 className="font-headline-md text-headline-md mb-2">
-                Potain FO23 / B
+                Tower Crane for rental
               </h3>
               <p className="text-on-surface-variant max-w-md">
-                The industry gold standard for versatility and load capacity.
-                Optimized for Jakarta&apos;s dense urban environments.
+                1. Tower Crane with jib length radius 50 meter–70 meter
+                <br />
+                2. Ready for Jawa, Sumatra, Bali, IKN Kalimantan
+                <br />
+                3. Stock unit Jakarta
               </p>
             </div>
           </GlassCard>
@@ -163,10 +168,9 @@ function TowerCraneFull() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80" />
             <div className="absolute bottom-0 p-6">
-              <h3 className="font-headline-md text-2xl mb-1">Raimondi ER180</h3>
-              <p className="text-on-surface-variant text-sm">
-                Italian precision for heavy lifting tasks.
-              </p>
+              <h3 className="font-headline-md text-2xl mb-1">
+                Accepting tower cranes on consignment for rental marketing
+              </h3>
               <Link
                 href="/contact/"
                 className="mt-4 text-secondary font-label-technical inline-flex items-center gap-2 group/btn"
@@ -224,6 +228,21 @@ function TowerCraneFull() {
               title: "Verified Unit",
               tag: "CERTIFIED",
             },
+            {
+              src: "/images/revisi/17.jpg",
+              title: "Erection & Dismantling",
+              tag: "SERVICES",
+            },
+            {
+              src: "/images/revisi/18.jpg",
+              title: "Dismantling Manual Crane",
+              tag: "SERVICES",
+            },
+            {
+              src: "/images/revisi/19.jpg",
+              title: "Spare Part & Component",
+              tag: "PARTS",
+            },
           ].map((p) => (
             <GlassCard
               key={p.src}
@@ -233,7 +252,7 @@ function TowerCraneFull() {
               <img
                 src={p.src}
                 alt={p.title}
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
                 loading="lazy"
               />
               <div className="p-4 border-t border-outline-variant/20">
@@ -335,19 +354,19 @@ function TowerCraneFull() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-surface-container-high font-label-technical text-xs uppercase tracking-widest text-secondary">
-                <th className="p-6 border-b border-outline-variant">
+                <th className="p-4 border-b border-outline-variant">
                   Equipment Model
                 </th>
-                <th className="p-6 border-b border-outline-variant">
+                <th className="p-4 border-b border-outline-variant">
                   Max Hook Height (HUH)
                 </th>
-                <th className="p-6 border-b border-outline-variant">
+                <th className="p-4 border-b border-outline-variant">
                   Jib Length Range
                 </th>
-                <th className="p-6 border-b border-outline-variant">
-                  Load Capacity
+                <th className="p-4 border-b border-outline-variant">
+                  TIP LOAD CAPACITY
                 </th>
-                <th className="p-6 border-b border-outline-variant text-right">
+                <th className="p-4 border-b border-outline-variant text-right">
                   Action
                 </th>
               </tr>
@@ -362,19 +381,19 @@ function TowerCraneFull() {
                       : "bg-surface-container-lowest hover:bg-white/5 transition-colors"
                   }
                 >
-                  <td className="p-6 border-b border-outline-variant/20 font-bold">
+                  <td className="p-4 border-b border-outline-variant/20 font-bold">
                     {row.model}
                   </td>
-                  <td className="p-6 border-b border-outline-variant/20">
+                  <td className="p-4 border-b border-outline-variant/20">
                     {row.huh}
                   </td>
-                  <td className="p-6 border-b border-outline-variant/20">
+                  <td className="p-4 border-b border-outline-variant/20">
                     {row.jib}
                   </td>
-                  <td className="p-6 border-b border-outline-variant/20">
+                  <td className="p-4 border-b border-outline-variant/20">
                     {row.load}
                   </td>
-                  <td className="p-6 border-b border-outline-variant/20 text-right">
+                  <td className="p-4 border-b border-outline-variant/20 text-right">
                     <Link
                       href="/contact/"
                       className="px-4 py-2 border border-outline text-xs rounded hover:bg-secondary hover:text-on-secondary transition-all"
@@ -398,7 +417,7 @@ function TowerCraneFull() {
                 Available Now
               </span>
               <h2 className="font-headline-md text-headline-md text-on-surface mt-2">
-                New units for sale
+                Tower crane available for sale
               </h2>
             </div>
             <Link
@@ -410,16 +429,6 @@ function TowerCraneFull() {
                 arrow_forward
               </span>
             </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {tcForSale.map((m) => (
-              <div
-                key={m}
-                className="px-4 py-3 bg-surface-container-low/40 rounded text-center font-label-technical text-tertiary"
-              >
-                {m}
-              </div>
-            ))}
           </div>
         </GlassCard>
       </section>

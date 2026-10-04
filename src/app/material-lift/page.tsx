@@ -1,6 +1,7 @@
 'use client';
 
 import { PageShell } from "@/components/layout/PageShell";
+import { SplitHero } from "@/components/layout/SplitHero";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ContactCTA } from "@/components/ui/ContactCTA";
 import { useLang } from "@/lib/i18n";
@@ -10,9 +11,9 @@ import { useLang } from "@/lib/i18n";
 const C = {
   id: {
     heroEyebrow: "Medium Lifting Equipment",
-    heroTitle: "Medium Lifting Equipment",
+    heroTitle: "Medium Lifting Material Lift Equipment",
     heroSubtitle:
-      "Elevator barang untuk efisiensi vertikal selama periode finishing konstruksi. Umumnya hingga tinggi 30m dan kapasitas 700kg — biaya lebih rendah, efisien, dan tercepat untuk konstruksi gedung 3-4 lantai.",
+      "Elevator barang untuk efisiensi vertikal selama periode finishing konstruksi. Umumnya hingga tinggi 30m dan kapasitas 700kg — biaya lebih rendah, efisien, dan tercepat untuk konstruksi gedung 3-4 lantai. Tidak perlu lagi mengangkat material secara manual dari lantai dasar ke lantai atas saat menggunakan material lift.",
     specTitle: "Spesifikasi Teknis",
     specs: [
       { label: "Nama Alat", value: "Material Lift (Tunggal / Ganda)" },
@@ -48,9 +49,9 @@ const C = {
         desc: "Jejak ringkas untuk shaft sempit dan profil beban lebih ringan.",
       },
       {
-        src: "/images/design/material-lift/schematic-02.jpg",
-        title: "Konfigurasi Ganda",
-        desc: "Throughput ganda untuk logistik fase finishing berpermintaan tinggi.",
+        src: "/images/revisi/60.jpg",
+        title: "A limited location with material lift can provide lifting equipment",
+        desc: "Solusi untuk lokasi terbatas yang tetap membutuhkan peralatan angkat.",
       },
     ],
     descTitle: "Deskripsi",
@@ -65,9 +66,9 @@ const C = {
   },
   en: {
     heroEyebrow: "Medium Lifting Equipment",
-    heroTitle: "Medium Lifting Equipment",
+    heroTitle: "Medium Lifting Material Lift Equipment",
     heroSubtitle:
-      "Freight elevator for vertical efficiency during construction finishing periods. Normally up to 30m height and 700kg capacity — lower cost, efficient, and fastest for 3-4 floors building construction.",
+      "Freight elevator for vertical efficiency during construction finishing periods. Normally up to 30m height and 700kg capacity — lower cost, efficient, and fastest for 3-4 floors building construction. No need to manually carry materials from the ground floor to upper levels when using a material lift.",
     specTitle: "Technical Specifications",
     specs: [
       { label: "Device Name", value: "Material Lifts (Single / Double)" },
@@ -103,9 +104,9 @@ const C = {
         desc: "Compact footprint for narrow shafts and lighter load profiles.",
       },
       {
-        src: "/images/design/material-lift/schematic-02.jpg",
-        title: "Double Configuration",
-        desc: "Doubled throughput for high-demand finishing-phase logistics.",
+        src: "/images/revisi/60.jpg",
+        title: "A limited location with material lift can provide lifting equipment",
+        desc: "A solution for limited locations that still require lifting equipment.",
       },
     ],
     descTitle: "Description",
@@ -125,12 +126,13 @@ export default function MaterialLiftPage() {
   const L = C[lang];
 
   return (
-    <PageShell
-      heroEyebrow={L.heroEyebrow}
-      heroTitle={L.heroTitle}
-      heroSubtitle={L.heroSubtitle}
-      heroImage="/images/design/material-lift/hero.jpg"
-    >
+    <PageShell>
+      <SplitHero
+        eyebrow={L.heroEyebrow}
+        title={L.heroTitle}
+        subtitle={L.heroSubtitle}
+        image="/images/revisi/40.jpg"
+      />
       {/* Bento: spec table card + side action cards. */}
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/PageShell';
+import { SplitHero } from '@/components/layout/SplitHero';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { ContactCTA } from '@/components/ui/ContactCTA';
 import { useLang } from '@/lib/i18n';
@@ -65,12 +66,13 @@ export default function ServicesPage() {
   const L = C[lang];
 
   return (
-    <PageShell
-      heroEyebrow={L.heroEyebrow}
-      heroTitle={L.heroTitle}
-      heroSubtitle={L.heroSubtitle}
-      heroImage="/images/services.jpg"
-    >
+    <PageShell>
+      <SplitHero
+        eyebrow={L.heroEyebrow}
+        title={L.heroTitle}
+        subtitle={L.heroSubtitle}
+        image="/images/services.jpg"
+      />
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
           {L.services.map((svc) => (

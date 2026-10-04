@@ -7,7 +7,8 @@ import { Footer } from './Footer';
 // (e.g. <span className="text-secondary">accent</span>) per design HTML.
 interface PageShellProps {
   heroEyebrow?: ReactNode;
-  heroTitle: ReactNode;
+  /** Undefined = hero bawaan disembunyikan; halaman render hero custom via children. */
+  heroTitle?: ReactNode;
   heroSubtitle?: ReactNode;
   heroImage?: string;
   children: ReactNode;
@@ -18,6 +19,7 @@ export function PageShell({ heroEyebrow, heroTitle, heroSubtitle, heroImage, chi
     <>
       <Header />
       <main>
+        {heroTitle !== undefined && (
         <section className="relative overflow-hidden">
           {heroImage && (
             <div className="absolute inset-0 z-0">
@@ -53,6 +55,7 @@ export function PageShell({ heroEyebrow, heroTitle, heroSubtitle, heroImage, chi
             )}
           </div>
         </section>
+        )}
         {children}
       </main>
       <Footer />

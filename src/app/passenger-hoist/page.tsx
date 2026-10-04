@@ -123,12 +123,30 @@ export default function PassengerHoistPage() {
   const L = C[lang];
 
   return (
-    <PageShell
-      heroEyebrow={L.heroEyebrow}
-      heroTitle={L.heroTitle}
-      heroSubtitle={L.heroSubtitle}
-      heroImage="/images/design/passenger-hoist/ph-1.jpg"
-    >
+    <PageShell heroEyebrow={L.heroEyebrow}>
+      {/* Hero custom: teks kiri, gambar kanan (rasio asli, tanpa crop). */}
+      <section className="px-margin-desktop pt-16 md:pt-24 pb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+          <div>
+            <h1 className="font-display-xl text-display-xl text-on-surface mb-6 leading-tight">
+              {L.heroTitle}
+            </h1>
+            <p className="text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              {L.heroSubtitle}
+            </p>
+          </div>
+          <div className="wm glass-panel rounded-2xl overflow-hidden border border-outline-variant/30 mx-auto w-fit max-w-full">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/revisi/37.jpg"
+              alt="Passenger hoist PT Trust Anugrah"
+              className="h-auto max-h-[420px] w-auto max-w-full"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Hero metric + Bento showcase. */}
       <section className="px-margin-desktop py-section-gap">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-gutter mb-12">
@@ -149,12 +167,12 @@ export default function PassengerHoistPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           {/* Featured unit */}
-          <GlassCard className="wm md:col-span-8 h-[400px] relative overflow-hidden group">
+          <GlassCard className="wm md:col-span-8 relative overflow-hidden group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/design/passenger-hoist/ph-2.jpg"
+              src="/images/revisi/38.jpg"
               alt="Twin-cage passenger hoist on Jakarta high-rise"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.03]"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
@@ -175,7 +193,7 @@ export default function PassengerHoistPage() {
               <div className="wm aspect-[4/3] overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/design/passenger-hoist/ph-3.jpg"
+                  src="/images/revisi/39.jpg"
                   alt="Variable frequency drive control panel"
                   className="w-full h-full object-cover"
                   loading="lazy"

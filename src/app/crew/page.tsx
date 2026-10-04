@@ -221,13 +221,13 @@ export default function CrewPage() {
             {fieldPhotos.map((p) => (
               <div
                 key={p.src}
-                className="wm aspect-square relative group overflow-hidden bg-surface-variant rounded-xl"
+                className="wm relative group overflow-hidden bg-surface-variant rounded-xl"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={p.src}
                   alt={p.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+                  className="w-full h-auto group-hover:scale-[1.03] transition-all duration-700"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">

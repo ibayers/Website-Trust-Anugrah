@@ -1,6 +1,7 @@
 'use client';
 
 import { PageShell } from "@/components/layout/PageShell";
+import { SplitHero } from "@/components/layout/SplitHero";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ContactCTA } from "@/components/ui/ContactCTA";
 import { useLang } from "@/lib/i18n";
@@ -9,22 +10,17 @@ import { useLang } from "@/lib/i18n";
 const C = {
   id: {
     heroEyebrow: "Solusi Dismantling Tower Crane Akses Sulit",
-    heroTitle: (
-      <>
-        Manual Crane <br />
-        <span className="text-secondary">Logika Akses</span>
-      </>
-    ),
+    heroTitle: "Manual crane Portable",
     heroSubtitle:
       "Saat mobile crane kecil tak bisa menjangkau, manual crane mengambil alih — bongkar tower crane dari area sulit dengan biaya lebih rendah dan keandalan tinggi. Dalam kondisi sulit seperti di tengah gedung tinggi, biayanya lebih rendah dibanding mobile crane.",
     logicTitle: "Berpengalaman Dismantling Biaya Rendah dengan Manual Crane",
     logicP:
       "Dalam konstruksi urban modern, keterbatasan ruang sering membuat mobile crane standar tidak bisa dipakai. Manual crane dibutuhkan untuk membongkar tower crane dari area sulit yang tidak bisa didekati mobile crane kecil. Sistem rekayasa kami menjembatani kebutuhan itu — alternatif biaya rendah dengan keandalan tinggi yang menyerupai fungsi tower crane dengan jejak ruang jauh lebih kecil.",
-    metrics: "METRIK DEPLOYMENT",
+    metrics: "MANUAL CRANE SPECIFICATION",
     specs: [
-      { label: "Jejak Min.", value: "1,2m × 1,2m" },
-      { label: "SWL Tipikal", value: "500 kg - 2000 kg" },
-      { label: "Busur Rotasi", value: "360° Kontinu" },
+      { label: "Radius Jib", value: "12 meter" },
+      { label: "Capacity", value: "1.5T" },
+      { label: "Swing", value: "<360 swing left and right" },
     ],
     useCases: [
       {
@@ -63,22 +59,17 @@ const C = {
   },
   en: {
     heroEyebrow: "Difficult Access Tower Crane Dismantling Solution",
-    heroTitle: (
-      <>
-        Manual Crane <br />
-        <span className="text-secondary">Access Logic</span>
-      </>
-    ),
+    heroTitle: "Manual crane Portable",
     heroSubtitle:
       "Where small mobile cranes cannot reach, manual cranes take over — dismantle tower cranes from difficult areas with lower cost and high reliability. In difficult conditions such as in the middle of a high-rise building, it is lower cost than a mobile crane.",
     logicTitle: "Experienced in the Lower-Cost Dismantling with Manual Crane",
     logicP:
       "In modern urban construction, spatial constraints often render standard mobile cranes obsolete. Manual cranes are needed to dismantle tower cranes from difficult areas that small mobile cranes cannot approach. Our engineered systems bridge this gap, offering a low-cost, high-reliability alternative that mirrors tower crane functionality at a fraction of the spatial footprint.",
-    metrics: "DEPLOYMENT METRICS",
+    metrics: "MANUAL CRANE SPECIFICATION",
     specs: [
-      { label: "Min. Footprint", value: "1.2m × 1.2m" },
-      { label: "Typical SWL", value: "500 kg - 2000 kg" },
-      { label: "Rotation Arc", value: "360° Continuous" },
+      { label: "Radius Jib", value: "12 meter" },
+      { label: "Capacity", value: "1.5T" },
+      { label: "Swing", value: "<360 swing left and right" },
     ],
     useCases: [
       {
@@ -122,12 +113,13 @@ export default function ManualCranePage() {
   const L = C[lang];
 
   return (
-    <PageShell
-      heroEyebrow={L.heroEyebrow}
-      heroTitle={L.heroTitle}
-      heroSubtitle={L.heroSubtitle}
-      heroImage="/images/design/tower-crane/tc-2.jpg"
-    >
+    <PageShell>
+      <SplitHero
+        eyebrow={L.heroEyebrow}
+        title={L.heroTitle}
+        subtitle={L.heroSubtitle}
+        image="/images/revisi/44.jpg"
+      />
       {/* Main: Specialized Access Logic + spec card. */}
       <section className="px-margin-desktop py-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
@@ -175,12 +167,12 @@ export default function ManualCranePage() {
               </div>
             </div>
             <div className="mt-8">
-              <div className="wm h-40 w-full rounded overflow-hidden border border-outline-variant/30">
+              <div className="wm w-full rounded overflow-hidden border border-outline-variant/30">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/design/field-service/fs-1.jpg"
                   alt="Manual crane deployment detail"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto"
                   loading="lazy"
                 />
               </div>
@@ -222,13 +214,13 @@ export default function ManualCranePage() {
           {L.gallery.map((p, i) => (
             <div
               key={p.src + "-" + i}
-              className="wm aspect-square relative group overflow-hidden bg-surface-variant rounded-xl"
+              className="wm relative group overflow-hidden bg-surface-variant rounded-xl"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.src}
                 alt={p.label}
-                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+                className="w-full h-auto group-hover:scale-[1.03] transition-all duration-700"
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">

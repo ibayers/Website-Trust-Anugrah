@@ -116,7 +116,7 @@ export default function GensetPage() {
       heroEyebrow={L.heroEyebrow}
       heroTitle={L.heroTitle}
       heroSubtitle={L.heroSubtitle}
-      heroImage="/images/design/genset/hero.jpg"
+      heroImage="/images/revisi/59.jpg"
     >
       {/* Hero stat + featured unit image. */}
       <section className="px-margin-desktop py-section-gap">

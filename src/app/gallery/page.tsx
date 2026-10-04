@@ -12,19 +12,19 @@ import { useLang } from '@/lib/i18n';
 type Filter = 'ALL' | 'TOWER_CRANES' | 'PASSENGER_HOIST' | 'FIELD_SERVICE';
 
 const ITEMS = [
-  { src: '/images/design/tower-crane/tc-4.jpg', icon: 'precision_manufacturing', titleId: 'Unit Tower Crane', titleEn: 'Tower Crane Unit', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
+  { src: '/images/revisi/64.jpg', icon: 'precision_manufacturing', titleId: 'FIRST INSTALLATION DPR2 PROJECT-IKN', titleEn: 'FIRST INSTALLATION DPR2 PROJECT-IKN', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
   { src: '/images/design/tower-crane/tc-fix-1.jpg', icon: 'engineering', titleId: 'Detail Crane', titleEn: 'Crane Detail', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
   { src: '/images/design/field-service/fs-2.jpg', icon: 'construction', titleId: 'Inspeksi PJK3 & SHE', titleEn: 'PJK3 and SHE Inspection', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
   { src: '/images/ph1-full.jpg', icon: 'build', titleId: 'Setelah Perbaikan Passenger Hoist Rusak', titleEn: 'After Repairing Broken Passenger Hoist', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
-  { src: '/images/design/tower-crane/tc-2.jpg', icon: 'fullscreen', titleId: 'Erection Penuh', titleEn: 'Full Erection', tagId: 'SEWA', tagEn: 'RENTAL', filter: 'TOWER_CRANES' },
-  { src: '/images/design/tower-crane/tc-3.jpg', icon: 'verified', titleId: 'Unit Terverifikasi', titleEn: 'Verified Unit', tagId: 'TERSERTIFIKASI', tagEn: 'CERTIFIED', filter: 'TOWER_CRANES' },
-  { src: '/images/design/field-service/fs-3.jpg', icon: 'build', titleId: 'Layanan Lapangan', titleEn: 'Field Service', tagId: 'INSPEKSI SHE & PJK3', tagEn: 'SHE & PJK3 INSPECTION', filter: 'FIELD_SERVICE' },
-  { src: '/images/design/field-service/fs-1.jpg', icon: 'photo_camera', titleId: 'Perbaikan Passenger Hoist Rusak', titleEn: 'Repairing Broken Passenger Hoist', tagId: 'OPS', tagEn: 'OPS', filter: 'FIELD_SERVICE' },
+  { src: '/images/revisi/67.jpg', icon: 'fullscreen', titleId: 'FIRST INSTALLATION DPR2 PROJECT-IKN', titleEn: 'FIRST INSTALLATION DPR2 PROJECT-IKN', tagId: 'SEWA', tagEn: 'RENTAL', filter: 'TOWER_CRANES' },
+  { src: '/images/revisi/78.jpg', icon: 'verified', titleId: 'TOWER CRANE APARTEMEN PLUIT', titleEn: 'TOWER CRANE APARTEMEN PLUIT', tagId: 'TERSERTIFIKASI', tagEn: 'CERTIFIED', filter: 'TOWER_CRANES' },
+  { src: '/images/revisi/71.jpg', icon: 'build', titleId: 'RUSUN PASPAMPRES IKN', titleEn: 'RUSUN PASPAMPRES IKN', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
+  { src: '/images/revisi/68.jpg', icon: 'photo_camera', titleId: 'TOWER CRANE PLTU MERAK', titleEn: 'TOWER CRANE PLTU MERAK', tagId: 'OPS', tagEn: 'OPS', filter: 'FIELD_SERVICE' },
   { src: '/images/design/passenger-hoist/ph-2.jpg', icon: 'elevator', titleId: 'Kru Erection Tower Crane Siap Bertugas', titleEn: 'Tower Crane Erection Crew Ready for Action', tagId: 'TRANSPORT VERTIKAL', tagEn: 'VERTICAL TRANSPORT', filter: 'PASSENGER_HOIST' },
-  { src: '/images/design/passenger-hoist/ph-3.jpg', icon: 'height', titleId: 'Deployment Hoist Gedung Tinggi', titleEn: 'High-Rise Hoist Deploy', tagId: 'OPERASI', tagEn: 'OPERATIONS', filter: 'PASSENGER_HOIST' },
+  { src: '/images/design/passenger-hoist/ph-3.jpg', icon: 'height', titleId: 'COR BOUQUET MANUFACTURING', titleEn: 'COR BOUQUET MANUFACTURING', tagId: 'OPERASI', tagEn: 'OPERATIONS', filter: 'PASSENGER_HOIST' },
 ] as const;
 
-const FLAGSHIP_SRC = '/images/design/tower-crane/tc-fix-3.jpg';
+const FLAGSHIP_SRC = '/images/revisi/63.jpg';
 
 export default function GalleryPage() {
   const { lang } = useLang();
@@ -181,7 +181,7 @@ export default function GalleryPage() {
               <img
                 src={item.src}
                 alt={lang === 'id' ? item.titleId : item.titleEn}
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-surface-dim/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
