@@ -211,7 +211,7 @@ function TowerCraneFull() {
       </section>
 
       <section className="px-margin-desktop ">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div className="columns-1 sm:columns-2 md:columns-3 gap-4 [&>*]:mb-4">
           {[
             {
               src: "/images/tower.jpg",
@@ -246,7 +246,7 @@ function TowerCraneFull() {
           ].map((p) => (
             <GlassCard
               key={p.src}
-              className="wm relative group overflow-hidden cursor-pointer p-0"
+              className="wm relative group overflow-hidden cursor-pointer p-0 break-inside-avoid"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

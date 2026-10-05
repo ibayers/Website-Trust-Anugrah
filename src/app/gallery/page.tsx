@@ -13,13 +13,13 @@ type Filter = 'ALL' | 'TOWER_CRANES' | 'PASSENGER_HOIST' | 'FIELD_SERVICE';
 
 const ITEMS = [
   { src: '/images/revisi/64.jpg', icon: 'precision_manufacturing', titleId: 'FIRST INSTALLATION DPR2 PROJECT-IKN', titleEn: 'FIRST INSTALLATION DPR2 PROJECT-IKN', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
-  { src: '/images/design/tower-crane/tc-fix-1.jpg', icon: 'engineering', titleId: 'Detail Crane', titleEn: 'Crane Detail', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
-  { src: '/images/design/field-service/fs-2.jpg', icon: 'construction', titleId: 'Inspeksi PJK3 & SHE', titleEn: 'PJK3 and SHE Inspection', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
-  { src: '/images/ph1-full.jpg', icon: 'build', titleId: 'Setelah Perbaikan Passenger Hoist Rusak', titleEn: 'After Repairing Broken Passenger Hoist', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
   { src: '/images/revisi/67.jpg', icon: 'fullscreen', titleId: 'FIRST INSTALLATION DPR2 PROJECT-IKN', titleEn: 'FIRST INSTALLATION DPR2 PROJECT-IKN', tagId: 'SEWA', tagEn: 'RENTAL', filter: 'TOWER_CRANES' },
   { src: '/images/revisi/78.jpg', icon: 'verified', titleId: 'TOWER CRANE APARTEMEN PLUIT', titleEn: 'TOWER CRANE APARTEMEN PLUIT', tagId: 'TERSERTIFIKASI', tagEn: 'CERTIFIED', filter: 'TOWER_CRANES' },
+  { src: '/images/design/tower-crane/tc-fix-1.jpg', icon: 'engineering', titleId: 'Detail Crane', titleEn: 'Crane Detail', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
+  { src: '/images/design/field-service/fs-2.jpg', icon: 'construction', titleId: 'Inspeksi PJK3 & SHE', titleEn: 'PJK3 and SHE Inspection', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
   { src: '/images/revisi/71.jpg', icon: 'build', titleId: 'RUSUN PASPAMPRES IKN', titleEn: 'RUSUN PASPAMPRES IKN', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
   { src: '/images/revisi/68.jpg', icon: 'photo_camera', titleId: 'TOWER CRANE PLTU MERAK', titleEn: 'TOWER CRANE PLTU MERAK', tagId: 'OPS', tagEn: 'OPS', filter: 'FIELD_SERVICE' },
+  { src: '/images/ph1-full.jpg', icon: 'build', titleId: 'Setelah Perbaikan Passenger Hoist Rusak', titleEn: 'After Repairing Broken Passenger Hoist', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
   { src: '/images/design/passenger-hoist/ph-2.jpg', icon: 'elevator', titleId: 'Kru Erection Tower Crane Siap Bertugas', titleEn: 'Tower Crane Erection Crew Ready for Action', tagId: 'TRANSPORT VERTIKAL', tagEn: 'VERTICAL TRANSPORT', filter: 'PASSENGER_HOIST' },
   { src: '/images/design/passenger-hoist/ph-3.jpg', icon: 'height', titleId: 'COR BOUQUET MANUFACTURING', titleEn: 'COR BOUQUET MANUFACTURING', tagId: 'OPERASI', tagEn: 'OPERATIONS', filter: 'PASSENGER_HOIST' },
 ] as const;
@@ -150,33 +150,35 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Bento Masonry Gallery */}
+      {/* Masonry — CSS columns: kolom seimbang, gap antar gambar minimal. Flagship = item biasa. */}
       <section className="px-margin-desktop py-section-gap">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-          {/* Flagship large feature — hidden when filter excludes it. */}
+        <div className="columns-1 sm:columns-2 lg:columns-4 gap-gutter [&>*]:mb-gutter">
+          {/* Flagship — digabung ke masonry sebagai item biasa. */}
           {showFlagship && (
-            <GlassCard className="wm lg:col-span-2 lg:row-span-2 relative group overflow-hidden cursor-pointer p-0">
+            <GlassCard className="wm relative group overflow-hidden cursor-pointer p-0 break-inside-avoid">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={FLAGSHIP_SRC}
                 alt={t.flagshipTitle}
-                className="w-full h-full min-h-[480px] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80" />
-              <div className="absolute bottom-0 left-0 p-8 w-full">
+              <div className="p-4 border-t border-outline-variant/20">
                 <span className="font-label-technical text-xs bg-secondary text-on-secondary-container px-2 py-1 mb-2 inline-block">
                   {t.flagshipTag}
                 </span>
-                <h3 className="font-headline-md text-body-lg font-bold mb-2">{t.flagshipTitle}</h3>
-                <p className="text-on-surface-variant text-sm line-clamp-2">{t.flagshipDesc}</p>
+                <h4 className="font-bold text-sm">{t.flagshipTitle}</h4>
+                <p className="text-xs text-on-surface-variant font-label-technical line-clamp-2">
+                  {t.flagshipDesc}
+                </p>
               </div>
             </GlassCard>
           )}
-
-          {/* Standard items */}
           {items.map((item) => (
-            <GlassCard key={item.src} className="wm relative group overflow-hidden cursor-pointer p-0">
+            <GlassCard
+              key={item.src}
+              className="wm relative group overflow-hidden cursor-pointer p-0 break-inside-avoid"
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={item.src}

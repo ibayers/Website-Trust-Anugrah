@@ -217,7 +217,7 @@ export default function CrewPage() {
               <p className="text-on-surface-variant max-w-xl">{L.fieldDesc}</p>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-start">
             {fieldPhotos.map((p) => (
               <div
                 key={p.src}

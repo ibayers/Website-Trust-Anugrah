@@ -190,12 +190,12 @@ export default function PassengerHoistPage() {
           {/* Side feature cards */}
           <div className="md:col-span-4 flex flex-col gap-gutter">
             <GlassCard className="p-0 overflow-hidden flex flex-col">
-              <div className="wm aspect-[4/3] overflow-hidden">
+              <div className="wm overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/revisi/39.jpg"
                   alt="Variable frequency drive control panel"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto"
                   loading="lazy"
                 />
               </div>
@@ -205,12 +205,12 @@ export default function PassengerHoistPage() {
               </div>
             </GlassCard>
             <GlassCard className="p-0 overflow-hidden flex flex-col">
-              <div className="wm aspect-[4/3] overflow-hidden">
+              <div className="wm overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/design/passenger-hoist/service-lifecycle.jpg"
                   alt="Service technician inspecting hoist"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto"
                   loading="lazy"
                 />
               </div>

@@ -210,11 +210,11 @@ export default function ManualCranePage() {
           <h2 className="font-headline-lg text-headline-lg mb-4">{L.galleryTitle}</h2>
           <div className="w-24 h-1 bg-secondary" />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="columns-1 sm:columns-2 md:columns-3 gap-4 [&>*]:mb-4">
           {L.gallery.map((p, i) => (
             <div
               key={p.src + "-" + i}
-              className="wm relative group overflow-hidden bg-surface-variant rounded-xl"
+              className="wm relative group overflow-hidden bg-surface-variant rounded-xl break-inside-avoid"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
