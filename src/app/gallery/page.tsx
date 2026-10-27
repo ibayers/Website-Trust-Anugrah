@@ -18,10 +18,10 @@ const ITEMS = [
   { src: '/images/design/tower-crane/tc-fix-1.jpg', icon: 'engineering', titleId: 'Detail Crane', titleEn: 'Crane Detail', tagId: 'PERALATAN', tagEn: 'EQUIPMENT', filter: 'TOWER_CRANES' },
   { src: '/images/design/field-service/fs-2.jpg', icon: 'construction', titleId: 'Inspeksi PJK3 & SHE', titleEn: 'PJK3 and SHE Inspection', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
   { src: '/images/revisi/71.jpg', icon: 'build', titleId: 'RUSUN PASPAMPRES IKN', titleEn: 'RUSUN PASPAMPRES IKN', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
-  { src: '/images/revisi/68.jpg', icon: 'photo_camera', titleId: 'TOWER CRANE PLTU MERAK', titleEn: 'TOWER CRANE PLTU MERAK', tagId: 'OPS', tagEn: 'OPS', filter: 'FIELD_SERVICE' },
+  { src: '/images/revisi/68.jpg', icon: 'photo_camera', titleId: 'RUSUN PASPAMPRES IKN', titleEn: 'RUSUN PASPAMPRES IKN', tagId: 'OPS', tagEn: 'OPS', filter: 'FIELD_SERVICE' },
   { src: '/images/ph1-full.jpg', icon: 'build', titleId: 'Setelah Perbaikan Passenger Hoist Rusak', titleEn: 'After Repairing Broken Passenger Hoist', tagId: 'LAYANAN LAPANGAN', tagEn: 'FIELD SERVICE', filter: 'FIELD_SERVICE' },
   { src: '/images/design/passenger-hoist/ph-2.jpg', icon: 'elevator', titleId: 'Kru Erection Tower Crane Siap Bertugas', titleEn: 'Tower Crane Erection Crew Ready for Action', tagId: 'TRANSPORT VERTIKAL', tagEn: 'VERTICAL TRANSPORT', filter: 'PASSENGER_HOIST' },
-  { src: '/images/design/passenger-hoist/ph-3.jpg', icon: 'height', titleId: 'COR BOUQUET MANUFACTURING', titleEn: 'COR BOUQUET MANUFACTURING', tagId: 'OPERASI', tagEn: 'OPERATIONS', filter: 'PASSENGER_HOIST' },
+  { src: '/images/revisi27/1.jpg', icon: 'height', titleId: 'COR BOUQUET MANUFACTURING', titleEn: 'COR BOUQUET MANUFACTURING', tagId: 'OPERASI', tagEn: 'OPERATIONS', filter: 'PASSENGER_HOIST' },
 ] as const;
 
 const FLAGSHIP_SRC = '/images/revisi/63.jpg';

@@ -170,7 +170,7 @@ export default function ManualCranePage() {
               <div className="wm w-full rounded overflow-hidden border border-outline-variant/30">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/design/field-service/fs-1.jpg"
+                  src="/images/revisi27/3.jpg"
                   alt="Manual crane deployment detail"
                   className="w-full h-auto"
                   loading="lazy"
