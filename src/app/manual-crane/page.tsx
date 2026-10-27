@@ -167,7 +167,7 @@ export default function ManualCranePage() {
               </div>
             </div>
             <div className="mt-8">
-              <div className="wm w-full rounded overflow-hidden border border-outline-variant/30">
+              <div className="w-full rounded overflow-hidden border border-outline-variant/30">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/revisi27/3.jpg"
