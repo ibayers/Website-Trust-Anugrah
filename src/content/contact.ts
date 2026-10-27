@@ -29,11 +29,11 @@ export const contact = {
   address: {
     status: "verified" as const,
     value: {
-      street: "Kp. Kebayunan RT.02 RW.016",
-      city: "Kel. Tapos, Kec. Tapos",
-      postal: "Depok, Jawa Barat",
+      street: "Depok, Jawa Barat",
+      city: "",
+      postal: "",
     } as Address,
-    source: "Client-supplied 2026-07-27 (PRD §7 Q4 resolved)",
+    source: "Client-supplied 2026-07-27, simplified 2026-10-27",
   } satisfies Verified<Address>,
 } as const;
 
